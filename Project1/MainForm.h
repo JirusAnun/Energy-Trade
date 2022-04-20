@@ -1,6 +1,4 @@
 #pragma once
-//Test git push (ek)
-//Test git push 2 (ek)
 namespace Project1 {
 
 	using namespace System;
@@ -233,6 +231,3 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 }
 };
 }
-
-//test git (Ham)
-
