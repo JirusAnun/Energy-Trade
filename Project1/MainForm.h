@@ -80,7 +80,7 @@ namespace Project1 {
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.2F));
 			this->button1->ForeColor = System::Drawing::Color::Red;
-			this->button1->Location = System::Drawing::Point(1233, 12);
+			this->button1->Location = System::Drawing::Point(1230, 15);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(35, 35);
 			this->button1->TabIndex = 1;
