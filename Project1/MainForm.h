@@ -151,7 +151,7 @@ namespace Project1 {
 			// 
 			this->button_register_back->BackColor = System::Drawing::Color::Black;
 			this->button_register_back->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button_register_back->Font = (gcnew System::Drawing::Font(L"Agency FB", 12));
+			this->button_register_back->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
 			this->button_register_back->ForeColor = System::Drawing::SystemColors::Highlight;
 			this->button_register_back->Location = System::Drawing::Point(748, 585);
 			this->button_register_back->Name = L"button_register_back";
@@ -167,7 +167,7 @@ namespace Project1 {
 			this->button_register_signup->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button_register_signup.BackgroundImage")));
 			this->button_register_signup->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->button_register_signup->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button_register_signup->Font = (gcnew System::Drawing::Font(L"Agency FB", 12));
+			this->button_register_signup->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
 			this->button_register_signup->ForeColor = System::Drawing::SystemColors::ScrollBar;
 			this->button_register_signup->Location = System::Drawing::Point(647, 585);
 			this->button_register_signup->Name = L"button_register_signup";
@@ -222,6 +222,7 @@ namespace Project1 {
 			this->testBox_register_username->Name = L"testBox_register_username";
 			this->testBox_register_username->Size = System::Drawing::Size(307, 19);
 			this->testBox_register_username->TabIndex = 4;
+			this->testBox_register_username->TextChanged += gcnew System::EventHandler(this, &MainForm::testBox_register_username_TextChanged);
 			// 
 			// panel_login
 			// 
@@ -260,7 +261,7 @@ namespace Project1 {
 			// 
 			this->button_login_signup->BackColor = System::Drawing::Color::Black;
 			this->button_login_signup->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button_login_signup->Font = (gcnew System::Drawing::Font(L"Agency FB", 12));
+			this->button_login_signup->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
 			this->button_login_signup->ForeColor = System::Drawing::SystemColors::Highlight;
 			this->button_login_signup->Location = System::Drawing::Point(750, 499);
 			this->button_login_signup->Name = L"button_login_signup";
@@ -276,7 +277,7 @@ namespace Project1 {
 			this->button_login_login->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button_login_login.BackgroundImage")));
 			this->button_login_login->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->button_login_login->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->button_login_login->Font = (gcnew System::Drawing::Font(L"Agency FB", 12));
+			this->button_login_login->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
 			this->button_login_login->ForeColor = System::Drawing::SystemColors::ScrollBar;
 			this->button_login_login->Location = System::Drawing::Point(649, 499);
 			this->button_login_login->Name = L"button_login_login";
@@ -329,7 +330,7 @@ namespace Project1 {
 			this->Controls->Add(this->panel_register);
 			this->Controls->Add(this->panel_login);
 			this->Cursor = System::Windows::Forms::Cursors::Default;
-			this->Font = (gcnew System::Drawing::Font(L"Agency FB", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"MainForm";
@@ -457,6 +458,9 @@ private: System::Void button_login_login_Click_1(System::Object^ sender, System:
 }
 #pragma endregion
 
+
+private: System::Void testBox_register_username_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
 
 };
 }
