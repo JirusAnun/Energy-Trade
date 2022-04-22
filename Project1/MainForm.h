@@ -66,6 +66,8 @@ namespace Project1 {
 
 
 
+
+
 	private: System::ComponentModel::IContainer^ components;
 
 	protected:
@@ -238,6 +240,7 @@ namespace Project1 {
 			this->button_register_signup->TabIndex = 9;
 			this->button_register_signup->Text = L"Sign up";
 			this->button_register_signup->UseVisualStyleBackColor = false;
+			this->button_register_signup->Click += gcnew System::EventHandler(this, &MainForm::button_register_signup_Click);
 			// 
 			// checkBox_register_showPassword
 			// 
@@ -375,6 +378,16 @@ private: System::Void checkBox_register_showPassword_CheckedChanged(System::Obje
 	{
 		textBox_register_password->UseSystemPasswordChar = true;
 		textBox_register_conpassword->UseSystemPasswordChar = true;
+	}
+}
+private: System::Void button_register_signup_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (textBox_register_password->Text != textBox_register_conpassword->Text)
+	{
+		MessageBox::Show("Password and confirm password isn't match.");
+	}
+	else
+	{
+
 	}
 }
 };
