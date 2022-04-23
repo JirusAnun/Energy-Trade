@@ -23,16 +23,13 @@
     <ClInclude Include="MainForm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ID_node.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="LL.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ID_NODE.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Register.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Login.h">
+    <ClInclude Include="ID_class.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

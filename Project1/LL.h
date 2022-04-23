@@ -1,7 +1,5 @@
 #pragma once
 #include <iostream>
-#include"ID_NODE.h"
-#include"LL.h"
 
 using namespace std;
 class LL {
@@ -23,7 +21,6 @@ LL::LL() {
 }
 
 LL::~LL() {
-    cout << "destructor Linklist" << endl;
     ID* t = hol;
     int i;
     for (i = 0; i < size; i++) {
@@ -49,7 +46,6 @@ int LL::Get_size() {
 }
 
 void LL::Add_node(ID*& new_node) {
-
     hol->Insert(new_node);
     hol = new_node;
 

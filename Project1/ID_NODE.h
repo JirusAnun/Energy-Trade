@@ -24,18 +24,9 @@ ID::ID(string Username, string Password, bool Permission) {
     this->Password = Password;
     this->Permission = Permission;
     Next = NULL;
-    cout << "Construct Object(NODE)" << endl
-        << "ID: " << Username << endl
-        << "Pass: " << Password << endl
-        << "Permission: ";
-    if (Permission)
-        cout << "Admin" << endl;
-    else
-        cout << "Not Admin" << endl;
-    cout << "------------" << endl;
 };
 
-ID::~ID() { cout << "Deconstruct Object(NODE) " << Username << endl; };
+ID::~ID() { };
 
 ID* ID::Move_next() {
     return Next;

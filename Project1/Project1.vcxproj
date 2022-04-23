@@ -125,13 +125,12 @@
     <ClCompile Include="MainForm.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Login.h" />
-    <ClInclude Include="ID_NODE.h" />
+    <ClInclude Include="ID_class.h" />
+    <ClInclude Include="ID_node.h" />
     <ClInclude Include="LL.h" />
     <ClInclude Include="MainForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="Register.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainForm.resx">
