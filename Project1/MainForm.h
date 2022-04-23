@@ -105,6 +105,13 @@ namespace Project1 {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid));
 			this->panel_register = (gcnew System::Windows::Forms::Panel());
+			this->label_register_SignUpTo = (gcnew System::Windows::Forms::Label());
+			this->label_register_ShowPassword = (gcnew System::Windows::Forms::Label());
+			this->label_register_ConfirmPassword = (gcnew System::Windows::Forms::Label());
+			this->label_register_Password = (gcnew System::Windows::Forms::Label());
+			this->labal_register_Username = (gcnew System::Windows::Forms::Label());
+			this->label_register_ContextBelowSignUP = (gcnew System::Windows::Forms::Label());
+			this->label_register_EnergyTrade = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button_register_back = (gcnew System::Windows::Forms::Button());
 			this->button_register_signup = (gcnew System::Windows::Forms::Button());
@@ -119,13 +126,6 @@ namespace Project1 {
 			this->checkBox_login_showPassword = (gcnew System::Windows::Forms::CheckBox());
 			this->textBox_login_password = (gcnew System::Windows::Forms::TextBox());
 			this->textBox_login_username = (gcnew System::Windows::Forms::TextBox());
-			this->label_register_SignUpTo = (gcnew System::Windows::Forms::Label());
-			this->label_register_EnergyTrade = (gcnew System::Windows::Forms::Label());
-			this->label_register_ContextBelowSignUP = (gcnew System::Windows::Forms::Label());
-			this->labal_register_Username = (gcnew System::Windows::Forms::Label());
-			this->label_register_Password = (gcnew System::Windows::Forms::Label());
-			this->label_register_ConfirmPassword = (gcnew System::Windows::Forms::Label());
-			this->label_register_ShowPassword = (gcnew System::Windows::Forms::Label());
 			this->panel_register->SuspendLayout();
 			this->panel_login->SuspendLayout();
 			this->SuspendLayout();
@@ -157,6 +157,97 @@ namespace Project1 {
 			this->panel_register->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &MainForm::MainForm_MouseDown);
 			this->panel_register->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &MainForm::MainForm_MouseMove);
 			this->panel_register->MouseUp += gcnew System::Windows::Forms::MouseEventHandler(this, &MainForm::MainForm_MouseUp);
+			// 
+			// label_register_SignUpTo
+			// 
+			this->label_register_SignUpTo->AutoSize = true;
+			this->label_register_SignUpTo->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(20)),
+				static_cast<System::Int32>(static_cast<System::Byte>(20)), static_cast<System::Int32>(static_cast<System::Byte>(20)));
+			this->label_register_SignUpTo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 32));
+			this->label_register_SignUpTo->ForeColor = System::Drawing::Color::Silver;
+			this->label_register_SignUpTo->Location = System::Drawing::Point(452, 74);
+			this->label_register_SignUpTo->Name = L"label_register_SignUpTo";
+			this->label_register_SignUpTo->Size = System::Drawing::Size(215, 51);
+			this->label_register_SignUpTo->TabIndex = 12;
+			this->label_register_SignUpTo->Text = L"Sign up to";
+			this->label_register_SignUpTo->Click += gcnew System::EventHandler(this, &MainForm::label1_Click);
+			// 
+			// label_register_ShowPassword
+			// 
+			this->label_register_ShowPassword->AutoSize = true;
+			this->label_register_ShowPassword->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(20)),
+				static_cast<System::Int32>(static_cast<System::Byte>(20)), static_cast<System::Int32>(static_cast<System::Byte>(20)));
+			this->label_register_ShowPassword->ForeColor = System::Drawing::SystemColors::AppWorkspace;
+			this->label_register_ShowPassword->Location = System::Drawing::Point(666, 518);
+			this->label_register_ShowPassword->Name = L"label_register_ShowPassword";
+			this->label_register_ShowPassword->Size = System::Drawing::Size(169, 26);
+			this->label_register_ShowPassword->TabIndex = 18;
+			this->label_register_ShowPassword->Text = L"Show Password";
+			// 
+			// label_register_ConfirmPassword
+			// 
+			this->label_register_ConfirmPassword->AutoSize = true;
+			this->label_register_ConfirmPassword->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(20)),
+				static_cast<System::Int32>(static_cast<System::Byte>(20)), static_cast<System::Int32>(static_cast<System::Byte>(20)));
+			this->label_register_ConfirmPassword->ForeColor = System::Drawing::SystemColors::AppWorkspace;
+			this->label_register_ConfirmPassword->Location = System::Drawing::Point(645, 422);
+			this->label_register_ConfirmPassword->Name = L"label_register_ConfirmPassword";
+			this->label_register_ConfirmPassword->Size = System::Drawing::Size(188, 26);
+			this->label_register_ConfirmPassword->TabIndex = 17;
+			this->label_register_ConfirmPassword->Text = L"Confirm password";
+			this->label_register_ConfirmPassword->Click += gcnew System::EventHandler(this, &MainForm::label1_Click_2);
+			// 
+			// label_register_Password
+			// 
+			this->label_register_Password->AutoSize = true;
+			this->label_register_Password->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(20)),
+				static_cast<System::Int32>(static_cast<System::Byte>(20)), static_cast<System::Int32>(static_cast<System::Byte>(20)));
+			this->label_register_Password->ForeColor = System::Drawing::SystemColors::AppWorkspace;
+			this->label_register_Password->Location = System::Drawing::Point(647, 317);
+			this->label_register_Password->Name = L"label_register_Password";
+			this->label_register_Password->Size = System::Drawing::Size(108, 26);
+			this->label_register_Password->TabIndex = 16;
+			this->label_register_Password->Text = L"Password";
+			this->label_register_Password->Click += gcnew System::EventHandler(this, &MainForm::label1_Click_1);
+			// 
+			// labal_register_Username
+			// 
+			this->labal_register_Username->AutoSize = true;
+			this->labal_register_Username->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(20)),
+				static_cast<System::Int32>(static_cast<System::Byte>(20)), static_cast<System::Int32>(static_cast<System::Byte>(20)));
+			this->labal_register_Username->ForeColor = System::Drawing::SystemColors::AppWorkspace;
+			this->labal_register_Username->Location = System::Drawing::Point(647, 223);
+			this->labal_register_Username->Name = L"labal_register_Username";
+			this->labal_register_Username->Size = System::Drawing::Size(113, 26);
+			this->labal_register_Username->TabIndex = 15;
+			this->labal_register_Username->Text = L"Username";
+			// 
+			// label_register_ContextBelowSignUP
+			// 
+			this->label_register_ContextBelowSignUP->AutoSize = true;
+			this->label_register_ContextBelowSignUP->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(20)),
+				static_cast<System::Int32>(static_cast<System::Byte>(20)), static_cast<System::Int32>(static_cast<System::Byte>(20)));
+			this->label_register_ContextBelowSignUP->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.5F));
+			this->label_register_ContextBelowSignUP->ForeColor = System::Drawing::Color::DarkGray;
+			this->label_register_ContextBelowSignUP->Location = System::Drawing::Point(470, 134);
+			this->label_register_ContextBelowSignUP->Name = L"label_register_ContextBelowSignUP";
+			this->label_register_ContextBelowSignUP->Size = System::Drawing::Size(258, 16);
+			this->label_register_ContextBelowSignUP->TabIndex = 14;
+			this->label_register_ContextBelowSignUP->Text = L"To start trade. Please create your account.";
+			// 
+			// label_register_EnergyTrade
+			// 
+			this->label_register_EnergyTrade->AutoSize = true;
+			this->label_register_EnergyTrade->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(20)),
+				static_cast<System::Int32>(static_cast<System::Byte>(20)), static_cast<System::Int32>(static_cast<System::Byte>(20)));
+			this->label_register_EnergyTrade->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 32));
+			this->label_register_EnergyTrade->ForeColor = System::Drawing::Color::DarkGray;
+			this->label_register_EnergyTrade->Location = System::Drawing::Point(662, 74);
+			this->label_register_EnergyTrade->Name = L"label_register_EnergyTrade";
+			this->label_register_EnergyTrade->Size = System::Drawing::Size(282, 51);
+			this->label_register_EnergyTrade->TabIndex = 13;
+			this->label_register_EnergyTrade->Text = L"Energy Trade";
+			this->label_register_EnergyTrade->Click += gcnew System::EventHandler(this, &MainForm::label_register_EnergyTrade_Click);
 			// 
 			// button1
 			// 
@@ -345,97 +436,6 @@ namespace Project1 {
 			this->textBox_login_username->Name = L"textBox_login_username";
 			this->textBox_login_username->Size = System::Drawing::Size(307, 19);
 			this->textBox_login_username->TabIndex = 10;
-			// 
-			// label_register_SignUpTo
-			// 
-			this->label_register_SignUpTo->AutoSize = true;
-			this->label_register_SignUpTo->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(20)),
-				static_cast<System::Int32>(static_cast<System::Byte>(20)), static_cast<System::Int32>(static_cast<System::Byte>(20)));
-			this->label_register_SignUpTo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 32));
-			this->label_register_SignUpTo->ForeColor = System::Drawing::Color::Silver;
-			this->label_register_SignUpTo->Location = System::Drawing::Point(452, 74);
-			this->label_register_SignUpTo->Name = L"label_register_SignUpTo";
-			this->label_register_SignUpTo->Size = System::Drawing::Size(215, 51);
-			this->label_register_SignUpTo->TabIndex = 12;
-			this->label_register_SignUpTo->Text = L"Sign up to";
-			this->label_register_SignUpTo->Click += gcnew System::EventHandler(this, &MainForm::label1_Click);
-			// 
-			// label_register_EnergyTrade
-			// 
-			this->label_register_EnergyTrade->AutoSize = true;
-			this->label_register_EnergyTrade->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(20)),
-				static_cast<System::Int32>(static_cast<System::Byte>(20)), static_cast<System::Int32>(static_cast<System::Byte>(20)));
-			this->label_register_EnergyTrade->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 32));
-			this->label_register_EnergyTrade->ForeColor = System::Drawing::Color::DarkGray;
-			this->label_register_EnergyTrade->Location = System::Drawing::Point(662, 74);
-			this->label_register_EnergyTrade->Name = L"label_register_EnergyTrade";
-			this->label_register_EnergyTrade->Size = System::Drawing::Size(282, 51);
-			this->label_register_EnergyTrade->TabIndex = 13;
-			this->label_register_EnergyTrade->Text = L"Energy Trade";
-			this->label_register_EnergyTrade->Click += gcnew System::EventHandler(this, &MainForm::label_register_EnergyTrade_Click);
-			// 
-			// label_register_ContextBelowSignUP
-			// 
-			this->label_register_ContextBelowSignUP->AutoSize = true;
-			this->label_register_ContextBelowSignUP->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(20)),
-				static_cast<System::Int32>(static_cast<System::Byte>(20)), static_cast<System::Int32>(static_cast<System::Byte>(20)));
-			this->label_register_ContextBelowSignUP->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.5F));
-			this->label_register_ContextBelowSignUP->ForeColor = System::Drawing::Color::DarkGray;
-			this->label_register_ContextBelowSignUP->Location = System::Drawing::Point(470, 134);
-			this->label_register_ContextBelowSignUP->Name = L"label_register_ContextBelowSignUP";
-			this->label_register_ContextBelowSignUP->Size = System::Drawing::Size(258, 16);
-			this->label_register_ContextBelowSignUP->TabIndex = 14;
-			this->label_register_ContextBelowSignUP->Text = L"To start trade. Please create your account.";
-			// 
-			// labal_register_Username
-			// 
-			this->labal_register_Username->AutoSize = true;
-			this->labal_register_Username->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(20)),
-				static_cast<System::Int32>(static_cast<System::Byte>(20)), static_cast<System::Int32>(static_cast<System::Byte>(20)));
-			this->labal_register_Username->ForeColor = System::Drawing::SystemColors::AppWorkspace;
-			this->labal_register_Username->Location = System::Drawing::Point(647, 223);
-			this->labal_register_Username->Name = L"labal_register_Username";
-			this->labal_register_Username->Size = System::Drawing::Size(113, 26);
-			this->labal_register_Username->TabIndex = 15;
-			this->labal_register_Username->Text = L"Username";
-			// 
-			// label_register_Password
-			// 
-			this->label_register_Password->AutoSize = true;
-			this->label_register_Password->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(20)),
-				static_cast<System::Int32>(static_cast<System::Byte>(20)), static_cast<System::Int32>(static_cast<System::Byte>(20)));
-			this->label_register_Password->ForeColor = System::Drawing::SystemColors::AppWorkspace;
-			this->label_register_Password->Location = System::Drawing::Point(647, 317);
-			this->label_register_Password->Name = L"label_register_Password";
-			this->label_register_Password->Size = System::Drawing::Size(108, 26);
-			this->label_register_Password->TabIndex = 16;
-			this->label_register_Password->Text = L"Password";
-			this->label_register_Password->Click += gcnew System::EventHandler(this, &MainForm::label1_Click_1);
-			// 
-			// label_register_ConfirmPassword
-			// 
-			this->label_register_ConfirmPassword->AutoSize = true;
-			this->label_register_ConfirmPassword->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(20)),
-				static_cast<System::Int32>(static_cast<System::Byte>(20)), static_cast<System::Int32>(static_cast<System::Byte>(20)));
-			this->label_register_ConfirmPassword->ForeColor = System::Drawing::SystemColors::AppWorkspace;
-			this->label_register_ConfirmPassword->Location = System::Drawing::Point(645, 422);
-			this->label_register_ConfirmPassword->Name = L"label_register_ConfirmPassword";
-			this->label_register_ConfirmPassword->Size = System::Drawing::Size(188, 26);
-			this->label_register_ConfirmPassword->TabIndex = 17;
-			this->label_register_ConfirmPassword->Text = L"Confirm password";
-			this->label_register_ConfirmPassword->Click += gcnew System::EventHandler(this, &MainForm::label1_Click_2);
-			// 
-			// label_register_ShowPassword
-			// 
-			this->label_register_ShowPassword->AutoSize = true;
-			this->label_register_ShowPassword->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(20)),
-				static_cast<System::Int32>(static_cast<System::Byte>(20)), static_cast<System::Int32>(static_cast<System::Byte>(20)));
-			this->label_register_ShowPassword->ForeColor = System::Drawing::SystemColors::AppWorkspace;
-			this->label_register_ShowPassword->Location = System::Drawing::Point(666, 518);
-			this->label_register_ShowPassword->Name = L"label_register_ShowPassword";
-			this->label_register_ShowPassword->Size = System::Drawing::Size(169, 26);
-			this->label_register_ShowPassword->TabIndex = 18;
-			this->label_register_ShowPassword->Text = L"Show Password";
 			// 
 			// MainForm
 			// 
