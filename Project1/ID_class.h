@@ -19,6 +19,7 @@ public:
     void create_LL();
     bool check_login(string,string);
     bool check_reg(string, string);
+    bool check_login_permission(string, string);
     void write_csv();
 
 };
@@ -29,13 +30,15 @@ void Login_reg::create_LL() {
     if (Read_file) {
         string Line = "";
         string Row_str;
-
+        string temp_Permission;
         while (getline(Read_file, Line)) {
             stringstream Read_string(Line);
             getline(Read_string, Row_str, ',');
             getline(Read_string, Username, ',');
             getline(Read_string, Password, ',');
-            t = new ID(Username, Password, 0);
+            getline(Read_string, temp_Permission);
+            Permission = stoi(temp_Permission);
+            t = new ID(Username, Password, Permission);
             All_User.Add_node(t);
             Line = "";
         }
@@ -56,6 +59,21 @@ bool Login_reg::check_login(string Username, string Password) {
     }
     return check;
 }
+
+bool Login_reg::check_login_permission(string Username, string Password) {
+    bool check = false;
+    n = All_User.Get_size();
+    for (int i = 0; i < n; i++) {
+        if (Username == All_User.Get_id(i)) {
+            if (Password == All_User.Get_pass(i)) {
+                check = All_User.Get_permission(i);
+                break;
+            }
+        }
+    }
+    return check;
+}
+
 
 bool Login_reg::check_reg(string Username, string Password) { // true = ready to use
     bool Check_username = true;
@@ -82,6 +100,7 @@ void Login_reg::write_csv() {
             Row = i + 1;
             Username = All_User.Get_id(i);
             Password = All_User.Get_pass(i);
+            Permission = All_User.Get_permission(i);
             File << Row << "," << Username << "," << Password << "," << Permission << "\n";
         }
     }

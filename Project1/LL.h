@@ -11,6 +11,7 @@ public:
     int Get_size();
     string Get_id(int);//Same as ID_NODE.h but in LL.h
     string Get_pass(int);//Same as ID_NODE.h but in LL.h
+    bool Get_permission(int);
     ~LL();
     LL();
 };
@@ -67,5 +68,14 @@ string LL::Get_pass(int n) {
     for (int i = 0; i < n; i++)
         t = t->Move_next();
     Temp = t->Get_password();
+    return Temp;
+}
+
+bool LL::Get_permission(int n) {
+    bool Temp = false;
+    ID* t = hol;
+    for (int i = 0; i < n; i++)
+        t = t->Move_next();
+    Temp = t->Get_permission();
     return Temp;
 }
