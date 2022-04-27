@@ -126,17 +126,18 @@
     <ClCompile Include="MainForm.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\Dropbox\PC\Downloads\CoverLL_class.h" />
-    <ClInclude Include="..\..\..\..\Dropbox\PC\Downloads\LL_base.h" />
-    <ClInclude Include="..\..\..\..\Dropbox\PC\Downloads\LL_sub.h" />
-    <ClInclude Include="..\..\..\..\Dropbox\PC\Downloads\Node_base.h" />
-    <ClInclude Include="..\..\..\..\Dropbox\PC\Downloads\Node_sub.h" />
+    <ClInclude Include="LL_class.h" />
     <ClInclude Include="ID_class.h" />
     <ClInclude Include="ID_node.h" />
     <ClInclude Include="LL.h" />
+    <ClInclude Include="LL_base.h" />
+    <ClInclude Include="LL_sub.h" />
     <ClInclude Include="MainForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Node_base.h" />
+    <ClInclude Include="Node_sub.h" />
+    <ClInclude Include="round.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainForm.resx">
