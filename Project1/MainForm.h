@@ -3,6 +3,7 @@
 #include "ID_class.h"
 
 string glob_user;
+bool status_confirm = NULL;
 
 namespace Project1 {
 	using namespace System;
@@ -200,7 +201,40 @@ private: System::Windows::Forms::Label^ label_admin_add_unitLine1;
 private: System::Windows::Forms::ComboBox^ comboBox_admin_add_genre;
 private: System::Windows::Forms::Label^ label_admin_add_genre;
 private: System::Windows::Forms::Button^ button_admin_addAll;
-	
+private: System::Windows::Forms::Panel^ panel_message;
+private: System::Windows::Forms::Label^ label_noti;
+
+private: System::Windows::Forms::Label^ label_message;
+private: System::Windows::Forms::Button^ button_message_close;
+
+private: System::Windows::Forms::Button^ button_message_ok;
+private: System::Windows::Forms::Panel^ panel_confirm;
+private: System::Windows::Forms::Button^ button_confirm_cancel;
+
+
+private: System::Windows::Forms::Label^ label_confirm_noti;
+private: System::Windows::Forms::Label^ label_confirm;
+private: System::Windows::Forms::Button^ button_confirm_close;
+
+
+
+private: System::Windows::Forms::Button^ button_confirm_ok;
+private: System::Windows::Forms::Label^ label_aadmim_top1;
+private: System::Windows::Forms::Panel^ Underline_unite;
+
+private: System::Windows::Forms::Label^ label_user_total3;
+private: System::Windows::Forms::Label^ label_user_total2;
+private: System::Windows::Forms::Label^ label_user_total1;
+private: System::Windows::Forms::Label^ label_user_top3;
+private: System::Windows::Forms::Label^ label_user_top2;
+private: System::Windows::Forms::Label^ label_user_top1;
+private: System::Windows::Forms::Label^ label_admin_total3;
+private: System::Windows::Forms::Label^ label_admin_total2;
+private: System::Windows::Forms::Label^ label_admin_total1;
+private: System::Windows::Forms::Label^ label_aadmim_top3;
+private: System::Windows::Forms::Label^ label_aadmim_top2;
+
+
 private: System::ComponentModel::IContainer^ components;
 
 	protected:
@@ -237,6 +271,13 @@ private: System::ComponentModel::IContainer^ components;
 			this->textBox_register_password = (gcnew System::Windows::Forms::TextBox());
 			this->testBox_register_username = (gcnew System::Windows::Forms::TextBox());
 			this->panel_user = (gcnew System::Windows::Forms::Panel());
+			this->Underline_unite = (gcnew System::Windows::Forms::Panel());
+			this->label_user_total3 = (gcnew System::Windows::Forms::Label());
+			this->label_user_total2 = (gcnew System::Windows::Forms::Label());
+			this->label_user_total1 = (gcnew System::Windows::Forms::Label());
+			this->label_user_top3 = (gcnew System::Windows::Forms::Label());
+			this->label_user_top2 = (gcnew System::Windows::Forms::Label());
+			this->label_user_top1 = (gcnew System::Windows::Forms::Label());
 			this->label_user_unitPrice = (gcnew System::Windows::Forms::Label());
 			this->label_user_unitVolume = (gcnew System::Windows::Forms::Label());
 			this->label_user_unitLine2 = (gcnew System::Windows::Forms::Label());
@@ -265,7 +306,18 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_user_name = (gcnew System::Windows::Forms::Label());
 			this->button_user_close = (gcnew System::Windows::Forms::Button());
 			this->label_user_EnergyTrade = (gcnew System::Windows::Forms::Label());
+			this->panel_message = (gcnew System::Windows::Forms::Panel());
+			this->button_message_ok = (gcnew System::Windows::Forms::Button());
+			this->label_noti = (gcnew System::Windows::Forms::Label());
+			this->label_message = (gcnew System::Windows::Forms::Label());
+			this->button_message_close = (gcnew System::Windows::Forms::Button());
 			this->panel_admin = (gcnew System::Windows::Forms::Panel());
+			this->label_admin_total3 = (gcnew System::Windows::Forms::Label());
+			this->label_admin_total2 = (gcnew System::Windows::Forms::Label());
+			this->label_admin_total1 = (gcnew System::Windows::Forms::Label());
+			this->label_aadmim_top3 = (gcnew System::Windows::Forms::Label());
+			this->label_aadmim_top2 = (gcnew System::Windows::Forms::Label());
+			this->label_aadmim_top1 = (gcnew System::Windows::Forms::Label());
 			this->panel_admin_add = (gcnew System::Windows::Forms::Panel());
 			this->button_admin_addAll = (gcnew System::Windows::Forms::Button());
 			this->comboBox_admin_add_genre = (gcnew System::Windows::Forms::ComboBox());
@@ -333,11 +385,19 @@ private: System::ComponentModel::IContainer^ components;
 			this->checkBox_login_showPassword = (gcnew System::Windows::Forms::CheckBox());
 			this->textBox_login_password = (gcnew System::Windows::Forms::TextBox());
 			this->textBox_login_username = (gcnew System::Windows::Forms::TextBox());
+			this->panel_confirm = (gcnew System::Windows::Forms::Panel());
+			this->button_confirm_ok = (gcnew System::Windows::Forms::Button());
+			this->button_confirm_cancel = (gcnew System::Windows::Forms::Button());
+			this->label_confirm_noti = (gcnew System::Windows::Forms::Label());
+			this->label_confirm = (gcnew System::Windows::Forms::Label());
+			this->button_confirm_close = (gcnew System::Windows::Forms::Button());
 			this->panel_register->SuspendLayout();
 			this->panel_user->SuspendLayout();
+			this->panel_message->SuspendLayout();
 			this->panel_admin->SuspendLayout();
 			this->panel_admin_add->SuspendLayout();
 			this->panel_login->SuspendLayout();
+			this->panel_confirm->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// panel_register
@@ -583,6 +643,13 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel_user->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(20)), static_cast<System::Int32>(static_cast<System::Byte>(20)),
 				static_cast<System::Int32>(static_cast<System::Byte>(20)));
 			this->panel_user->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel_user.BackgroundImage")));
+			this->panel_user->Controls->Add(this->Underline_unite);
+			this->panel_user->Controls->Add(this->label_user_total3);
+			this->panel_user->Controls->Add(this->label_user_total2);
+			this->panel_user->Controls->Add(this->label_user_total1);
+			this->panel_user->Controls->Add(this->label_user_top3);
+			this->panel_user->Controls->Add(this->label_user_top2);
+			this->panel_user->Controls->Add(this->label_user_top1);
 			this->panel_user->Controls->Add(this->label_user_unitPrice);
 			this->panel_user->Controls->Add(this->label_user_unitVolume);
 			this->panel_user->Controls->Add(this->label_user_unitLine2);
@@ -623,6 +690,80 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel_user->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &MainForm::MainForm_MouseDown);
 			this->panel_user->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &MainForm::MainForm_MouseMove);
 			this->panel_user->MouseUp += gcnew System::Windows::Forms::MouseEventHandler(this, &MainForm::MainForm_MouseUp);
+			// 
+			// Underline_unite
+			// 
+			this->Underline_unite->BackColor = System::Drawing::SystemColors::ActiveBorder;
+			this->Underline_unite->Location = System::Drawing::Point(360, 670);
+			this->Underline_unite->Name = L"Underline_unite";
+			this->Underline_unite->Size = System::Drawing::Size(210, 3);
+			this->Underline_unite->TabIndex = 53;
+			// 
+			// label_user_total3
+			// 
+			this->label_user_total3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(13)),
+				static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->label_user_total3->Location = System::Drawing::Point(1040, 60);
+			this->label_user_total3->Name = L"label_user_total3";
+			this->label_user_total3->Size = System::Drawing::Size(115, 23);
+			this->label_user_total3->TabIndex = 52;
+			this->label_user_total3->Text = L"Total3";
+			// 
+			// label_user_total2
+			// 
+			this->label_user_total2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(13)),
+				static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->label_user_total2->Location = System::Drawing::Point(835, 60);
+			this->label_user_total2->Name = L"label_user_total2";
+			this->label_user_total2->Size = System::Drawing::Size(115, 23);
+			this->label_user_total2->TabIndex = 51;
+			this->label_user_total2->Text = L"Total2";
+			// 
+			// label_user_total1
+			// 
+			this->label_user_total1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(13)),
+				static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->label_user_total1->Location = System::Drawing::Point(650, 60);
+			this->label_user_total1->Name = L"label_user_total1";
+			this->label_user_total1->Size = System::Drawing::Size(115, 23);
+			this->label_user_total1->TabIndex = 50;
+			this->label_user_total1->Text = L"Total1";
+			// 
+			// label_user_top3
+			// 
+			this->label_user_top3->AutoSize = true;
+			this->label_user_top3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(13)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
+				static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->label_user_top3->Font = (gcnew System::Drawing::Font(L"Agency FB", 13));
+			this->label_user_top3->Location = System::Drawing::Point(960, 60);
+			this->label_user_top3->Name = L"label_user_top3";
+			this->label_user_top3->Size = System::Drawing::Size(79, 23);
+			this->label_user_top3->TabIndex = 49;
+			this->label_user_top3->Text = L"Natural gas : ";
+			// 
+			// label_user_top2
+			// 
+			this->label_user_top2->AutoSize = true;
+			this->label_user_top2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(13)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
+				static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->label_user_top2->Font = (gcnew System::Drawing::Font(L"Agency FB", 13));
+			this->label_user_top2->Location = System::Drawing::Point(770, 60);
+			this->label_user_top2->Name = L"label_user_top2";
+			this->label_user_top2->Size = System::Drawing::Size(65, 23);
+			this->label_user_top2->TabIndex = 48;
+			this->label_user_top2->Text = L"Crude oil : ";
+			// 
+			// label_user_top1
+			// 
+			this->label_user_top1->AutoSize = true;
+			this->label_user_top1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(13)), static_cast<System::Int32>(static_cast<System::Byte>(45)),
+				static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->label_user_top1->Font = (gcnew System::Drawing::Font(L"Agency FB", 13));
+			this->label_user_top1->Location = System::Drawing::Point(515, 60);
+			this->label_user_top1->Name = L"label_user_top1";
+			this->label_user_top1->Size = System::Drawing::Size(132, 23);
+			this->label_user_top1->TabIndex = 47;
+			this->label_user_top1->Text = L"Total of Electric energy :";
 			// 
 			// label_user_unitPrice
 			// 
@@ -721,6 +862,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->button_user_sell->TabIndex = 29;
 			this->button_user_sell->Text = L"SELL";
 			this->button_user_sell->UseVisualStyleBackColor = true;
+			this->button_user_sell->Click += gcnew System::EventHandler(this, &MainForm::button_user_sell_Click);
 			// 
 			// button_user_buy
 			// 
@@ -732,6 +874,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->button_user_buy->TabIndex = 28;
 			this->button_user_buy->Text = L"BUY";
 			this->button_user_buy->UseVisualStyleBackColor = true;
+			this->button_user_buy->Click += gcnew System::EventHandler(this, &MainForm::button_user_buy_Click);
 			// 
 			// label_user_unit
 			// 
@@ -747,9 +890,12 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// textBox_user_unit
 			// 
-			this->textBox_user_unit->Location = System::Drawing::Point(360, 640);
+			this->textBox_user_unit->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
+				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
+			this->textBox_user_unit->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox_user_unit->Location = System::Drawing::Point(365, 640);
 			this->textBox_user_unit->Name = L"textBox_user_unit";
-			this->textBox_user_unit->Size = System::Drawing::Size(200, 30);
+			this->textBox_user_unit->Size = System::Drawing::Size(200, 23);
 			this->textBox_user_unit->TabIndex = 26;
 			// 
 			// label_user_price
@@ -841,8 +987,9 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// comboBox_user_company
 			// 
-			this->comboBox_user_company->BackColor = System::Drawing::SystemColors::Window;
+			this->comboBox_user_company->BackColor = System::Drawing::SystemColors::HotTrack;
 			this->comboBox_user_company->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox_user_company->FlatStyle = System::Windows::Forms::FlatStyle::System;
 			this->comboBox_user_company->Font = (gcnew System::Drawing::Font(L"Agency FB", 12));
 			this->comboBox_user_company->FormattingEnabled = true;
 			this->comboBox_user_company->Items->AddRange(gcnew cli::array< System::Object^  >(1) { L"Test1" });
@@ -928,7 +1075,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_user_name->Name = L"label_user_name";
 			this->label_user_name->Size = System::Drawing::Size(254, 24);
 			this->label_user_name->TabIndex = 13;
-			this->label_user_name->Text = L"Jiruschai";
+			this->label_user_name->Text = L"Username";
 			this->label_user_name->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// button_user_close
@@ -957,11 +1104,84 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_user_EnergyTrade->TabIndex = 0;
 			this->label_user_EnergyTrade->Text = L"Energy Trade";
 			// 
+			// panel_message
+			// 
+			this->panel_message->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(20)), static_cast<System::Int32>(static_cast<System::Byte>(20)),
+				static_cast<System::Int32>(static_cast<System::Byte>(20)));
+			this->panel_message->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
+			this->panel_message->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel_message->Controls->Add(this->button_message_ok);
+			this->panel_message->Controls->Add(this->label_noti);
+			this->panel_message->Controls->Add(this->label_message);
+			this->panel_message->Controls->Add(this->button_message_close);
+			this->panel_message->Location = System::Drawing::Point(465, 260);
+			this->panel_message->Name = L"panel_message";
+			this->panel_message->Size = System::Drawing::Size(350, 200);
+			this->panel_message->TabIndex = 39;
+			this->panel_message->Visible = false;
+			// 
+			// button_message_ok
+			// 
+			this->button_message_ok->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(13)),
+				static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->button_message_ok->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button_message_ok->Font = (gcnew System::Drawing::Font(L"Agency FB", 12));
+			this->button_message_ok->ForeColor = System::Drawing::SystemColors::ActiveBorder;
+			this->button_message_ok->Location = System::Drawing::Point(265, 160);
+			this->button_message_ok->Name = L"button_message_ok";
+			this->button_message_ok->Size = System::Drawing::Size(75, 28);
+			this->button_message_ok->TabIndex = 16;
+			this->button_message_ok->Text = L"OK";
+			this->button_message_ok->UseVisualStyleBackColor = false;
+			this->button_message_ok->Click += gcnew System::EventHandler(this, &MainForm::button_message_ok_Click);
+			// 
+			// label_noti
+			// 
+			this->label_noti->AutoSize = true;
+			this->label_noti->Font = (gcnew System::Drawing::Font(L"Agency FB", 15));
+			this->label_noti->ForeColor = System::Drawing::SystemColors::ActiveBorder;
+			this->label_noti->Location = System::Drawing::Point(13, 7);
+			this->label_noti->Name = L"label_noti";
+			this->label_noti->Size = System::Drawing::Size(73, 24);
+			this->label_noti->TabIndex = 15;
+			this->label_noti->Text = L"Notification";
+			// 
+			// label_message
+			// 
+			this->label_message->Font = (gcnew System::Drawing::Font(L"Agency FB", 13));
+			this->label_message->ForeColor = System::Drawing::SystemColors::ActiveBorder;
+			this->label_message->Location = System::Drawing::Point(36, 61);
+			this->label_message->Name = L"label_message";
+			this->label_message->Size = System::Drawing::Size(280, 74);
+			this->label_message->TabIndex = 14;
+			this->label_message->Text = L"label_message";
+			this->label_message->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// button_message_close
+			// 
+			this->button_message_close->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->button_message_close->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button_message_close->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 5));
+			this->button_message_close->ForeColor = System::Drawing::Color::Red;
+			this->button_message_close->Location = System::Drawing::Point(320, 7);
+			this->button_message_close->Name = L"button_message_close";
+			this->button_message_close->Size = System::Drawing::Size(20, 20);
+			this->button_message_close->TabIndex = 13;
+			this->button_message_close->Text = L"X";
+			this->button_message_close->UseVisualStyleBackColor = false;
+			this->button_message_close->Click += gcnew System::EventHandler(this, &MainForm::button1_Click_1);
+			// 
 			// panel_admin
 			// 
 			this->panel_admin->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(20)), static_cast<System::Int32>(static_cast<System::Byte>(20)),
 				static_cast<System::Int32>(static_cast<System::Byte>(20)));
 			this->panel_admin->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel_admin.BackgroundImage")));
+			this->panel_admin->Controls->Add(this->label_admin_total3);
+			this->panel_admin->Controls->Add(this->label_admin_total2);
+			this->panel_admin->Controls->Add(this->label_admin_total1);
+			this->panel_admin->Controls->Add(this->label_aadmim_top3);
+			this->panel_admin->Controls->Add(this->label_aadmim_top2);
+			this->panel_admin->Controls->Add(this->label_aadmim_top1);
 			this->panel_admin->Controls->Add(this->panel_admin_add);
 			this->panel_admin->Controls->Add(this->button_admin_add);
 			this->panel_admin->Controls->Add(this->label_admin_unitUnitPrice);
@@ -1000,6 +1220,72 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel_admin->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &MainForm::MainForm_MouseDown);
 			this->panel_admin->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &MainForm::MainForm_MouseMove);
 			this->panel_admin->MouseUp += gcnew System::Windows::Forms::MouseEventHandler(this, &MainForm::MainForm_MouseUp);
+			// 
+			// label_admin_total3
+			// 
+			this->label_admin_total3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(13)),
+				static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->label_admin_total3->Location = System::Drawing::Point(1040, 60);
+			this->label_admin_total3->Name = L"label_admin_total3";
+			this->label_admin_total3->Size = System::Drawing::Size(115, 23);
+			this->label_admin_total3->TabIndex = 46;
+			this->label_admin_total3->Text = L"Total3";
+			// 
+			// label_admin_total2
+			// 
+			this->label_admin_total2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(13)),
+				static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->label_admin_total2->Location = System::Drawing::Point(835, 60);
+			this->label_admin_total2->Name = L"label_admin_total2";
+			this->label_admin_total2->Size = System::Drawing::Size(115, 23);
+			this->label_admin_total2->TabIndex = 45;
+			this->label_admin_total2->Text = L"Total2";
+			// 
+			// label_admin_total1
+			// 
+			this->label_admin_total1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(13)),
+				static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->label_admin_total1->Location = System::Drawing::Point(650, 60);
+			this->label_admin_total1->Name = L"label_admin_total1";
+			this->label_admin_total1->Size = System::Drawing::Size(115, 23);
+			this->label_admin_total1->TabIndex = 44;
+			this->label_admin_total1->Text = L"Total1";
+			// 
+			// label_aadmim_top3
+			// 
+			this->label_aadmim_top3->AutoSize = true;
+			this->label_aadmim_top3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(13)),
+				static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->label_aadmim_top3->Font = (gcnew System::Drawing::Font(L"Agency FB", 13));
+			this->label_aadmim_top3->Location = System::Drawing::Point(960, 60);
+			this->label_aadmim_top3->Name = L"label_aadmim_top3";
+			this->label_aadmim_top3->Size = System::Drawing::Size(79, 23);
+			this->label_aadmim_top3->TabIndex = 43;
+			this->label_aadmim_top3->Text = L"Natural gas : ";
+			// 
+			// label_aadmim_top2
+			// 
+			this->label_aadmim_top2->AutoSize = true;
+			this->label_aadmim_top2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(13)),
+				static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->label_aadmim_top2->Font = (gcnew System::Drawing::Font(L"Agency FB", 13));
+			this->label_aadmim_top2->Location = System::Drawing::Point(770, 60);
+			this->label_aadmim_top2->Name = L"label_aadmim_top2";
+			this->label_aadmim_top2->Size = System::Drawing::Size(65, 23);
+			this->label_aadmim_top2->TabIndex = 42;
+			this->label_aadmim_top2->Text = L"Crude oil : ";
+			// 
+			// label_aadmim_top1
+			// 
+			this->label_aadmim_top1->AutoSize = true;
+			this->label_aadmim_top1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(13)),
+				static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->label_aadmim_top1->Font = (gcnew System::Drawing::Font(L"Agency FB", 13));
+			this->label_aadmim_top1->Location = System::Drawing::Point(515, 60);
+			this->label_aadmim_top1->Name = L"label_aadmim_top1";
+			this->label_aadmim_top1->Size = System::Drawing::Size(132, 23);
+			this->label_aadmim_top1->TabIndex = 41;
+			this->label_aadmim_top1->Text = L"Total of Electric energy :";
 			// 
 			// panel_admin_add
 			// 
@@ -1048,6 +1334,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->button_admin_addAll->TabIndex = 63;
 			this->button_admin_addAll->Text = L"Add";
 			this->button_admin_addAll->UseVisualStyleBackColor = true;
+			this->button_admin_addAll->Click += gcnew System::EventHandler(this, &MainForm::button_admin_addAll_Click);
 			// 
 			// comboBox_admin_add_genre
 			// 
@@ -1499,6 +1786,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_admin_genre->TabIndex = 21;
 			this->label_admin_genre->Text = L"Genre";
 			this->label_admin_genre->Visible = false;
+			this->label_admin_genre->Click += gcnew System::EventHandler(this, &MainForm::label_admin_genre_Click);
 			// 
 			// comboBox_admin_genre
 			// 
@@ -1825,20 +2113,106 @@ private: System::ComponentModel::IContainer^ components;
 			this->textBox_login_username->Size = System::Drawing::Size(340, 19);
 			this->textBox_login_username->TabIndex = 10;
 			// 
+			// panel_confirm
+			// 
+			this->panel_confirm->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(20)), static_cast<System::Int32>(static_cast<System::Byte>(20)),
+				static_cast<System::Int32>(static_cast<System::Byte>(20)));
+			this->panel_confirm->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
+			this->panel_confirm->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel_confirm->Controls->Add(this->button_confirm_ok);
+			this->panel_confirm->Controls->Add(this->button_confirm_cancel);
+			this->panel_confirm->Controls->Add(this->label_confirm_noti);
+			this->panel_confirm->Controls->Add(this->label_confirm);
+			this->panel_confirm->Controls->Add(this->button_confirm_close);
+			this->panel_confirm->Location = System::Drawing::Point(465, 260);
+			this->panel_confirm->Name = L"panel_confirm";
+			this->panel_confirm->Size = System::Drawing::Size(350, 200);
+			this->panel_confirm->TabIndex = 40;
+			this->panel_confirm->Visible = false;
+			// 
+			// button_confirm_ok
+			// 
+			this->button_confirm_ok->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(13)),
+				static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(140)));
+			this->button_confirm_ok->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button_confirm_ok->Font = (gcnew System::Drawing::Font(L"Agency FB", 12));
+			this->button_confirm_ok->ForeColor = System::Drawing::SystemColors::ActiveBorder;
+			this->button_confirm_ok->Location = System::Drawing::Point(188, 160);
+			this->button_confirm_ok->Name = L"button_confirm_ok";
+			this->button_confirm_ok->Size = System::Drawing::Size(75, 28);
+			this->button_confirm_ok->TabIndex = 17;
+			this->button_confirm_ok->Text = L"OK";
+			this->button_confirm_ok->UseVisualStyleBackColor = false;
+			this->button_confirm_ok->Click += gcnew System::EventHandler(this, &MainForm::button_confirm_ok_Click);
+			// 
+			// button_confirm_cancel
+			// 
+			this->button_confirm_cancel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
+				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
+			this->button_confirm_cancel->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button_confirm_cancel->Font = (gcnew System::Drawing::Font(L"Agency FB", 12));
+			this->button_confirm_cancel->ForeColor = System::Drawing::SystemColors::ActiveBorder;
+			this->button_confirm_cancel->Location = System::Drawing::Point(265, 160);
+			this->button_confirm_cancel->Name = L"button_confirm_cancel";
+			this->button_confirm_cancel->Size = System::Drawing::Size(75, 28);
+			this->button_confirm_cancel->TabIndex = 16;
+			this->button_confirm_cancel->Text = L"Cancel";
+			this->button_confirm_cancel->UseVisualStyleBackColor = false;
+			this->button_confirm_cancel->Click += gcnew System::EventHandler(this, &MainForm::button_confirm_cancel_Click);
+			// 
+			// label_confirm_noti
+			// 
+			this->label_confirm_noti->AutoSize = true;
+			this->label_confirm_noti->Font = (gcnew System::Drawing::Font(L"Agency FB", 15));
+			this->label_confirm_noti->ForeColor = System::Drawing::SystemColors::ActiveBorder;
+			this->label_confirm_noti->Location = System::Drawing::Point(13, 7);
+			this->label_confirm_noti->Name = L"label_confirm_noti";
+			this->label_confirm_noti->Size = System::Drawing::Size(73, 24);
+			this->label_confirm_noti->TabIndex = 15;
+			this->label_confirm_noti->Text = L"Notification";
+			// 
+			// label_confirm
+			// 
+			this->label_confirm->Font = (gcnew System::Drawing::Font(L"Agency FB", 13));
+			this->label_confirm->ForeColor = System::Drawing::SystemColors::ActiveBorder;
+			this->label_confirm->Location = System::Drawing::Point(36, 61);
+			this->label_confirm->Name = L"label_confirm";
+			this->label_confirm->Size = System::Drawing::Size(280, 74);
+			this->label_confirm->TabIndex = 14;
+			this->label_confirm->Text = L"Are you sure you want to exit";
+			this->label_confirm->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// button_confirm_close
+			// 
+			this->button_confirm_close->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->button_confirm_close->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button_confirm_close->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 5));
+			this->button_confirm_close->ForeColor = System::Drawing::Color::Red;
+			this->button_confirm_close->Location = System::Drawing::Point(320, 7);
+			this->button_confirm_close->Name = L"button_confirm_close";
+			this->button_confirm_close->Size = System::Drawing::Size(20, 20);
+			this->button_confirm_close->TabIndex = 13;
+			this->button_confirm_close->Text = L"X";
+			this->button_confirm_close->UseVisualStyleBackColor = false;
+			this->button_confirm_close->Click += gcnew System::EventHandler(this, &MainForm::button_confirm_close_Click);
+			// 
 			// MainForm
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->BackColor = System::Drawing::SystemColors::ActiveBorder;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->ClientSize = System::Drawing::Size(1280, 720);
+			this->Controls->Add(this->panel_confirm);
 			this->Controls->Add(this->panel_user);
-			this->Controls->Add(this->panel_admin);
 			this->Controls->Add(this->panel_login);
+			this->Controls->Add(this->panel_admin);
+			this->Controls->Add(this->panel_message);
 			this->Controls->Add(this->panel_register);
 			this->Cursor = System::Windows::Forms::Cursors::Default;
 			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"MainForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"MainForm";
@@ -1850,12 +2224,16 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel_register->PerformLayout();
 			this->panel_user->ResumeLayout(false);
 			this->panel_user->PerformLayout();
+			this->panel_message->ResumeLayout(false);
+			this->panel_message->PerformLayout();
 			this->panel_admin->ResumeLayout(false);
 			this->panel_admin->PerformLayout();
 			this->panel_admin_add->ResumeLayout(false);
 			this->panel_admin_add->PerformLayout();
 			this->panel_login->ResumeLayout(false);
 			this->panel_login->PerformLayout();
+			this->panel_confirm->ResumeLayout(false);
+			this->panel_confirm->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
@@ -1894,7 +2272,8 @@ private: System::Void button_register_back_Click(System::Object^ sender, System:
 	panel_register->Visible = false;
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	Application::Exit();
+	panel_confirm->Visible = true;
+	panel_confirm->BringToFront();
 }
 private: System::Void checkBox_register_showPassword_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
 	if (checkBox_register_showPassword->Checked)
@@ -1967,7 +2346,8 @@ private: System::Void checkBox_login_showPassword_CheckedChanged(System::Object^
 	
 }
 private: System::Void button_login_close_Click(System::Object^ sender, System::EventArgs^ e) {
-	Application::Exit();
+	panel_confirm->Visible = true;
+	panel_confirm->BringToFront();
 }
 private: System::Void panel_register_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
@@ -1981,19 +2361,25 @@ private: System::Void button_login_login_Click_1(System::Object^ sender, System:
 	bool status_permission = User.check_login_permission(username, password);
 	if (status_login) {
 		if (status_permission) {
-			MessageBox::Show("  Login successful  \n  Permission : Admin ");
 			panel_admin->Visible = true;
 			panel_admin->BringToFront();
 			glob_user = username;
 			label_admin_name->Text = gcnew String(glob_user.data());
+			label_message->Text = "Login successfully\nPermission type Admin";
+			panel_message->Location = Point(465, 260);
+			panel_message->Visible = true;
+			panel_message->BringToFront();
 		}
 		else
 		{
-			MessageBox::Show("  Login successful  \n  Permission : User  ");
 			panel_user->Visible = true;
 			panel_user->BringToFront();
 			glob_user = username;
 			label_user_name->Text = gcnew String(glob_user.data());
+			label_message->Text = "Login successfully\nPermission type User";
+			panel_message->Location = Point(465, 260);
+			panel_message->Visible = true;
+			panel_message->BringToFront();
 		}
 		textBox_login_username->Text = "";
 		textBox_login_password->Text = "";
@@ -2008,7 +2394,8 @@ private: System::Void testBox_register_username_TextChanged(System::Object^ send
 private: System::Void label_register_EnergyTrade_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void button_user_close_Click(System::Object^ sender, System::EventArgs^ e) {
-	Application::Exit();
+	panel_confirm->Visible = true;
+	panel_confirm->BringToFront();
 }
 private: System::Void button_user_electric_Click(System::Object^ sender, System::EventArgs^ e) {
 		label_user_genre->Visible = false;
@@ -2128,7 +2515,8 @@ private: System::Void button_admin_logout_Click(System::Object^ sender, System::
 	panel_login->BringToFront();
 }
 private: System::Void button_admin_close_Click(System::Object^ sender, System::EventArgs^ e) {
-	Application::Exit();
+	panel_confirm->Visible = true;
+	panel_confirm->BringToFront();
 }
 private: System::Void button_admin_electric_Click(System::Object^ sender, System::EventArgs^ e) {
 	panel_admin_add->Visible = false;
@@ -2239,6 +2627,7 @@ private: System::Void button_admin_gas_Click(System::Object^ sender, System::Eve
 		static_cast<System::Int32>(static_cast<System::Byte>(140)));
 }
 private: System::Void comboBox_admin_enterprise_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+	label_admin_genre->Visible = true;
 	comboBox_admin_genre->Visible = true;
 }
 private: System::Void button_admin_add_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2321,6 +2710,30 @@ private: System::Void comboBox_admin_add_catagory_SelectedIndexChanged(System::O
 		label_admin_add_unitLine1->Text = "kPA";
 		label_admin_add_unitLine2->Text = "°F";
 	}
+}
+private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	panel_message->Visible = false;
+}
+private: System::Void button_message_ok_Click(System::Object^ sender, System::EventArgs^ e) {
+	panel_message->Visible = false;
+}
+private: System::Void label_admin_genre_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button_confirm_ok_Click(System::Object^ sender, System::EventArgs^ e) {
+	panel_confirm->Visible = false;
+	Application::Exit();
+}
+private: System::Void button_confirm_cancel_Click(System::Object^ sender, System::EventArgs^ e) {
+	panel_confirm->Visible = false;
+}
+private: System::Void button_confirm_close_Click(System::Object^ sender, System::EventArgs^ e) {
+	panel_confirm->Visible = false;
+}
+private: System::Void button_admin_addAll_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button_user_buy_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button_user_sell_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
