@@ -126,6 +126,11 @@
     <ClCompile Include="MainForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\Dropbox\PC\Downloads\CoverLL_class.h" />
+    <ClInclude Include="..\..\..\..\Dropbox\PC\Downloads\LL_base.h" />
+    <ClInclude Include="..\..\..\..\Dropbox\PC\Downloads\LL_sub.h" />
+    <ClInclude Include="..\..\..\..\Dropbox\PC\Downloads\Node_base.h" />
+    <ClInclude Include="..\..\..\..\Dropbox\PC\Downloads\Node_sub.h" />
     <ClInclude Include="ID_class.h" />
     <ClInclude Include="ID_node.h" />
     <ClInclude Include="LL.h" />

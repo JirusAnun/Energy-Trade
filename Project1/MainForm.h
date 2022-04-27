@@ -4,7 +4,7 @@
 
 string glob_user;
 bool status_confirm = NULL;
-
+//just comment
 namespace Project1 {
 	using namespace System;
 	using namespace System::ComponentModel;
