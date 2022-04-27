@@ -2202,12 +2202,12 @@ private: System::ComponentModel::IContainer^ components;
 			this->BackColor = System::Drawing::SystemColors::ActiveBorder;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->ClientSize = System::Drawing::Size(1280, 720);
+			this->Controls->Add(this->panel_register);
 			this->Controls->Add(this->panel_confirm);
 			this->Controls->Add(this->panel_user);
 			this->Controls->Add(this->panel_login);
 			this->Controls->Add(this->panel_admin);
 			this->Controls->Add(this->panel_message);
-			this->Controls->Add(this->panel_register);
 			this->Cursor = System::Windows::Forms::Cursors::Default;
 			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -2298,19 +2298,23 @@ private: System::Void button_register_signup_Click(System::Object^ sender, Syste
 		bool status_register = User.check_reg(username, password);
 		if (status_register) { 
 			User.write_csv(); 
-			MessageBox::Show("Register successful.");
 			testBox_register_username->Text = "";
 			textBox_register_password->Text = "";
 			textBox_register_conpassword->Text = "";
 			panel_user->Visible = true;
 			panel_user->BringToFront();
+			label_message->Text = "Register successful.";
+			panel_message->Visible = true;
+			panel_message->BringToFront();
 			panel_register->Visible = false;
 			glob_user = username;
 			label_user_name->Text = gcnew String(glob_user.data());
 		}
 		else
 		{
-			MessageBox::Show("Register failed");
+			label_message->Text = "Register failed.";
+			panel_message->Visible = true;
+			panel_message->BringToFront();
 			testBox_register_username->Text = "";
 			textBox_register_password->Text = "";
 			textBox_register_conpassword->Text = "";
