@@ -307,6 +307,33 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_message = (gcnew System::Windows::Forms::Label());
 			this->button_message_close = (gcnew System::Windows::Forms::Button());
 			this->panel_admin = (gcnew System::Windows::Forms::Panel());
+			this->panel_admin_add = (gcnew System::Windows::Forms::Panel());
+			this->button_admin_addAll = (gcnew System::Windows::Forms::Button());
+			this->comboBox_admin_add_genre = (gcnew System::Windows::Forms::ComboBox());
+			this->label_admin_add_genre = (gcnew System::Windows::Forms::Label());
+			this->label_admin_add_unitUnitPrice = (gcnew System::Windows::Forms::Label());
+			this->label_admin_add_unitVolume = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label_admin_add_unitLine2 = (gcnew System::Windows::Forms::Label());
+			this->label_admin_add_unitLine1 = (gcnew System::Windows::Forms::Label());
+			this->Underline_admin_add_line5 = (gcnew System::Windows::Forms::Panel());
+			this->Underline_admin_add_line4 = (gcnew System::Windows::Forms::Panel());
+			this->Underline_admin_add_line3 = (gcnew System::Windows::Forms::Panel());
+			this->Underline_admin_add_line2 = (gcnew System::Windows::Forms::Panel());
+			this->Underline_admin_add_line1 = (gcnew System::Windows::Forms::Panel());
+			this->textBox_admin_add_unitePrice = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_admin_add_volume = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_admin_add_line2 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_admin_add_line1 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox_admin_add_enterprise = (gcnew System::Windows::Forms::TextBox());
+			this->comboBox_admin_add_catagory = (gcnew System::Windows::Forms::ComboBox());
+			this->Underline_admin_add = (gcnew System::Windows::Forms::Panel());
+			this->label_admin_add_category = (gcnew System::Windows::Forms::Label());
+			this->label_admin_add_unitPrice = (gcnew System::Windows::Forms::Label());
+			this->label_admin_add_volume = (gcnew System::Windows::Forms::Label());
+			this->label_admin_add_line2 = (gcnew System::Windows::Forms::Label());
+			this->label_admin_add_line1 = (gcnew System::Windows::Forms::Label());
+			this->label_admin_add_enterprise = (gcnew System::Windows::Forms::Label());
 			this->button_admin_transactions = (gcnew System::Windows::Forms::Button());
 			this->label_admin_total3 = (gcnew System::Windows::Forms::Label());
 			this->label_admin_total2 = (gcnew System::Windows::Forms::Label());
@@ -343,33 +370,6 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel_admin_transactions = (gcnew System::Windows::Forms::Panel());
 			this->textBox_admin_transactions = (gcnew System::Windows::Forms::TextBox());
 			this->label_admin_transactions = (gcnew System::Windows::Forms::Label());
-			this->panel_admin_add = (gcnew System::Windows::Forms::Panel());
-			this->button_admin_addAll = (gcnew System::Windows::Forms::Button());
-			this->comboBox_admin_add_genre = (gcnew System::Windows::Forms::ComboBox());
-			this->label_admin_add_genre = (gcnew System::Windows::Forms::Label());
-			this->label_admin_add_unitUnitPrice = (gcnew System::Windows::Forms::Label());
-			this->label_admin_add_unitVolume = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->label_admin_add_unitLine2 = (gcnew System::Windows::Forms::Label());
-			this->label_admin_add_unitLine1 = (gcnew System::Windows::Forms::Label());
-			this->Underline_admin_add_line5 = (gcnew System::Windows::Forms::Panel());
-			this->Underline_admin_add_line4 = (gcnew System::Windows::Forms::Panel());
-			this->Underline_admin_add_line3 = (gcnew System::Windows::Forms::Panel());
-			this->Underline_admin_add_line2 = (gcnew System::Windows::Forms::Panel());
-			this->Underline_admin_add_line1 = (gcnew System::Windows::Forms::Panel());
-			this->textBox_admin_add_unitePrice = (gcnew System::Windows::Forms::TextBox());
-			this->textBox_admin_add_volume = (gcnew System::Windows::Forms::TextBox());
-			this->textBox_admin_add_line2 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox_admin_add_line1 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox_admin_add_enterprise = (gcnew System::Windows::Forms::TextBox());
-			this->comboBox_admin_add_catagory = (gcnew System::Windows::Forms::ComboBox());
-			this->Underline_admin_add = (gcnew System::Windows::Forms::Panel());
-			this->label_admin_add_category = (gcnew System::Windows::Forms::Label());
-			this->label_admin_add_unitPrice = (gcnew System::Windows::Forms::Label());
-			this->label_admin_add_volume = (gcnew System::Windows::Forms::Label());
-			this->label_admin_add_line2 = (gcnew System::Windows::Forms::Label());
-			this->label_admin_add_line1 = (gcnew System::Windows::Forms::Label());
-			this->label_admin_add_enterprise = (gcnew System::Windows::Forms::Label());
 			this->panel_login = (gcnew System::Windows::Forms::Panel());
 			this->underline_login_password = (gcnew System::Windows::Forms::Panel());
 			this->label_login_password = (gcnew System::Windows::Forms::Label());
@@ -394,8 +394,8 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel_user->SuspendLayout();
 			this->panel_message->SuspendLayout();
 			this->panel_admin->SuspendLayout();
-			this->panel_admin_transactions->SuspendLayout();
 			this->panel_admin_add->SuspendLayout();
+			this->panel_admin_transactions->SuspendLayout();
 			this->panel_login->SuspendLayout();
 			this->panel_confirm->SuspendLayout();
 			this->SuspendLayout();
@@ -469,7 +469,7 @@ private: System::ComponentModel::IContainer^ components;
 				static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(140)));
 			this->label_register_EnergyTrade->Location = System::Drawing::Point(677, 60);
 			this->label_register_EnergyTrade->Name = L"label_register_EnergyTrade";
-			this->label_register_EnergyTrade->Size = System::Drawing::Size(260, 65);
+			this->label_register_EnergyTrade->Size = System::Drawing::Size(312, 79);
 			this->label_register_EnergyTrade->TabIndex = 13;
 			this->label_register_EnergyTrade->Text = L"Energy Trade";
 			this->label_register_EnergyTrade->Click += gcnew System::EventHandler(this, &MainForm::label_register_EnergyTrade_Click);
@@ -483,7 +483,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_register_SignUpTo->ForeColor = System::Drawing::SystemColors::ActiveBorder;
 			this->label_register_SignUpTo->Location = System::Drawing::Point(490, 60);
 			this->label_register_SignUpTo->Name = L"label_register_SignUpTo";
-			this->label_register_SignUpTo->Size = System::Drawing::Size(204, 65);
+			this->label_register_SignUpTo->Size = System::Drawing::Size(248, 79);
 			this->label_register_SignUpTo->TabIndex = 12;
 			this->label_register_SignUpTo->Text = L"Sign up to";
 			// 
@@ -496,7 +496,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_register_ConfirmPassword->ForeColor = System::Drawing::SystemColors::AppWorkspace;
 			this->label_register_ConfirmPassword->Location = System::Drawing::Point(670, 390);
 			this->label_register_ConfirmPassword->Name = L"label_register_ConfirmPassword";
-			this->label_register_ConfirmPassword->Size = System::Drawing::Size(116, 24);
+			this->label_register_ConfirmPassword->Size = System::Drawing::Size(152, 29);
 			this->label_register_ConfirmPassword->TabIndex = 17;
 			this->label_register_ConfirmPassword->Text = L"Confirm password";
 			// 
@@ -509,7 +509,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_register_Password->ForeColor = System::Drawing::SystemColors::AppWorkspace;
 			this->label_register_Password->Location = System::Drawing::Point(670, 315);
 			this->label_register_Password->Name = L"label_register_Password";
-			this->label_register_Password->Size = System::Drawing::Size(68, 24);
+			this->label_register_Password->Size = System::Drawing::Size(90, 29);
 			this->label_register_Password->TabIndex = 16;
 			this->label_register_Password->Text = L"Password";
 			// 
@@ -522,7 +522,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->labal_register_Username->ForeColor = System::Drawing::SystemColors::AppWorkspace;
 			this->labal_register_Username->Location = System::Drawing::Point(670, 240);
 			this->labal_register_Username->Name = L"labal_register_Username";
-			this->labal_register_Username->Size = System::Drawing::Size(70, 24);
+			this->labal_register_Username->Size = System::Drawing::Size(90, 29);
 			this->labal_register_Username->TabIndex = 15;
 			this->labal_register_Username->Text = L"Username";
 			// 
@@ -535,7 +535,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_register_description->ForeColor = System::Drawing::SystemColors::ActiveBorder;
 			this->label_register_description->Location = System::Drawing::Point(500, 125);
 			this->label_register_description->Name = L"label_register_description";
-			this->label_register_description->Size = System::Drawing::Size(259, 24);
+			this->label_register_description->Size = System::Drawing::Size(336, 29);
 			this->label_register_description->TabIndex = 14;
 			this->label_register_description->Text = L"To start trade. Please create your account.";
 			// 
@@ -593,7 +593,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->checkBox_register_showPassword->ForeColor = System::Drawing::SystemColors::ActiveBorder;
 			this->checkBox_register_showPassword->Location = System::Drawing::Point(670, 480);
 			this->checkBox_register_showPassword->Name = L"checkBox_register_showPassword";
-			this->checkBox_register_showPassword->Size = System::Drawing::Size(122, 28);
+			this->checkBox_register_showPassword->Size = System::Drawing::Size(159, 33);
 			this->checkBox_register_showPassword->TabIndex = 8;
 			this->checkBox_register_showPassword->Text = L"Show Password";
 			this->checkBox_register_showPassword->UseVisualStyleBackColor = false;
@@ -608,7 +608,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->textBox_register_conpassword->ForeColor = System::Drawing::SystemColors::ScrollBar;
 			this->textBox_register_conpassword->Location = System::Drawing::Point(675, 425);
 			this->textBox_register_conpassword->Name = L"textBox_register_conpassword";
-			this->textBox_register_conpassword->Size = System::Drawing::Size(340, 19);
+			this->textBox_register_conpassword->Size = System::Drawing::Size(340, 23);
 			this->textBox_register_conpassword->TabIndex = 6;
 			this->textBox_register_conpassword->UseSystemPasswordChar = true;
 			// 
@@ -621,7 +621,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->textBox_register_password->ForeColor = System::Drawing::SystemColors::ScrollBar;
 			this->textBox_register_password->Location = System::Drawing::Point(675, 350);
 			this->textBox_register_password->Name = L"textBox_register_password";
-			this->textBox_register_password->Size = System::Drawing::Size(340, 19);
+			this->textBox_register_password->Size = System::Drawing::Size(340, 23);
 			this->textBox_register_password->TabIndex = 5;
 			this->textBox_register_password->UseSystemPasswordChar = true;
 			// 
@@ -634,7 +634,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->testBox_register_username->ForeColor = System::Drawing::SystemColors::ScrollBar;
 			this->testBox_register_username->Location = System::Drawing::Point(675, 275);
 			this->testBox_register_username->Name = L"testBox_register_username";
-			this->testBox_register_username->Size = System::Drawing::Size(340, 19);
+			this->testBox_register_username->Size = System::Drawing::Size(340, 23);
 			this->testBox_register_username->TabIndex = 4;
 			this->testBox_register_username->TextChanged += gcnew System::EventHandler(this, &MainForm::testBox_register_username_TextChanged);
 			// 
@@ -737,7 +737,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_user_top3->Font = (gcnew System::Drawing::Font(L"Agency FB", 13));
 			this->label_user_top3->Location = System::Drawing::Point(960, 60);
 			this->label_user_top3->Name = L"label_user_top3";
-			this->label_user_top3->Size = System::Drawing::Size(79, 23);
+			this->label_user_top3->Size = System::Drawing::Size(101, 26);
 			this->label_user_top3->TabIndex = 49;
 			this->label_user_top3->Text = L"Natural gas : ";
 			// 
@@ -749,7 +749,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_user_top2->Font = (gcnew System::Drawing::Font(L"Agency FB", 13));
 			this->label_user_top2->Location = System::Drawing::Point(770, 60);
 			this->label_user_top2->Name = L"label_user_top2";
-			this->label_user_top2->Size = System::Drawing::Size(65, 23);
+			this->label_user_top2->Size = System::Drawing::Size(84, 26);
 			this->label_user_top2->TabIndex = 48;
 			this->label_user_top2->Text = L"Crude oil : ";
 			// 
@@ -761,7 +761,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_user_top1->Font = (gcnew System::Drawing::Font(L"Agency FB", 13));
 			this->label_user_top1->Location = System::Drawing::Point(515, 60);
 			this->label_user_top1->Name = L"label_user_top1";
-			this->label_user_top1->Size = System::Drawing::Size(132, 23);
+			this->label_user_top1->Size = System::Drawing::Size(173, 26);
 			this->label_user_top1->TabIndex = 47;
 			this->label_user_top1->Text = L"Total of Electric energy :";
 			// 
@@ -884,7 +884,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_user_unit->Font = (gcnew System::Drawing::Font(L"Agency FB", 20));
 			this->label_user_unit->Location = System::Drawing::Point(360, 605);
 			this->label_user_unit->Name = L"label_user_unit";
-			this->label_user_unit->Size = System::Drawing::Size(44, 32);
+			this->label_user_unit->Size = System::Drawing::Size(58, 42);
 			this->label_user_unit->TabIndex = 27;
 			this->label_user_unit->Text = L"Unit";
 			// 
@@ -895,7 +895,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->textBox_user_unit->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox_user_unit->Location = System::Drawing::Point(365, 640);
 			this->textBox_user_unit->Name = L"textBox_user_unit";
-			this->textBox_user_unit->Size = System::Drawing::Size(200, 23);
+			this->textBox_user_unit->Size = System::Drawing::Size(200, 28);
 			this->textBox_user_unit->TabIndex = 26;
 			// 
 			// label_user_price
@@ -906,7 +906,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_user_price->Font = (gcnew System::Drawing::Font(L"Agency FB", 15));
 			this->label_user_price->Location = System::Drawing::Point(360, 480);
 			this->label_user_price->Name = L"label_user_price";
-			this->label_user_price->Size = System::Drawing::Size(66, 24);
+			this->label_user_price->Size = System::Drawing::Size(85, 29);
 			this->label_user_price->TabIndex = 25;
 			this->label_user_price->Text = L"Unit price";
 			// 
@@ -918,7 +918,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_user_volume->Font = (gcnew System::Drawing::Font(L"Agency FB", 15));
 			this->label_user_volume->Location = System::Drawing::Point(360, 420);
 			this->label_user_volume->Name = L"label_user_volume";
-			this->label_user_volume->Size = System::Drawing::Size(50, 24);
+			this->label_user_volume->Size = System::Drawing::Size(66, 29);
 			this->label_user_volume->TabIndex = 24;
 			this->label_user_volume->Text = L"volume";
 			// 
@@ -930,7 +930,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_user_line2->Font = (gcnew System::Drawing::Font(L"Agency FB", 15));
 			this->label_user_line2->Location = System::Drawing::Point(360, 360);
 			this->label_user_line2->Name = L"label_user_line2";
-			this->label_user_line2->Size = System::Drawing::Size(53, 24);
+			this->label_user_line2->Size = System::Drawing::Size(69, 29);
 			this->label_user_line2->TabIndex = 23;
 			this->label_user_line2->Text = L"License";
 			// 
@@ -942,7 +942,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_user_line1->Font = (gcnew System::Drawing::Font(L"Agency FB", 15));
 			this->label_user_line1->Location = System::Drawing::Point(360, 300);
 			this->label_user_line1->Name = L"label_user_line1";
-			this->label_user_line1->Size = System::Drawing::Size(78, 24);
+			this->label_user_line1->Size = System::Drawing::Size(100, 29);
 			this->label_user_line1->TabIndex = 22;
 			this->label_user_line1->Text = L"Substations";
 			// 
@@ -954,7 +954,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_user_genre->Font = (gcnew System::Drawing::Font(L"Agency FB", 15));
 			this->label_user_genre->Location = System::Drawing::Point(850, 190);
 			this->label_user_genre->Name = L"label_user_genre";
-			this->label_user_genre->Size = System::Drawing::Size(45, 24);
+			this->label_user_genre->Size = System::Drawing::Size(58, 29);
 			this->label_user_genre->TabIndex = 21;
 			this->label_user_genre->Text = L"Genre";
 			this->label_user_genre->Visible = false;
@@ -967,7 +967,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->comboBox_user_genre->FormattingEnabled = true;
 			this->comboBox_user_genre->Location = System::Drawing::Point(850, 220);
 			this->comboBox_user_genre->Name = L"comboBox_user_genre";
-			this->comboBox_user_genre->Size = System::Drawing::Size(260, 28);
+			this->comboBox_user_genre->Size = System::Drawing::Size(260, 32);
 			this->comboBox_user_genre->TabIndex = 20;
 			this->comboBox_user_genre->Visible = false;
 			this->comboBox_user_genre->SelectedIndexChanged += gcnew System::EventHandler(this, &MainForm::comboBox_user_genre_SelectedIndexChanged);
@@ -980,7 +980,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_user_enterprise->Font = (gcnew System::Drawing::Font(L"Agency FB", 15));
 			this->label_user_enterprise->Location = System::Drawing::Point(360, 190);
 			this->label_user_enterprise->Name = L"label_user_enterprise";
-			this->label_user_enterprise->Size = System::Drawing::Size(71, 24);
+			this->label_user_enterprise->Size = System::Drawing::Size(91, 29);
 			this->label_user_enterprise->TabIndex = 19;
 			this->label_user_enterprise->Text = L"Enterprise";
 			this->label_user_enterprise->Click += gcnew System::EventHandler(this, &MainForm::label_user_company_Click);
@@ -995,7 +995,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->comboBox_user_company->Items->AddRange(gcnew cli::array< System::Object^  >(1) { L"Test1" });
 			this->comboBox_user_company->Location = System::Drawing::Point(360, 220);
 			this->comboBox_user_company->Name = L"comboBox_user_company";
-			this->comboBox_user_company->Size = System::Drawing::Size(350, 28);
+			this->comboBox_user_company->Size = System::Drawing::Size(350, 32);
 			this->comboBox_user_company->TabIndex = 18;
 			this->comboBox_user_company->SelectedIndexChanged += gcnew System::EventHandler(this, &MainForm::comboBox_user_enterprise_SelectedIndexChanged);
 			// 
@@ -1100,7 +1100,7 @@ private: System::ComponentModel::IContainer^ components;
 				static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(140)));
 			this->label_user_EnergyTrade->Location = System::Drawing::Point(280, 42);
 			this->label_user_EnergyTrade->Name = L"label_user_EnergyTrade";
-			this->label_user_EnergyTrade->Size = System::Drawing::Size(210, 55);
+			this->label_user_EnergyTrade->Size = System::Drawing::Size(270, 72);
 			this->label_user_EnergyTrade->TabIndex = 0;
 			this->label_user_EnergyTrade->Text = L"Energy Trade";
 			// 
@@ -1142,7 +1142,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_noti->ForeColor = System::Drawing::SystemColors::ActiveBorder;
 			this->label_noti->Location = System::Drawing::Point(13, 7);
 			this->label_noti->Name = L"label_noti";
-			this->label_noti->Size = System::Drawing::Size(73, 24);
+			this->label_noti->Size = System::Drawing::Size(94, 29);
 			this->label_noti->TabIndex = 15;
 			this->label_noti->Text = L"Notification";
 			// 
@@ -1176,6 +1176,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel_admin->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(20)), static_cast<System::Int32>(static_cast<System::Byte>(20)),
 				static_cast<System::Int32>(static_cast<System::Byte>(20)));
 			this->panel_admin->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel_admin.BackgroundImage")));
+			this->panel_admin->Controls->Add(this->panel_admin_add);
 			this->panel_admin->Controls->Add(this->button_admin_transactions);
 			this->panel_admin->Controls->Add(this->label_admin_total3);
 			this->panel_admin->Controls->Add(this->label_admin_total2);
@@ -1209,7 +1210,6 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel_admin->Controls->Add(this->label_admin_name);
 			this->panel_admin->Controls->Add(this->button_admin_close);
 			this->panel_admin->Controls->Add(this->label_admin_energyTrade);
-			this->panel_admin->Controls->Add(this->panel_admin_add);
 			this->panel_admin->Controls->Add(this->panel_admin_transactions);
 			this->panel_admin->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel_admin->Font = (gcnew System::Drawing::Font(L"Agency FB", 14));
@@ -1222,6 +1222,328 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel_admin->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &MainForm::MainForm_MouseDown);
 			this->panel_admin->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &MainForm::MainForm_MouseMove);
 			this->panel_admin->MouseUp += gcnew System::Windows::Forms::MouseEventHandler(this, &MainForm::MainForm_MouseUp);
+			// 
+			// panel_admin_add
+			// 
+			this->panel_admin_add->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)),
+				static_cast<System::Int32>(static_cast<System::Byte>(32)));
+			this->panel_admin_add->Controls->Add(this->button_admin_addAll);
+			this->panel_admin_add->Controls->Add(this->comboBox_admin_add_genre);
+			this->panel_admin_add->Controls->Add(this->label_admin_add_genre);
+			this->panel_admin_add->Controls->Add(this->label_admin_add_unitUnitPrice);
+			this->panel_admin_add->Controls->Add(this->label_admin_add_unitVolume);
+			this->panel_admin_add->Controls->Add(this->label2);
+			this->panel_admin_add->Controls->Add(this->label_admin_add_unitLine2);
+			this->panel_admin_add->Controls->Add(this->label_admin_add_unitLine1);
+			this->panel_admin_add->Controls->Add(this->Underline_admin_add_line5);
+			this->panel_admin_add->Controls->Add(this->Underline_admin_add_line4);
+			this->panel_admin_add->Controls->Add(this->Underline_admin_add_line3);
+			this->panel_admin_add->Controls->Add(this->Underline_admin_add_line2);
+			this->panel_admin_add->Controls->Add(this->Underline_admin_add_line1);
+			this->panel_admin_add->Controls->Add(this->textBox_admin_add_unitePrice);
+			this->panel_admin_add->Controls->Add(this->textBox_admin_add_volume);
+			this->panel_admin_add->Controls->Add(this->textBox_admin_add_line2);
+			this->panel_admin_add->Controls->Add(this->textBox_admin_add_line1);
+			this->panel_admin_add->Controls->Add(this->textBox_admin_add_enterprise);
+			this->panel_admin_add->Controls->Add(this->comboBox_admin_add_catagory);
+			this->panel_admin_add->Controls->Add(this->Underline_admin_add);
+			this->panel_admin_add->Controls->Add(this->label_admin_add_category);
+			this->panel_admin_add->Controls->Add(this->label_admin_add_unitPrice);
+			this->panel_admin_add->Controls->Add(this->label_admin_add_volume);
+			this->panel_admin_add->Controls->Add(this->label_admin_add_line2);
+			this->panel_admin_add->Controls->Add(this->label_admin_add_line1);
+			this->panel_admin_add->Controls->Add(this->label_admin_add_enterprise);
+			this->panel_admin_add->Location = System::Drawing::Point(257, 145);
+			this->panel_admin_add->Name = L"panel_admin_add";
+			this->panel_admin_add->Size = System::Drawing::Size(1021, 575);
+			this->panel_admin_add->TabIndex = 40;
+			this->panel_admin_add->Visible = false;
+			this->panel_admin_add->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MainForm::panel_admin_add_Paint);
+			// 
+			// button_admin_addAll
+			// 
+			this->button_admin_addAll->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button_admin_addAll->ForeColor = System::Drawing::SystemColors::ActiveBorder;
+			this->button_admin_addAll->Location = System::Drawing::Point(753, 475);
+			this->button_admin_addAll->Name = L"button_admin_addAll";
+			this->button_admin_addAll->Size = System::Drawing::Size(200, 50);
+			this->button_admin_addAll->TabIndex = 63;
+			this->button_admin_addAll->Text = L"Add";
+			this->button_admin_addAll->UseVisualStyleBackColor = true;
+			this->button_admin_addAll->Click += gcnew System::EventHandler(this, &MainForm::button_admin_addAll_Click);
+			// 
+			// comboBox_admin_add_genre
+			// 
+			this->comboBox_admin_add_genre->AutoCompleteCustomSource->AddRange(gcnew cli::array< System::String^  >(3) {
+				L"Electric energy",
+					L"Crude oil", L"Natural gas"
+			});
+			this->comboBox_admin_add_genre->BackColor = System::Drawing::SystemColors::Window;
+			this->comboBox_admin_add_genre->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox_admin_add_genre->Font = (gcnew System::Drawing::Font(L"Agency FB", 12));
+			this->comboBox_admin_add_genre->FormattingEnabled = true;
+			this->comboBox_admin_add_genre->Location = System::Drawing::Point(630, 46);
+			this->comboBox_admin_add_genre->Name = L"comboBox_admin_add_genre";
+			this->comboBox_admin_add_genre->Size = System::Drawing::Size(200, 32);
+			this->comboBox_admin_add_genre->TabIndex = 62;
+			this->comboBox_admin_add_genre->Visible = false;
+			// 
+			// label_admin_add_genre
+			// 
+			this->label_admin_add_genre->AutoSize = true;
+			this->label_admin_add_genre->Font = (gcnew System::Drawing::Font(L"Agency FB", 15));
+			this->label_admin_add_genre->Location = System::Drawing::Point(505, 45);
+			this->label_admin_add_genre->Name = L"label_admin_add_genre";
+			this->label_admin_add_genre->Size = System::Drawing::Size(58, 29);
+			this->label_admin_add_genre->TabIndex = 61;
+			this->label_admin_add_genre->Text = L"Genre";
+			this->label_admin_add_genre->Visible = false;
+			// 
+			// label_admin_add_unitUnitPrice
+			// 
+			this->label_admin_add_unitUnitPrice->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
+				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
+			this->label_admin_add_unitUnitPrice->Location = System::Drawing::Point(663, 345);
+			this->label_admin_add_unitUnitPrice->Name = L"label_admin_add_unitUnitPrice";
+			this->label_admin_add_unitUnitPrice->Size = System::Drawing::Size(40, 24);
+			this->label_admin_add_unitUnitPrice->TabIndex = 60;
+			this->label_admin_add_unitUnitPrice->Text = L"$";
+			this->label_admin_add_unitUnitPrice->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// label_admin_add_unitVolume
+			// 
+			this->label_admin_add_unitVolume->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
+				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
+			this->label_admin_add_unitVolume->Location = System::Drawing::Point(663, 285);
+			this->label_admin_add_unitVolume->Name = L"label_admin_add_unitVolume";
+			this->label_admin_add_unitVolume->Size = System::Drawing::Size(40, 24);
+			this->label_admin_add_unitVolume->TabIndex = 59;
+			this->label_admin_add_unitVolume->Text = L"unit";
+			this->label_admin_add_unitVolume->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// label2
+			// 
+			this->label2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)),
+				static_cast<System::Int32>(static_cast<System::Byte>(32)));
+			this->label2->Location = System::Drawing::Point(663, 285);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(40, 24);
+			this->label2->TabIndex = 58;
+			this->label2->Text = L"unit";
+			this->label2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// label_admin_add_unitLine2
+			// 
+			this->label_admin_add_unitLine2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
+				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
+			this->label_admin_add_unitLine2->Location = System::Drawing::Point(663, 225);
+			this->label_admin_add_unitLine2->Name = L"label_admin_add_unitLine2";
+			this->label_admin_add_unitLine2->Size = System::Drawing::Size(40, 24);
+			this->label_admin_add_unitLine2->TabIndex = 57;
+			this->label_admin_add_unitLine2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// label_admin_add_unitLine1
+			// 
+			this->label_admin_add_unitLine1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
+				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
+			this->label_admin_add_unitLine1->Location = System::Drawing::Point(663, 165);
+			this->label_admin_add_unitLine1->Name = L"label_admin_add_unitLine1";
+			this->label_admin_add_unitLine1->Size = System::Drawing::Size(40, 24);
+			this->label_admin_add_unitLine1->TabIndex = 41;
+			this->label_admin_add_unitLine1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// Underline_admin_add_line5
+			// 
+			this->Underline_admin_add_line5->BackColor = System::Drawing::SystemColors::ActiveBorder;
+			this->Underline_admin_add_line5->Location = System::Drawing::Point(240, 370);
+			this->Underline_admin_add_line5->Name = L"Underline_admin_add_line5";
+			this->Underline_admin_add_line5->Size = System::Drawing::Size(410, 2);
+			this->Underline_admin_add_line5->TabIndex = 56;
+			// 
+			// Underline_admin_add_line4
+			// 
+			this->Underline_admin_add_line4->BackColor = System::Drawing::SystemColors::ActiveBorder;
+			this->Underline_admin_add_line4->Location = System::Drawing::Point(240, 310);
+			this->Underline_admin_add_line4->Name = L"Underline_admin_add_line4";
+			this->Underline_admin_add_line4->Size = System::Drawing::Size(410, 2);
+			this->Underline_admin_add_line4->TabIndex = 55;
+			// 
+			// Underline_admin_add_line3
+			// 
+			this->Underline_admin_add_line3->BackColor = System::Drawing::SystemColors::ActiveBorder;
+			this->Underline_admin_add_line3->Location = System::Drawing::Point(240, 250);
+			this->Underline_admin_add_line3->Name = L"Underline_admin_add_line3";
+			this->Underline_admin_add_line3->Size = System::Drawing::Size(410, 2);
+			this->Underline_admin_add_line3->TabIndex = 54;
+			// 
+			// Underline_admin_add_line2
+			// 
+			this->Underline_admin_add_line2->BackColor = System::Drawing::SystemColors::ActiveBorder;
+			this->Underline_admin_add_line2->Location = System::Drawing::Point(240, 190);
+			this->Underline_admin_add_line2->Name = L"Underline_admin_add_line2";
+			this->Underline_admin_add_line2->Size = System::Drawing::Size(410, 2);
+			this->Underline_admin_add_line2->TabIndex = 53;
+			// 
+			// Underline_admin_add_line1
+			// 
+			this->Underline_admin_add_line1->BackColor = System::Drawing::SystemColors::ActiveBorder;
+			this->Underline_admin_add_line1->Location = System::Drawing::Point(240, 130);
+			this->Underline_admin_add_line1->Name = L"Underline_admin_add_line1";
+			this->Underline_admin_add_line1->Size = System::Drawing::Size(410, 2);
+			this->Underline_admin_add_line1->TabIndex = 52;
+			// 
+			// textBox_admin_add_unitePrice
+			// 
+			this->textBox_admin_add_unitePrice->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
+				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
+			this->textBox_admin_add_unitePrice->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox_admin_add_unitePrice->ForeColor = System::Drawing::SystemColors::ActiveBorder;
+			this->textBox_admin_add_unitePrice->Location = System::Drawing::Point(245, 345);
+			this->textBox_admin_add_unitePrice->Name = L"textBox_admin_add_unitePrice";
+			this->textBox_admin_add_unitePrice->Size = System::Drawing::Size(400, 28);
+			this->textBox_admin_add_unitePrice->TabIndex = 51;
+			// 
+			// textBox_admin_add_volume
+			// 
+			this->textBox_admin_add_volume->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
+				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
+			this->textBox_admin_add_volume->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox_admin_add_volume->ForeColor = System::Drawing::SystemColors::ActiveBorder;
+			this->textBox_admin_add_volume->Location = System::Drawing::Point(245, 285);
+			this->textBox_admin_add_volume->Name = L"textBox_admin_add_volume";
+			this->textBox_admin_add_volume->Size = System::Drawing::Size(400, 28);
+			this->textBox_admin_add_volume->TabIndex = 50;
+			// 
+			// textBox_admin_add_line2
+			// 
+			this->textBox_admin_add_line2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
+				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
+			this->textBox_admin_add_line2->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox_admin_add_line2->ForeColor = System::Drawing::SystemColors::ActiveBorder;
+			this->textBox_admin_add_line2->Location = System::Drawing::Point(245, 225);
+			this->textBox_admin_add_line2->Name = L"textBox_admin_add_line2";
+			this->textBox_admin_add_line2->Size = System::Drawing::Size(400, 28);
+			this->textBox_admin_add_line2->TabIndex = 49;
+			// 
+			// textBox_admin_add_line1
+			// 
+			this->textBox_admin_add_line1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
+				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
+			this->textBox_admin_add_line1->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox_admin_add_line1->ForeColor = System::Drawing::SystemColors::ActiveBorder;
+			this->textBox_admin_add_line1->Location = System::Drawing::Point(245, 165);
+			this->textBox_admin_add_line1->Name = L"textBox_admin_add_line1";
+			this->textBox_admin_add_line1->Size = System::Drawing::Size(400, 28);
+			this->textBox_admin_add_line1->TabIndex = 48;
+			// 
+			// textBox_admin_add_enterprise
+			// 
+			this->textBox_admin_add_enterprise->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
+				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
+			this->textBox_admin_add_enterprise->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->textBox_admin_add_enterprise->ForeColor = System::Drawing::SystemColors::ActiveBorder;
+			this->textBox_admin_add_enterprise->Location = System::Drawing::Point(245, 105);
+			this->textBox_admin_add_enterprise->Name = L"textBox_admin_add_enterprise";
+			this->textBox_admin_add_enterprise->Size = System::Drawing::Size(400, 28);
+			this->textBox_admin_add_enterprise->TabIndex = 47;
+			// 
+			// comboBox_admin_add_catagory
+			// 
+			this->comboBox_admin_add_catagory->AutoCompleteCustomSource->AddRange(gcnew cli::array< System::String^  >(3) {
+				L"Electric energy",
+					L"Crude oil", L"Natural gas"
+			});
+			this->comboBox_admin_add_catagory->BackColor = System::Drawing::SystemColors::Window;
+			this->comboBox_admin_add_catagory->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->comboBox_admin_add_catagory->Font = (gcnew System::Drawing::Font(L"Agency FB", 12));
+			this->comboBox_admin_add_catagory->FormattingEnabled = true;
+			this->comboBox_admin_add_catagory->Items->AddRange(gcnew cli::array< System::Object^  >(3) {
+				L"Electric energy", L"Crude oil",
+					L"Natural gas"
+			});
+			this->comboBox_admin_add_catagory->Location = System::Drawing::Point(244, 46);
+			this->comboBox_admin_add_catagory->Name = L"comboBox_admin_add_catagory";
+			this->comboBox_admin_add_catagory->Size = System::Drawing::Size(200, 32);
+			this->comboBox_admin_add_catagory->TabIndex = 46;
+			this->comboBox_admin_add_catagory->SelectedIndexChanged += gcnew System::EventHandler(this, &MainForm::comboBox_admin_add_catagory_SelectedIndexChanged);
+			// 
+			// Underline_admin_add
+			// 
+			this->Underline_admin_add->BackColor = System::Drawing::SystemColors::ActiveBorder;
+			this->Underline_admin_add->Location = System::Drawing::Point(49, 420);
+			this->Underline_admin_add->Name = L"Underline_admin_add";
+			this->Underline_admin_add->Size = System::Drawing::Size(924, 2);
+			this->Underline_admin_add->TabIndex = 45;
+			// 
+			// label_admin_add_category
+			// 
+			this->label_admin_add_category->AutoSize = true;
+			this->label_admin_add_category->Font = (gcnew System::Drawing::Font(L"Agency FB", 15));
+			this->label_admin_add_category->Location = System::Drawing::Point(105, 45);
+			this->label_admin_add_category->Name = L"label_admin_add_category";
+			this->label_admin_add_category->Size = System::Drawing::Size(80, 29);
+			this->label_admin_add_category->TabIndex = 44;
+			this->label_admin_add_category->Text = L"Category";
+			// 
+			// label_admin_add_unitPrice
+			// 
+			this->label_admin_add_unitPrice->AutoSize = true;
+			this->label_admin_add_unitPrice->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
+				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
+			this->label_admin_add_unitPrice->Font = (gcnew System::Drawing::Font(L"Agency FB", 15));
+			this->label_admin_add_unitPrice->Location = System::Drawing::Point(105, 345);
+			this->label_admin_add_unitPrice->Name = L"label_admin_add_unitPrice";
+			this->label_admin_add_unitPrice->Size = System::Drawing::Size(85, 29);
+			this->label_admin_add_unitPrice->TabIndex = 43;
+			this->label_admin_add_unitPrice->Text = L"Unit price";
+			// 
+			// label_admin_add_volume
+			// 
+			this->label_admin_add_volume->AutoSize = true;
+			this->label_admin_add_volume->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
+				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
+			this->label_admin_add_volume->Font = (gcnew System::Drawing::Font(L"Agency FB", 15));
+			this->label_admin_add_volume->Location = System::Drawing::Point(105, 285);
+			this->label_admin_add_volume->Name = L"label_admin_add_volume";
+			this->label_admin_add_volume->Size = System::Drawing::Size(66, 29);
+			this->label_admin_add_volume->TabIndex = 42;
+			this->label_admin_add_volume->Text = L"volume";
+			// 
+			// label_admin_add_line2
+			// 
+			this->label_admin_add_line2->AutoSize = true;
+			this->label_admin_add_line2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
+				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
+			this->label_admin_add_line2->Font = (gcnew System::Drawing::Font(L"Agency FB", 15));
+			this->label_admin_add_line2->Location = System::Drawing::Point(105, 225);
+			this->label_admin_add_line2->Name = L"label_admin_add_line2";
+			this->label_admin_add_line2->Size = System::Drawing::Size(69, 29);
+			this->label_admin_add_line2->TabIndex = 41;
+			this->label_admin_add_line2->Text = L"License";
+			// 
+			// label_admin_add_line1
+			// 
+			this->label_admin_add_line1->AutoSize = true;
+			this->label_admin_add_line1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
+				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
+			this->label_admin_add_line1->Font = (gcnew System::Drawing::Font(L"Agency FB", 15));
+			this->label_admin_add_line1->Location = System::Drawing::Point(105, 165);
+			this->label_admin_add_line1->Name = L"label_admin_add_line1";
+			this->label_admin_add_line1->Size = System::Drawing::Size(100, 29);
+			this->label_admin_add_line1->TabIndex = 23;
+			this->label_admin_add_line1->Text = L"Substations";
+			// 
+			// label_admin_add_enterprise
+			// 
+			this->label_admin_add_enterprise->AutoSize = true;
+			this->label_admin_add_enterprise->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
+				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
+			this->label_admin_add_enterprise->Font = (gcnew System::Drawing::Font(L"Agency FB", 15));
+			this->label_admin_add_enterprise->Location = System::Drawing::Point(105, 105);
+			this->label_admin_add_enterprise->Name = L"label_admin_add_enterprise";
+			this->label_admin_add_enterprise->Size = System::Drawing::Size(91, 29);
+			this->label_admin_add_enterprise->TabIndex = 20;
+			this->label_admin_add_enterprise->Text = L"Enterprise";
 			// 
 			// button_admin_transactions
 			// 
@@ -1278,7 +1600,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_aadmim_top3->Font = (gcnew System::Drawing::Font(L"Agency FB", 13));
 			this->label_aadmim_top3->Location = System::Drawing::Point(960, 60);
 			this->label_aadmim_top3->Name = L"label_aadmim_top3";
-			this->label_aadmim_top3->Size = System::Drawing::Size(79, 23);
+			this->label_aadmim_top3->Size = System::Drawing::Size(101, 26);
 			this->label_aadmim_top3->TabIndex = 43;
 			this->label_aadmim_top3->Text = L"Natural gas : ";
 			// 
@@ -1290,7 +1612,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_aadmim_top2->Font = (gcnew System::Drawing::Font(L"Agency FB", 13));
 			this->label_aadmim_top2->Location = System::Drawing::Point(770, 60);
 			this->label_aadmim_top2->Name = L"label_aadmim_top2";
-			this->label_aadmim_top2->Size = System::Drawing::Size(65, 23);
+			this->label_aadmim_top2->Size = System::Drawing::Size(84, 26);
 			this->label_aadmim_top2->TabIndex = 42;
 			this->label_aadmim_top2->Text = L"Crude oil : ";
 			// 
@@ -1302,7 +1624,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_aadmim_top1->Font = (gcnew System::Drawing::Font(L"Agency FB", 13));
 			this->label_aadmim_top1->Location = System::Drawing::Point(515, 60);
 			this->label_aadmim_top1->Name = L"label_aadmim_top1";
-			this->label_aadmim_top1->Size = System::Drawing::Size(132, 23);
+			this->label_aadmim_top1->Size = System::Drawing::Size(173, 26);
 			this->label_aadmim_top1->TabIndex = 41;
 			this->label_aadmim_top1->Text = L"Total of Electric energy :";
 			// 
@@ -1432,7 +1754,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_admin_unitPrice->Font = (gcnew System::Drawing::Font(L"Agency FB", 15));
 			this->label_admin_unitPrice->Location = System::Drawing::Point(360, 480);
 			this->label_admin_unitPrice->Name = L"label_admin_unitPrice";
-			this->label_admin_unitPrice->Size = System::Drawing::Size(66, 24);
+			this->label_admin_unitPrice->Size = System::Drawing::Size(85, 29);
 			this->label_admin_unitPrice->TabIndex = 25;
 			this->label_admin_unitPrice->Text = L"Unit price";
 			// 
@@ -1444,7 +1766,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_admin_volume->Font = (gcnew System::Drawing::Font(L"Agency FB", 15));
 			this->label_admin_volume->Location = System::Drawing::Point(360, 420);
 			this->label_admin_volume->Name = L"label_admin_volume";
-			this->label_admin_volume->Size = System::Drawing::Size(50, 24);
+			this->label_admin_volume->Size = System::Drawing::Size(66, 29);
 			this->label_admin_volume->TabIndex = 24;
 			this->label_admin_volume->Text = L"volume";
 			// 
@@ -1456,7 +1778,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_admin_line2->Font = (gcnew System::Drawing::Font(L"Agency FB", 15));
 			this->label_admin_line2->Location = System::Drawing::Point(360, 360);
 			this->label_admin_line2->Name = L"label_admin_line2";
-			this->label_admin_line2->Size = System::Drawing::Size(53, 24);
+			this->label_admin_line2->Size = System::Drawing::Size(69, 29);
 			this->label_admin_line2->TabIndex = 23;
 			this->label_admin_line2->Text = L"License";
 			// 
@@ -1468,7 +1790,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_admin_line1->Font = (gcnew System::Drawing::Font(L"Agency FB", 15));
 			this->label_admin_line1->Location = System::Drawing::Point(360, 300);
 			this->label_admin_line1->Name = L"label_admin_line1";
-			this->label_admin_line1->Size = System::Drawing::Size(78, 24);
+			this->label_admin_line1->Size = System::Drawing::Size(100, 29);
 			this->label_admin_line1->TabIndex = 22;
 			this->label_admin_line1->Text = L"Substations";
 			// 
@@ -1480,7 +1802,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_admin_genre->Font = (gcnew System::Drawing::Font(L"Agency FB", 15));
 			this->label_admin_genre->Location = System::Drawing::Point(850, 190);
 			this->label_admin_genre->Name = L"label_admin_genre";
-			this->label_admin_genre->Size = System::Drawing::Size(45, 24);
+			this->label_admin_genre->Size = System::Drawing::Size(58, 29);
 			this->label_admin_genre->TabIndex = 21;
 			this->label_admin_genre->Text = L"Genre";
 			this->label_admin_genre->Visible = false;
@@ -1493,9 +1815,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->comboBox_admin_genre->FormattingEnabled = true;
 			this->comboBox_admin_genre->Location = System::Drawing::Point(850, 220);
 			this->comboBox_admin_genre->Name = L"comboBox_admin_genre";
-			this->comboBox_admin_genre->Size = System::Drawing::Size(260, 28);
+			this->comboBox_admin_genre->Size = System::Drawing::Size(260, 32);
 			this->comboBox_admin_genre->TabIndex = 20;
 			this->comboBox_admin_genre->Visible = false;
+			this->comboBox_admin_genre->SelectedIndexChanged += gcnew System::EventHandler(this, &MainForm::comboBox_admin_genre_SelectedIndexChanged);
 			// 
 			// label_admin_enterpise
 			// 
@@ -1505,7 +1828,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_admin_enterpise->Font = (gcnew System::Drawing::Font(L"Agency FB", 15));
 			this->label_admin_enterpise->Location = System::Drawing::Point(360, 190);
 			this->label_admin_enterpise->Name = L"label_admin_enterpise";
-			this->label_admin_enterpise->Size = System::Drawing::Size(71, 24);
+			this->label_admin_enterpise->Size = System::Drawing::Size(91, 29);
 			this->label_admin_enterpise->TabIndex = 19;
 			this->label_admin_enterpise->Text = L"Enterprise";
 			// 
@@ -1518,7 +1841,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->comboBox_admin_enterprise->Items->AddRange(gcnew cli::array< System::Object^  >(1) { L"Test1" });
 			this->comboBox_admin_enterprise->Location = System::Drawing::Point(360, 220);
 			this->comboBox_admin_enterprise->Name = L"comboBox_admin_enterprise";
-			this->comboBox_admin_enterprise->Size = System::Drawing::Size(350, 28);
+			this->comboBox_admin_enterprise->Size = System::Drawing::Size(350, 32);
 			this->comboBox_admin_enterprise->TabIndex = 18;
 			this->comboBox_admin_enterprise->SelectedIndexChanged += gcnew System::EventHandler(this, &MainForm::comboBox_admin_enterprise_SelectedIndexChanged);
 			// 
@@ -1623,7 +1946,7 @@ private: System::ComponentModel::IContainer^ components;
 				static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(140)));
 			this->label_admin_energyTrade->Location = System::Drawing::Point(280, 42);
 			this->label_admin_energyTrade->Name = L"label_admin_energyTrade";
-			this->label_admin_energyTrade->Size = System::Drawing::Size(210, 55);
+			this->label_admin_energyTrade->Size = System::Drawing::Size(270, 72);
 			this->label_admin_energyTrade->TabIndex = 0;
 			this->label_admin_energyTrade->Text = L"Energy Trade";
 			// 
@@ -1659,331 +1982,9 @@ private: System::ComponentModel::IContainer^ components;
 				static_cast<System::Byte>(0)));
 			this->label_admin_transactions->Location = System::Drawing::Point(60, 30);
 			this->label_admin_transactions->Name = L"label_admin_transactions";
-			this->label_admin_transactions->Size = System::Drawing::Size(80, 25);
+			this->label_admin_transactions->Size = System::Drawing::Size(110, 32);
 			this->label_admin_transactions->TabIndex = 0;
 			this->label_admin_transactions->Text = L"Transaction";
-			// 
-			// panel_admin_add
-			// 
-			this->panel_admin_add->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)),
-				static_cast<System::Int32>(static_cast<System::Byte>(32)));
-			this->panel_admin_add->Controls->Add(this->button_admin_addAll);
-			this->panel_admin_add->Controls->Add(this->comboBox_admin_add_genre);
-			this->panel_admin_add->Controls->Add(this->label_admin_add_genre);
-			this->panel_admin_add->Controls->Add(this->label_admin_add_unitUnitPrice);
-			this->panel_admin_add->Controls->Add(this->label_admin_add_unitVolume);
-			this->panel_admin_add->Controls->Add(this->label2);
-			this->panel_admin_add->Controls->Add(this->label_admin_add_unitLine2);
-			this->panel_admin_add->Controls->Add(this->label_admin_add_unitLine1);
-			this->panel_admin_add->Controls->Add(this->Underline_admin_add_line5);
-			this->panel_admin_add->Controls->Add(this->Underline_admin_add_line4);
-			this->panel_admin_add->Controls->Add(this->Underline_admin_add_line3);
-			this->panel_admin_add->Controls->Add(this->Underline_admin_add_line2);
-			this->panel_admin_add->Controls->Add(this->Underline_admin_add_line1);
-			this->panel_admin_add->Controls->Add(this->textBox_admin_add_unitePrice);
-			this->panel_admin_add->Controls->Add(this->textBox_admin_add_volume);
-			this->panel_admin_add->Controls->Add(this->textBox_admin_add_line2);
-			this->panel_admin_add->Controls->Add(this->textBox_admin_add_line1);
-			this->panel_admin_add->Controls->Add(this->textBox_admin_add_enterprise);
-			this->panel_admin_add->Controls->Add(this->comboBox_admin_add_catagory);
-			this->panel_admin_add->Controls->Add(this->Underline_admin_add);
-			this->panel_admin_add->Controls->Add(this->label_admin_add_category);
-			this->panel_admin_add->Controls->Add(this->label_admin_add_unitPrice);
-			this->panel_admin_add->Controls->Add(this->label_admin_add_volume);
-			this->panel_admin_add->Controls->Add(this->label_admin_add_line2);
-			this->panel_admin_add->Controls->Add(this->label_admin_add_line1);
-			this->panel_admin_add->Controls->Add(this->label_admin_add_enterprise);
-			this->panel_admin_add->Location = System::Drawing::Point(257, 145);
-			this->panel_admin_add->Name = L"panel_admin_add";
-			this->panel_admin_add->Size = System::Drawing::Size(1021, 575);
-			this->panel_admin_add->TabIndex = 40;
-			this->panel_admin_add->Visible = false;
-			this->panel_admin_add->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MainForm::panel_admin_add_Paint);
-			// 
-			// button_admin_addAll
-			// 
-			this->button_admin_addAll->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button_admin_addAll->ForeColor = System::Drawing::SystemColors::ActiveBorder;
-			this->button_admin_addAll->Location = System::Drawing::Point(753, 475);
-			this->button_admin_addAll->Name = L"button_admin_addAll";
-			this->button_admin_addAll->Size = System::Drawing::Size(200, 50);
-			this->button_admin_addAll->TabIndex = 63;
-			this->button_admin_addAll->Text = L"Add";
-			this->button_admin_addAll->UseVisualStyleBackColor = true;
-			this->button_admin_addAll->Click += gcnew System::EventHandler(this, &MainForm::button_admin_addAll_Click);
-			// 
-			// comboBox_admin_add_genre
-			// 
-			this->comboBox_admin_add_genre->AutoCompleteCustomSource->AddRange(gcnew cli::array< System::String^  >(3) {
-				L"Electric energy",
-					L"Crude oil", L"Natural gas"
-			});
-			this->comboBox_admin_add_genre->BackColor = System::Drawing::SystemColors::Window;
-			this->comboBox_admin_add_genre->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
-			this->comboBox_admin_add_genre->Font = (gcnew System::Drawing::Font(L"Agency FB", 12));
-			this->comboBox_admin_add_genre->FormattingEnabled = true;
-			this->comboBox_admin_add_genre->Location = System::Drawing::Point(630, 46);
-			this->comboBox_admin_add_genre->Name = L"comboBox_admin_add_genre";
-			this->comboBox_admin_add_genre->Size = System::Drawing::Size(200, 28);
-			this->comboBox_admin_add_genre->TabIndex = 62;
-			this->comboBox_admin_add_genre->Visible = false;
-			// 
-			// label_admin_add_genre
-			// 
-			this->label_admin_add_genre->AutoSize = true;
-			this->label_admin_add_genre->Font = (gcnew System::Drawing::Font(L"Agency FB", 15));
-			this->label_admin_add_genre->Location = System::Drawing::Point(505, 45);
-			this->label_admin_add_genre->Name = L"label_admin_add_genre";
-			this->label_admin_add_genre->Size = System::Drawing::Size(45, 24);
-			this->label_admin_add_genre->TabIndex = 61;
-			this->label_admin_add_genre->Text = L"Genre";
-			this->label_admin_add_genre->Visible = false;
-			// 
-			// label_admin_add_unitUnitPrice
-			// 
-			this->label_admin_add_unitUnitPrice->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
-				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
-			this->label_admin_add_unitUnitPrice->Location = System::Drawing::Point(663, 345);
-			this->label_admin_add_unitUnitPrice->Name = L"label_admin_add_unitUnitPrice";
-			this->label_admin_add_unitUnitPrice->Size = System::Drawing::Size(40, 24);
-			this->label_admin_add_unitUnitPrice->TabIndex = 60;
-			this->label_admin_add_unitUnitPrice->Text = L"$";
-			this->label_admin_add_unitUnitPrice->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			// 
-			// label_admin_add_unitVolume
-			// 
-			this->label_admin_add_unitVolume->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
-				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
-			this->label_admin_add_unitVolume->Location = System::Drawing::Point(663, 285);
-			this->label_admin_add_unitVolume->Name = L"label_admin_add_unitVolume";
-			this->label_admin_add_unitVolume->Size = System::Drawing::Size(40, 24);
-			this->label_admin_add_unitVolume->TabIndex = 59;
-			this->label_admin_add_unitVolume->Text = L"unit";
-			this->label_admin_add_unitVolume->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			// 
-			// label2
-			// 
-			this->label2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)),
-				static_cast<System::Int32>(static_cast<System::Byte>(32)));
-			this->label2->Location = System::Drawing::Point(663, 285);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(40, 24);
-			this->label2->TabIndex = 58;
-			this->label2->Text = L"unit";
-			this->label2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			// 
-			// label_admin_add_unitLine2
-			// 
-			this->label_admin_add_unitLine2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
-				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
-			this->label_admin_add_unitLine2->Location = System::Drawing::Point(663, 225);
-			this->label_admin_add_unitLine2->Name = L"label_admin_add_unitLine2";
-			this->label_admin_add_unitLine2->Size = System::Drawing::Size(40, 24);
-			this->label_admin_add_unitLine2->TabIndex = 57;
-			this->label_admin_add_unitLine2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			// 
-			// label_admin_add_unitLine1
-			// 
-			this->label_admin_add_unitLine1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
-				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
-			this->label_admin_add_unitLine1->Location = System::Drawing::Point(663, 165);
-			this->label_admin_add_unitLine1->Name = L"label_admin_add_unitLine1";
-			this->label_admin_add_unitLine1->Size = System::Drawing::Size(40, 24);
-			this->label_admin_add_unitLine1->TabIndex = 41;
-			this->label_admin_add_unitLine1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			// 
-			// Underline_admin_add_line5
-			// 
-			this->Underline_admin_add_line5->BackColor = System::Drawing::SystemColors::ActiveBorder;
-			this->Underline_admin_add_line5->Location = System::Drawing::Point(240, 370);
-			this->Underline_admin_add_line5->Name = L"Underline_admin_add_line5";
-			this->Underline_admin_add_line5->Size = System::Drawing::Size(410, 2);
-			this->Underline_admin_add_line5->TabIndex = 56;
-			// 
-			// Underline_admin_add_line4
-			// 
-			this->Underline_admin_add_line4->BackColor = System::Drawing::SystemColors::ActiveBorder;
-			this->Underline_admin_add_line4->Location = System::Drawing::Point(240, 310);
-			this->Underline_admin_add_line4->Name = L"Underline_admin_add_line4";
-			this->Underline_admin_add_line4->Size = System::Drawing::Size(410, 2);
-			this->Underline_admin_add_line4->TabIndex = 55;
-			// 
-			// Underline_admin_add_line3
-			// 
-			this->Underline_admin_add_line3->BackColor = System::Drawing::SystemColors::ActiveBorder;
-			this->Underline_admin_add_line3->Location = System::Drawing::Point(240, 250);
-			this->Underline_admin_add_line3->Name = L"Underline_admin_add_line3";
-			this->Underline_admin_add_line3->Size = System::Drawing::Size(410, 2);
-			this->Underline_admin_add_line3->TabIndex = 54;
-			// 
-			// Underline_admin_add_line2
-			// 
-			this->Underline_admin_add_line2->BackColor = System::Drawing::SystemColors::ActiveBorder;
-			this->Underline_admin_add_line2->Location = System::Drawing::Point(240, 190);
-			this->Underline_admin_add_line2->Name = L"Underline_admin_add_line2";
-			this->Underline_admin_add_line2->Size = System::Drawing::Size(410, 2);
-			this->Underline_admin_add_line2->TabIndex = 53;
-			// 
-			// Underline_admin_add_line1
-			// 
-			this->Underline_admin_add_line1->BackColor = System::Drawing::SystemColors::ActiveBorder;
-			this->Underline_admin_add_line1->Location = System::Drawing::Point(240, 130);
-			this->Underline_admin_add_line1->Name = L"Underline_admin_add_line1";
-			this->Underline_admin_add_line1->Size = System::Drawing::Size(410, 2);
-			this->Underline_admin_add_line1->TabIndex = 52;
-			// 
-			// textBox_admin_add_unitePrice
-			// 
-			this->textBox_admin_add_unitePrice->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
-				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
-			this->textBox_admin_add_unitePrice->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox_admin_add_unitePrice->ForeColor = System::Drawing::SystemColors::ActiveBorder;
-			this->textBox_admin_add_unitePrice->Location = System::Drawing::Point(245, 345);
-			this->textBox_admin_add_unitePrice->Name = L"textBox_admin_add_unitePrice";
-			this->textBox_admin_add_unitePrice->Size = System::Drawing::Size(400, 23);
-			this->textBox_admin_add_unitePrice->TabIndex = 51;
-			// 
-			// textBox_admin_add_volume
-			// 
-			this->textBox_admin_add_volume->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
-				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
-			this->textBox_admin_add_volume->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox_admin_add_volume->ForeColor = System::Drawing::SystemColors::ActiveBorder;
-			this->textBox_admin_add_volume->Location = System::Drawing::Point(245, 285);
-			this->textBox_admin_add_volume->Name = L"textBox_admin_add_volume";
-			this->textBox_admin_add_volume->Size = System::Drawing::Size(400, 23);
-			this->textBox_admin_add_volume->TabIndex = 50;
-			// 
-			// textBox_admin_add_line2
-			// 
-			this->textBox_admin_add_line2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
-				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
-			this->textBox_admin_add_line2->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox_admin_add_line2->ForeColor = System::Drawing::SystemColors::ActiveBorder;
-			this->textBox_admin_add_line2->Location = System::Drawing::Point(245, 225);
-			this->textBox_admin_add_line2->Name = L"textBox_admin_add_line2";
-			this->textBox_admin_add_line2->Size = System::Drawing::Size(400, 23);
-			this->textBox_admin_add_line2->TabIndex = 49;
-			// 
-			// textBox_admin_add_line1
-			// 
-			this->textBox_admin_add_line1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
-				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
-			this->textBox_admin_add_line1->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox_admin_add_line1->ForeColor = System::Drawing::SystemColors::ActiveBorder;
-			this->textBox_admin_add_line1->Location = System::Drawing::Point(245, 165);
-			this->textBox_admin_add_line1->Name = L"textBox_admin_add_line1";
-			this->textBox_admin_add_line1->Size = System::Drawing::Size(400, 23);
-			this->textBox_admin_add_line1->TabIndex = 48;
-			// 
-			// textBox_admin_add_enterprise
-			// 
-			this->textBox_admin_add_enterprise->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
-				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
-			this->textBox_admin_add_enterprise->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox_admin_add_enterprise->ForeColor = System::Drawing::SystemColors::ActiveBorder;
-			this->textBox_admin_add_enterprise->Location = System::Drawing::Point(245, 105);
-			this->textBox_admin_add_enterprise->Name = L"textBox_admin_add_enterprise";
-			this->textBox_admin_add_enterprise->Size = System::Drawing::Size(400, 23);
-			this->textBox_admin_add_enterprise->TabIndex = 47;
-			// 
-			// comboBox_admin_add_catagory
-			// 
-			this->comboBox_admin_add_catagory->AutoCompleteCustomSource->AddRange(gcnew cli::array< System::String^  >(3) {
-				L"Electric energy",
-					L"Crude oil", L"Natural gas"
-			});
-			this->comboBox_admin_add_catagory->BackColor = System::Drawing::SystemColors::Window;
-			this->comboBox_admin_add_catagory->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
-			this->comboBox_admin_add_catagory->Font = (gcnew System::Drawing::Font(L"Agency FB", 12));
-			this->comboBox_admin_add_catagory->FormattingEnabled = true;
-			this->comboBox_admin_add_catagory->Items->AddRange(gcnew cli::array< System::Object^  >(3) {
-				L"Electric energy", L"Crude oil",
-					L"Natural gas"
-			});
-			this->comboBox_admin_add_catagory->Location = System::Drawing::Point(244, 46);
-			this->comboBox_admin_add_catagory->Name = L"comboBox_admin_add_catagory";
-			this->comboBox_admin_add_catagory->Size = System::Drawing::Size(200, 28);
-			this->comboBox_admin_add_catagory->TabIndex = 46;
-			this->comboBox_admin_add_catagory->SelectedIndexChanged += gcnew System::EventHandler(this, &MainForm::comboBox_admin_add_catagory_SelectedIndexChanged);
-			// 
-			// Underline_admin_add
-			// 
-			this->Underline_admin_add->BackColor = System::Drawing::SystemColors::ActiveBorder;
-			this->Underline_admin_add->Location = System::Drawing::Point(49, 420);
-			this->Underline_admin_add->Name = L"Underline_admin_add";
-			this->Underline_admin_add->Size = System::Drawing::Size(924, 2);
-			this->Underline_admin_add->TabIndex = 45;
-			// 
-			// label_admin_add_category
-			// 
-			this->label_admin_add_category->AutoSize = true;
-			this->label_admin_add_category->Font = (gcnew System::Drawing::Font(L"Agency FB", 15));
-			this->label_admin_add_category->Location = System::Drawing::Point(105, 45);
-			this->label_admin_add_category->Name = L"label_admin_add_category";
-			this->label_admin_add_category->Size = System::Drawing::Size(61, 24);
-			this->label_admin_add_category->TabIndex = 44;
-			this->label_admin_add_category->Text = L"Category";
-			// 
-			// label_admin_add_unitPrice
-			// 
-			this->label_admin_add_unitPrice->AutoSize = true;
-			this->label_admin_add_unitPrice->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
-				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
-			this->label_admin_add_unitPrice->Font = (gcnew System::Drawing::Font(L"Agency FB", 15));
-			this->label_admin_add_unitPrice->Location = System::Drawing::Point(105, 345);
-			this->label_admin_add_unitPrice->Name = L"label_admin_add_unitPrice";
-			this->label_admin_add_unitPrice->Size = System::Drawing::Size(66, 24);
-			this->label_admin_add_unitPrice->TabIndex = 43;
-			this->label_admin_add_unitPrice->Text = L"Unit price";
-			// 
-			// label_admin_add_volume
-			// 
-			this->label_admin_add_volume->AutoSize = true;
-			this->label_admin_add_volume->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
-				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
-			this->label_admin_add_volume->Font = (gcnew System::Drawing::Font(L"Agency FB", 15));
-			this->label_admin_add_volume->Location = System::Drawing::Point(105, 285);
-			this->label_admin_add_volume->Name = L"label_admin_add_volume";
-			this->label_admin_add_volume->Size = System::Drawing::Size(50, 24);
-			this->label_admin_add_volume->TabIndex = 42;
-			this->label_admin_add_volume->Text = L"volume";
-			// 
-			// label_admin_add_line2
-			// 
-			this->label_admin_add_line2->AutoSize = true;
-			this->label_admin_add_line2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
-				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
-			this->label_admin_add_line2->Font = (gcnew System::Drawing::Font(L"Agency FB", 15));
-			this->label_admin_add_line2->Location = System::Drawing::Point(105, 225);
-			this->label_admin_add_line2->Name = L"label_admin_add_line2";
-			this->label_admin_add_line2->Size = System::Drawing::Size(53, 24);
-			this->label_admin_add_line2->TabIndex = 41;
-			this->label_admin_add_line2->Text = L"License";
-			// 
-			// label_admin_add_line1
-			// 
-			this->label_admin_add_line1->AutoSize = true;
-			this->label_admin_add_line1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
-				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
-			this->label_admin_add_line1->Font = (gcnew System::Drawing::Font(L"Agency FB", 15));
-			this->label_admin_add_line1->Location = System::Drawing::Point(105, 165);
-			this->label_admin_add_line1->Name = L"label_admin_add_line1";
-			this->label_admin_add_line1->Size = System::Drawing::Size(78, 24);
-			this->label_admin_add_line1->TabIndex = 23;
-			this->label_admin_add_line1->Text = L"Substations";
-			// 
-			// label_admin_add_enterprise
-			// 
-			this->label_admin_add_enterprise->AutoSize = true;
-			this->label_admin_add_enterprise->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
-				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
-			this->label_admin_add_enterprise->Font = (gcnew System::Drawing::Font(L"Agency FB", 15));
-			this->label_admin_add_enterprise->Location = System::Drawing::Point(105, 105);
-			this->label_admin_add_enterprise->Name = L"label_admin_add_enterprise";
-			this->label_admin_add_enterprise->Size = System::Drawing::Size(71, 24);
-			this->label_admin_add_enterprise->TabIndex = 20;
-			this->label_admin_add_enterprise->Text = L"Enterprise";
 			// 
 			// panel_login
 			// 
@@ -2029,7 +2030,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_login_password->AutoSize = true;
 			this->label_login_password->Location = System::Drawing::Point(670, 315);
 			this->label_login_password->Name = L"label_login_password";
-			this->label_login_password->Size = System::Drawing::Size(68, 24);
+			this->label_login_password->Size = System::Drawing::Size(90, 29);
 			this->label_login_password->TabIndex = 21;
 			this->label_login_password->Text = L"Password";
 			// 
@@ -2047,7 +2048,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_login_username->AutoSize = true;
 			this->label_login_username->Location = System::Drawing::Point(670, 240);
 			this->label_login_username->Name = L"label_login_username";
-			this->label_login_username->Size = System::Drawing::Size(70, 24);
+			this->label_login_username->Size = System::Drawing::Size(90, 29);
 			this->label_login_username->TabIndex = 19;
 			this->label_login_username->Text = L"Username";
 			// 
@@ -2056,7 +2057,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_login_description->AutoSize = true;
 			this->label_login_description->Location = System::Drawing::Point(500, 125);
 			this->label_login_description->Name = L"label_login_description";
-			this->label_login_description->Size = System::Drawing::Size(263, 24);
+			this->label_login_description->Size = System::Drawing::Size(341, 29);
 			this->label_login_description->TabIndex = 18;
 			this->label_login_description->Text = L"To start trade, Please login to your account.";
 			// 
@@ -2070,7 +2071,7 @@ private: System::ComponentModel::IContainer^ components;
 				static_cast<System::Int32>(static_cast<System::Byte>(45)), static_cast<System::Int32>(static_cast<System::Byte>(140)));
 			this->label_login_EnergyTrade->Location = System::Drawing::Point(638, 60);
 			this->label_login_EnergyTrade->Name = L"label_login_EnergyTrade";
-			this->label_login_EnergyTrade->Size = System::Drawing::Size(260, 65);
+			this->label_login_EnergyTrade->Size = System::Drawing::Size(312, 79);
 			this->label_login_EnergyTrade->TabIndex = 17;
 			this->label_login_EnergyTrade->Text = L"Energy Trade";
 			// 
@@ -2083,7 +2084,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_login_logInTo->ForeColor = System::Drawing::SystemColors::ActiveBorder;
 			this->label_login_logInTo->Location = System::Drawing::Point(490, 60);
 			this->label_login_logInTo->Name = L"label_login_logInTo";
-			this->label_login_logInTo->Size = System::Drawing::Size(164, 65);
+			this->label_login_logInTo->Size = System::Drawing::Size(202, 79);
 			this->label_login_logInTo->TabIndex = 16;
 			this->label_login_logInTo->Text = L"Login to";
 			// 
@@ -2138,7 +2139,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->checkBox_login_showPassword->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->checkBox_login_showPassword->Location = System::Drawing::Point(670, 405);
 			this->checkBox_login_showPassword->Name = L"checkBox_login_showPassword";
-			this->checkBox_login_showPassword->Size = System::Drawing::Size(122, 28);
+			this->checkBox_login_showPassword->Size = System::Drawing::Size(159, 33);
 			this->checkBox_login_showPassword->TabIndex = 12;
 			this->checkBox_login_showPassword->Text = L"Show Password";
 			this->checkBox_login_showPassword->UseVisualStyleBackColor = false;
@@ -2153,7 +2154,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->textBox_login_password->ForeColor = System::Drawing::SystemColors::ScrollBar;
 			this->textBox_login_password->Location = System::Drawing::Point(675, 350);
 			this->textBox_login_password->Name = L"textBox_login_password";
-			this->textBox_login_password->Size = System::Drawing::Size(340, 19);
+			this->textBox_login_password->Size = System::Drawing::Size(340, 23);
 			this->textBox_login_password->TabIndex = 11;
 			this->textBox_login_password->UseSystemPasswordChar = true;
 			// 
@@ -2167,7 +2168,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->textBox_login_username->Location = System::Drawing::Point(675, 275);
 			this->textBox_login_username->MaxLength = 20;
 			this->textBox_login_username->Name = L"textBox_login_username";
-			this->textBox_login_username->Size = System::Drawing::Size(340, 19);
+			this->textBox_login_username->Size = System::Drawing::Size(340, 23);
 			this->textBox_login_username->TabIndex = 10;
 			// 
 			// panel_confirm
@@ -2224,7 +2225,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->label_confirm_noti->ForeColor = System::Drawing::SystemColors::ActiveBorder;
 			this->label_confirm_noti->Location = System::Drawing::Point(13, 7);
 			this->label_confirm_noti->Name = L"label_confirm_noti";
-			this->label_confirm_noti->Size = System::Drawing::Size(73, 24);
+			this->label_confirm_noti->Size = System::Drawing::Size(94, 29);
 			this->label_confirm_noti->TabIndex = 15;
 			this->label_confirm_noti->Text = L"Notification";
 			// 
@@ -2259,11 +2260,11 @@ private: System::ComponentModel::IContainer^ components;
 			this->BackColor = System::Drawing::SystemColors::ActiveBorder;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->ClientSize = System::Drawing::Size(1280, 720);
-			this->Controls->Add(this->panel_admin);
-			this->Controls->Add(this->panel_register);
-			this->Controls->Add(this->panel_login);
-			this->Controls->Add(this->panel_confirm);
 			this->Controls->Add(this->panel_user);
+			this->Controls->Add(this->panel_admin);
+			this->Controls->Add(this->panel_login);
+			this->Controls->Add(this->panel_register);
+			this->Controls->Add(this->panel_confirm);
 			this->Controls->Add(this->panel_message);
 			this->Cursor = System::Windows::Forms::Cursors::Default;
 			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
@@ -2285,10 +2286,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel_message->PerformLayout();
 			this->panel_admin->ResumeLayout(false);
 			this->panel_admin->PerformLayout();
-			this->panel_admin_transactions->ResumeLayout(false);
-			this->panel_admin_transactions->PerformLayout();
 			this->panel_admin_add->ResumeLayout(false);
 			this->panel_admin_add->PerformLayout();
+			this->panel_admin_transactions->ResumeLayout(false);
+			this->panel_admin_transactions->PerformLayout();
 			this->panel_login->ResumeLayout(false);
 			this->panel_login->PerformLayout();
 			this->panel_confirm->ResumeLayout(false);
@@ -2424,6 +2425,22 @@ private: System::Void button_login_login_Click_1(System::Object^ sender, System:
 	bool status_permission = User.check_login_permission(username, password);
 	if (status_login) {
 		if (status_permission) {
+			status_menu = "Electric energy";
+			comboBox_admin_enterprise->Items->Clear();
+
+			String^ temp_company_name;
+			for (Electric* t = LL_head.LL_of_electric->get_head(); t; t = t->move_next()) {
+				temp_company_name = gcnew String(t->get_enterprise().data());
+
+				if (!comboBox_admin_enterprise->Items->Contains(temp_company_name))
+				{
+					comboBox_admin_enterprise->Items->Add(temp_company_name);
+				}
+			}
+			label_admin_total1->Text = gcnew String(to_string(LL_head.LL_of_electric->get_sum_energy()).data());
+			label_admin_total2->Text = gcnew String(to_string(LL_head.LL_of_oil->get_sum_energy()).data());
+			label_admin_total3->Text = gcnew String(to_string(LL_head.LL_of_gas->get_sum_energy()).data());
+
 			panel_admin->Visible = true;
 			panel_admin->BringToFront();
 			glob_user = username;
@@ -2604,11 +2621,16 @@ private: System::Void button_admin_electric_Click(System::Object^ sender, System
 
 	comboBox_admin_enterprise->Items->Clear();
 
-	msclr::interop::marshal_context context;
-	for (Electric* t = LL_head.LL_of_electric->get_head(); t; t = t->move_next()) {
-		String^ temp = gcnew String(t->get_enterprise().data());
-		comboBox_admin_enterprise->Items->Add(temp);
+	String^ temp_company_name;
+	for (Electric* t = LL_head.LL_of_electric->get_head(); t ; t = t->move_next()) {
+		temp_company_name = gcnew String(t->get_enterprise().data());
+
+		if (!comboBox_admin_enterprise->Items->Contains(temp_company_name))
+		{
+			comboBox_admin_enterprise->Items->Add(temp_company_name);
+		}
 	}
+
 
 	button_admin_electric->BackColor = System::Drawing::Color::FromArgb(
 		static_cast<System::Int32>(static_cast<System::Byte>(0)),
@@ -2652,6 +2674,18 @@ private: System::Void button_admin_oil_Click(System::Object^ sender, System::Eve
 	label_admin_unitVolume->Text = "unit";
 	label_admin_unitUnitPrice->Text = "$";
 
+	comboBox_admin_enterprise->Items->Clear();
+
+	String^ temp_company_name;
+	for (Crude_oil* t = LL_head.LL_of_oil->get_head(); t; t = t->move_next()) {
+		temp_company_name = gcnew String(t->get_enterprise().data());
+
+		if (!comboBox_admin_enterprise->Items->Contains(temp_company_name))
+		{
+			comboBox_admin_enterprise->Items->Add(temp_company_name);
+		}
+	}
+
 	button_admin_electric->BackColor = System::Drawing::Color::FromArgb(
 		static_cast<System::Int32>(static_cast<System::Byte>(13)),
 		static_cast<System::Int32>(static_cast<System::Byte>(45)),
@@ -2694,6 +2728,18 @@ private: System::Void button_admin_gas_Click(System::Object^ sender, System::Eve
 	label_admin_unitVolume->Text = "unit";
 	label_admin_unitUnitPrice->Text = "$";
 
+	comboBox_admin_enterprise->Items->Clear();
+
+	String^ temp_company_name;
+	for (Gas* t = LL_head.LL_of_gas->get_head(); t; t = t->move_next()) {
+		temp_company_name = gcnew String(t->get_enterprise().data());
+
+		if (!comboBox_admin_enterprise->Items->Contains(temp_company_name))
+		{
+			comboBox_admin_enterprise->Items->Add(temp_company_name);
+		}
+	}
+
 	button_admin_electric->BackColor = System::Drawing::Color::FromArgb(
 		static_cast<System::Int32>(static_cast<System::Byte>(13)),
 		static_cast<System::Int32>(static_cast<System::Byte>(45)),
@@ -2716,29 +2762,52 @@ private: System::Void button_admin_gas_Click(System::Object^ sender, System::Eve
 		static_cast<System::Int32>(static_cast<System::Byte>(140)));
 }
 private: System::Void comboBox_admin_enterprise_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-		/////////////////////////////////////////////////
+	comboBox_admin_genre->Items->Clear();
 	msclr::interop::marshal_context context;
 	std::string temp_enterpise = context.marshal_as<std::string>(comboBox_admin_enterprise->GetItemText(comboBox_admin_enterprise->SelectedItem));
 	if (status_menu == "Electric energy") {
-		Electric* temp_head = LL_head.LL_of_electric->get_head();
-		Electric* temp_pointer;
-		while (temp_head) {
-			temp_pointer = LL_head.LL_of_electric->search_string("Electric corp.", temp_head->move_next());
-			if (temp_pointer){
+		Electric* temp_pointer = LL_head.LL_of_electric->get_head();
+		while (temp_pointer)
+		{
+			cout << "search name\n";
+			temp_pointer = LL_head.LL_of_electric->search_string(temp_enterpise, temp_pointer);
+			if (temp_pointer)
+			{
 				String^ temp = gcnew String(temp_pointer->get_genre().data());
 				comboBox_admin_genre->Items->Add(temp);
+				temp_pointer = temp_pointer->move_next();
 			}
-			temp_head = temp_pointer;
-			/////////////////////////////////////////////////
 		}
 	}
 	else if (status_menu == "Crude oil")
 	{
-
+		Crude_oil* temp_pointer = LL_head.LL_of_oil->get_head();
+		while (temp_pointer)
+		{
+			cout << "search name\n";
+			temp_pointer = LL_head.LL_of_oil->search_string(temp_enterpise, temp_pointer);
+			if (temp_pointer)
+			{
+				String^ temp = gcnew String(temp_pointer->get_type().data());
+				comboBox_admin_genre->Items->Add(temp);
+				temp_pointer = temp_pointer->move_next();
+			}
+		}
 	}
 	else if (status_menu == "Natural gas")
 	{
-	
+		Gas* temp_pointer = LL_head.LL_of_gas->get_head();
+		while (temp_pointer)
+		{
+			cout << "search name\n";
+			temp_pointer = LL_head.LL_of_gas->search_string(temp_enterpise, temp_pointer);
+			if (temp_pointer)
+			{
+				String^ temp = gcnew String(temp_pointer->get_type().data());
+				comboBox_admin_genre->Items->Add(temp);
+				temp_pointer = temp_pointer->move_next();
+			}
+		}
 	}
 	label_admin_genre->Visible = true;
 	comboBox_admin_genre->Visible = true;
@@ -2869,6 +2938,11 @@ private: System::Void label_admin_genre_Click(System::Object^ sender, System::Ev
 }
 private: System::Void button_confirm_ok_Click(System::Object^ sender, System::EventArgs^ e) {
 	panel_confirm->Visible = false;
+
+	LL_head.LL_of_electric->write_csv();
+	LL_head.LL_of_oil->write_csv();
+	LL_head.LL_of_gas->write_csv();
+
 	Application::Exit();
 }
 private: System::Void button_confirm_cancel_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2878,60 +2952,97 @@ private: System::Void button_confirm_close_Click(System::Object^ sender, System:
 	panel_confirm->Visible = false;
 }
 private: System::Void button_admin_addAll_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (comboBox_admin_add_catagory->SelectedItem == "Electric energy")
+	if (comboBox_admin_add_catagory->SelectedItem != -1 && comboBox_admin_add_genre->SelectedItem != -1 && 
+		textBox_admin_add_line1->Text->Length != 0 && textBox_admin_add_line2->Text->Length != 0 && 
+		textBox_admin_add_enterprise->Text->Length != 0 && textBox_admin_add_volume->Text->Length != 0 && 
+		textBox_admin_add_unitePrice->Text->Length != 0)
 	{
-		//To add exception handling
-		Electric* t;
-		msclr::interop::marshal_context context;
-		std::string temp_genre = context.marshal_as<std::string>(comboBox_admin_add_genre->GetItemText(comboBox_admin_add_genre->SelectedItem));
-		std::string temp_line1 = context.marshal_as<std::string>(textBox_admin_add_line1->Text);
-		std::string temp_line2 = context.marshal_as<std::string>(textBox_admin_add_line2->Text);
-		std::string temp_enterprise = context.marshal_as<std::string>(textBox_admin_add_enterprise->Text);
-		std::string temp_volume = context.marshal_as<std::string>(textBox_admin_add_volume->Text);
-		std::string temp_price = context.marshal_as<std::string>(textBox_admin_add_unitePrice->Text);
+		if (comboBox_admin_add_catagory->SelectedItem == "Electric energy")
+		{
+			//To add exception handling
+			Electric* t;
+				msclr::interop::marshal_context context;
+				std::string temp_genre = context.marshal_as<std::string>(comboBox_admin_add_genre->GetItemText(comboBox_admin_add_genre->SelectedItem));
+				std::string temp_line1 = context.marshal_as<std::string>(textBox_admin_add_line1->Text);
+				std::string temp_line2 = context.marshal_as<std::string>(textBox_admin_add_line2->Text);
+				std::string temp_enterprise = context.marshal_as<std::string>(textBox_admin_add_enterprise->Text);
+				std::string temp_volume = context.marshal_as<std::string>(textBox_admin_add_volume->Text);
+			std::string temp_price = context.marshal_as<std::string>(textBox_admin_add_unitePrice->Text);
 
-		float tempf_volume = stof(temp_volume);
-		float tempf_price = stof(temp_price);
-		t = new Electric(temp_genre, temp_line1, temp_line2, temp_enterprise, tempf_volume, tempf_price);
-		LL_head.LL_of_electric->add_node(t);
+			float tempf_volume = stof(temp_volume);
+			float tempf_price = stof(temp_price);
+			t = new Electric(temp_genre, temp_line1, temp_line2, temp_enterprise, tempf_volume, tempf_price);
+			LL_head.LL_of_electric->add_node(t);
+
+			MessageBox::Show("Add");
+
+			textBox_admin_add_enterprise->Text = "";
+			textBox_admin_add_line1->Text = "";
+			textBox_admin_add_line2->Text = "";
+			textBox_admin_add_volume->Text = "";
+			textBox_admin_add_unitePrice->Text = "";
+		}
+		else if (comboBox_admin_add_catagory->SelectedItem == "Crude oil")
+		{
+			//To add exception handling
+			Crude_oil* t;
+			msclr::interop::marshal_context context;
+			std::string temp_genre = context.marshal_as<std::string>(comboBox_admin_add_genre->GetItemText(comboBox_admin_add_genre->SelectedItem));
+			std::string temp_line1 = context.marshal_as<std::string>(textBox_admin_add_line1->Text);
+			std::string temp_line2 = context.marshal_as<std::string>(textBox_admin_add_line2->Text);
+			std::string temp_enterprise = context.marshal_as<std::string>(textBox_admin_add_enterprise->Text);
+			std::string temp_volume = context.marshal_as<std::string>(textBox_admin_add_volume->Text);
+			std::string temp_price = context.marshal_as<std::string>(textBox_admin_add_unitePrice->Text);
+
+			float tempf_line1 = stof(temp_line1);
+			float tempf_line2 = stof(temp_line2);
+			float tempf_volume = stof(temp_volume);
+			float tempf_price = stof(temp_price);
+			t = new Crude_oil(temp_genre, tempf_line1, tempf_line2, temp_enterprise, tempf_volume, tempf_price);
+			LL_head.LL_of_oil->add_node(t);
+
+			MessageBox::Show("Add");
+
+			textBox_admin_add_enterprise->Text = "";
+			textBox_admin_add_line1->Text = "";
+			textBox_admin_add_line2->Text = "";
+			textBox_admin_add_volume->Text = "";
+			textBox_admin_add_unitePrice->Text = "";
+		}
+		else if (comboBox_admin_add_catagory->SelectedItem == "Natural gas")
+		{
+			//To add exception handling
+			Gas* t;
+			msclr::interop::marshal_context context;
+			std::string temp_genre = context.marshal_as<std::string>(comboBox_admin_add_genre->GetItemText(comboBox_admin_add_genre->SelectedItem));
+			std::string temp_line1 = context.marshal_as<std::string>(textBox_admin_add_line1->Text);
+			std::string temp_line2 = context.marshal_as<std::string>(textBox_admin_add_line2->Text);
+			std::string temp_enterprise = context.marshal_as<std::string>(textBox_admin_add_enterprise->Text);
+			std::string temp_volume = context.marshal_as<std::string>(textBox_admin_add_volume->Text);
+			std::string temp_price = context.marshal_as<std::string>(textBox_admin_add_unitePrice->Text);
+
+			float tempf_line1 = stof(temp_line1);
+			float tempf_line2 = stof(temp_line2);
+			float tempf_volume = stof(temp_volume);
+			float tempf_price = stof(temp_price);
+			t = new Gas(temp_genre, tempf_line1, tempf_line2, temp_enterprise, tempf_volume, tempf_price);
+			LL_head.LL_of_gas->add_node(t);
+
+			MessageBox::Show("Add");
+
+			textBox_admin_add_enterprise->Text = "";
+			textBox_admin_add_line1->Text = "";
+			textBox_admin_add_line2->Text = "";
+			textBox_admin_add_volume->Text = "";
+			textBox_admin_add_unitePrice->Text = "";
+		}
+		label_admin_total1->Text = gcnew String(to_string(LL_head.LL_of_electric->get_sum_energy()).data());
+		label_admin_total2->Text = gcnew String(to_string(LL_head.LL_of_oil->get_sum_energy()).data());
+		label_admin_total3->Text = gcnew String(to_string(LL_head.LL_of_gas->get_sum_energy()).data());
 	}
-	else if (comboBox_admin_add_catagory->SelectedItem == "Crude oil")
+	else
 	{
-		//To add exception handling
-		Crude_oil* t;
-		msclr::interop::marshal_context context;
-		std::string temp_genre = context.marshal_as<std::string>(comboBox_admin_add_genre->GetItemText(comboBox_admin_add_genre->SelectedItem));
-		std::string temp_line1 = context.marshal_as<std::string>(textBox_admin_add_line1->Text);
-		std::string temp_line2 = context.marshal_as<std::string>(textBox_admin_add_line2->Text);
-		std::string temp_enterprise = context.marshal_as<std::string>(textBox_admin_add_enterprise->Text);
-		std::string temp_volume = context.marshal_as<std::string>(textBox_admin_add_volume->Text);
-		std::string temp_price = context.marshal_as<std::string>(textBox_admin_add_unitePrice->Text);
-
-		float tempf_line1 = stof(temp_line1);
-		float tempf_line2 = stof(temp_line2);
-		float tempf_volume = stof(temp_volume);
-		float tempf_price = stof(temp_price);
-		t = new Crude_oil(temp_genre, tempf_line1, tempf_line2, temp_enterprise, tempf_volume, tempf_price);
-		LL_head.LL_of_oil->add_node(t);
-	}
-	else if (comboBox_admin_add_catagory->SelectedItem == "Crude oil")
-	{
-		//To add exception handling
-		Gas* t;
-		msclr::interop::marshal_context context;
-		std::string temp_genre = context.marshal_as<std::string>(comboBox_admin_add_genre->GetItemText(comboBox_admin_add_genre->SelectedItem));
-		std::string temp_line1 = context.marshal_as<std::string>(textBox_admin_add_line1->Text);
-		std::string temp_line2 = context.marshal_as<std::string>(textBox_admin_add_line2->Text);
-		std::string temp_enterprise = context.marshal_as<std::string>(textBox_admin_add_enterprise->Text);
-		std::string temp_volume = context.marshal_as<std::string>(textBox_admin_add_volume->Text);
-		std::string temp_price = context.marshal_as<std::string>(textBox_admin_add_unitePrice->Text);
-
-		float tempf_line1 = stof(temp_line1);
-		float tempf_line2 = stof(temp_line2);
-		float tempf_volume = stof(temp_volume);
-		float tempf_price = stof(temp_price);
-		t = new Gas(temp_genre, tempf_line1, tempf_line2, temp_enterprise, tempf_volume, tempf_price);
-		LL_head.LL_of_gas->add_node(t);
+		MessageBox::Show("nope");
 	}
 }
 private: System::Void button_user_buy_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2939,26 +3050,125 @@ private: System::Void button_user_buy_Click(System::Object^ sender, System::Even
 private: System::Void button_user_sell_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void button_admin_delete_Click(System::Object^ sender, System::EventArgs^ e) {
+	if(comboBox_admin_enterprise->SelectedIndex != -1 && comboBox_admin_genre->SelectedIndex != -1)
+	{ 
+		if (status_menu == "Electric energy")
+		{
+			msclr::interop::marshal_context context;
+			std::string name_enterprise = context.marshal_as<std::string>(comboBox_admin_enterprise->GetItemText(comboBox_admin_enterprise->SelectedItem));
+			std::string type = context.marshal_as<std::string>(comboBox_admin_genre->GetItemText(comboBox_admin_genre->SelectedItem));
+			LL_head.LL_of_electric->delete_node(name_enterprise, type);
+			MessageBox::Show("deleted");
+
+			label_admin_valueLine1->Text = "";
+			label_admin_valueLine2->Text = "";
+			label_admin_valueVolume->Text = "";
+			label_admin_valueUnitPrice->Text = "";
+		
+			comboBox_admin_enterprise->Items->Clear();
+			comboBox_admin_genre->Items->Clear();
+			String^ temp_company_name;
+			for (Electric* t = LL_head.LL_of_electric->get_head(); t; t = t->move_next()) {
+				temp_company_name = gcnew String(t->get_enterprise().data());
+
+				if (!comboBox_admin_enterprise->Items->Contains(temp_company_name))
+				{
+				comboBox_admin_enterprise->Items->Add(temp_company_name);
+				}
+			}
+		}
+		else if (status_menu == "Crude oil")
+		{
+			msclr::interop::marshal_context context;
+			std::string name_enterprise = context.marshal_as<std::string>(comboBox_admin_enterprise->GetItemText(comboBox_admin_enterprise->SelectedItem));
+			std::string type = context.marshal_as<std::string>(comboBox_admin_genre->GetItemText(comboBox_admin_genre->SelectedItem));
+			LL_head.LL_of_oil->delete_node(name_enterprise, type);
+			MessageBox::Show("deleted");
+
+			label_admin_valueLine1->Text = "";
+			label_admin_valueLine2->Text = "";
+			label_admin_valueVolume->Text = "";
+			label_admin_valueUnitPrice->Text = "";
+
+			comboBox_admin_enterprise->Items->Clear();
+			comboBox_admin_genre->Items->Clear();
+			String^ temp_company_name;
+			for (Crude_oil* t = LL_head.LL_of_oil->get_head(); t; t = t->move_next()) {
+				temp_company_name = gcnew String(t->get_enterprise().data());
+
+				if (!comboBox_admin_enterprise->Items->Contains(temp_company_name))
+				{
+					comboBox_admin_enterprise->Items->Add(temp_company_name);
+				}
+			}
+		}
+		else if (status_menu == "Natural gas")
+		{
+			msclr::interop::marshal_context context;
+			std::string name_enterprise = context.marshal_as<std::string>(comboBox_admin_enterprise->GetItemText(comboBox_admin_enterprise->SelectedItem));
+			std::string type = context.marshal_as<std::string>(comboBox_admin_genre->GetItemText(comboBox_admin_genre->SelectedItem));
+			LL_head.LL_of_gas->delete_node(name_enterprise, type);
+			MessageBox::Show("deleted");
+
+			label_admin_valueLine1->Text = "";
+			label_admin_valueLine2->Text = "";
+			label_admin_valueVolume->Text = "";
+			label_admin_valueUnitPrice->Text = "";
+
+			comboBox_admin_enterprise->Items->Clear();
+			comboBox_admin_genre->Items->Clear();
+			String^ temp_company_name;
+			for (Gas* t = LL_head.LL_of_gas->get_head(); t; t = t->move_next()) {
+				temp_company_name = gcnew String(t->get_enterprise().data());
+
+				if (!comboBox_admin_enterprise->Items->Contains(temp_company_name))
+				{
+					comboBox_admin_enterprise->Items->Add(temp_company_name);
+				}
+			}
+		}
+		label_admin_total1->Text = gcnew String(to_string(LL_head.LL_of_electric->get_sum_energy()).data());
+		label_admin_total2->Text = gcnew String(to_string(LL_head.LL_of_oil->get_sum_energy()).data());
+		label_admin_total3->Text = gcnew String(to_string(LL_head.LL_of_gas->get_sum_energy()).data());
+	}
+	else //When user not selected combobox
+	{
+		MessageBox::Show("nope");
+	}
+}
+private: System::Void comboBox_admin_genre_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 	if (status_menu == "Electric energy")
 	{
 		msclr::interop::marshal_context context;
-		std::string name_enterprise = context.marshal_as<std::string>(comboBox_admin_add_genre->GetItemText(comboBox_admin_enterprise->SelectedItem));
-		std::string type = context.marshal_as<std::string>(comboBox_admin_add_genre->GetItemText(comboBox_admin_add_genre->SelectedItem));
-		LL_head.LL_of_electric->delete_node(name_enterprise, type);
+		std::string temp_name = context.marshal_as<std::string>(comboBox_admin_enterprise->Text);
+		std::string temp_genre = context.marshal_as<std::string>(comboBox_admin_genre->Text);
+
+		label_admin_valueLine1->Text = gcnew String(LL_head.LL_of_electric->search_string(temp_name, temp_genre)->get_Substations().data());
+		label_admin_valueLine2->Text = gcnew String(LL_head.LL_of_electric->search_string(temp_name, temp_genre)->get_license().data());
+		label_admin_valueVolume->Text = gcnew String(to_string(LL_head.LL_of_electric->search_string(temp_name, temp_genre)->get_volume()).data());
+		label_admin_valueUnitPrice->Text = gcnew String(to_string(LL_head.LL_of_electric->search_string(temp_name, temp_genre)->get_price()).data());
 	}
 	else if (status_menu == "Crude oil")
 	{
 		msclr::interop::marshal_context context;
-		std::string name_enterprise = context.marshal_as<std::string>(comboBox_admin_add_genre->GetItemText(comboBox_admin_enterprise->SelectedItem));
-		std::string type = context.marshal_as<std::string>(comboBox_admin_add_genre->GetItemText(comboBox_admin_add_genre->SelectedItem));
-		LL_head.LL_of_oil->delete_node(name_enterprise, type);
+		std::string temp_name = context.marshal_as<std::string>(comboBox_admin_enterprise->Text);
+		std::string temp_genre = context.marshal_as<std::string>(comboBox_admin_genre->Text);
+
+		label_admin_valueLine1->Text = gcnew String(to_string(LL_head.LL_of_oil->search_string(temp_name, temp_genre)->get_api_gravity()).data());
+		label_admin_valueLine2->Text = gcnew String(to_string(LL_head.LL_of_oil->search_string(temp_name, temp_genre)->get_sulfer()).data());
+		label_admin_valueVolume->Text = gcnew String(to_string(LL_head.LL_of_oil->search_string(temp_name, temp_genre)->get_volume()).data());
+		label_admin_valueUnitPrice->Text = gcnew String(to_string(LL_head.LL_of_oil->search_string(temp_name, temp_genre)->get_price()).data());
 	}
 	else if (status_menu == "Natural gas")
 	{
 		msclr::interop::marshal_context context;
-		std::string name_enterprise = context.marshal_as<std::string>(comboBox_admin_add_genre->GetItemText(comboBox_admin_enterprise->SelectedItem));
-		std::string type = context.marshal_as<std::string>(comboBox_admin_add_genre->GetItemText(comboBox_admin_add_genre->SelectedItem));
-		LL_head.LL_of_gas->delete_node(name_enterprise, type);
+		std::string temp_name = context.marshal_as<std::string>(comboBox_admin_enterprise->Text);
+		std::string temp_genre = context.marshal_as<std::string>(comboBox_admin_genre->Text);
+
+		label_admin_valueLine1->Text = gcnew String(to_string(LL_head.LL_of_gas->search_string(temp_name, temp_genre)->get_pressure()).data());
+		label_admin_valueLine2->Text = gcnew String(to_string(LL_head.LL_of_gas->search_string(temp_name, temp_genre)->get_temperature()).data());
+		label_admin_valueVolume->Text = gcnew String(to_string(LL_head.LL_of_gas->search_string(temp_name, temp_genre)->get_volume()).data());
+		label_admin_valueUnitPrice->Text = gcnew String(to_string(LL_head.LL_of_gas->search_string(temp_name, temp_genre)->get_price()).data());
 	}
 }
 };

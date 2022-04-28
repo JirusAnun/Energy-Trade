@@ -1,5 +1,4 @@
-﻿#pragma once
-//electric
+﻿//electric
 class LL_Electric :public LL_Energy {
 private:
     Electric* head_Electric;
@@ -10,6 +9,7 @@ public:
     float sell_fuction(string, string, float);
     Electric* search_string(string, string);
     Electric* search_string(string, Electric*);
+    string search_string_type(string, Electric*);
     Electric* get_head();
     void write_csv();
     LL_Electric();
@@ -19,7 +19,6 @@ public:
 float LL_Electric::buy_fuction(string com_name, string com_type, float volum_buy) {
     float expense;
     expense = this->search_string(com_name, com_type)->user_select_buy(volum_buy);
-
     if (expense) {
         sum_energy -= volum_buy;
         write_history_csv("buy", glob_user, com_name, volum_buy, expense);
@@ -35,14 +34,10 @@ float LL_Electric::sell_fuction(string com_name, string com_type, float volum_se
         sum_energy += volum_sell;
         write_history_csv("sell", glob_user, Energy_type_current, volum_sell, expense);
     }
-    else
     return expense;
 }
 
-
-LL_Electric::LL_Electric() {
-    head_Electric = NULL;
-}
+LL_Electric::LL_Electric() { head_Electric = NULL; }
 
 LL_Electric::~LL_Electric() {
     Electric* t = head_Electric;
@@ -55,12 +50,7 @@ LL_Electric::~LL_Electric() {
     sum_company = 0;
 }
 
-
-Electric* LL_Electric::get_head() {
-    return head_Electric;
-}
-
-
+Electric* LL_Electric::get_head() { return head_Electric; }
 
 void LL_Electric::add_node(Electric*& new_node) {
     Electric* t = head_Electric;
@@ -88,23 +78,46 @@ Electric* LL_Electric::search_string(string name_to_show, string type_to_show) {
     for (int i = 0; i < sum_company; i++) {
         if (name_to_show == (t->get_enterprise())
             && type_to_show == (t->get_genre())) {
+            //cout<<"Found "<< t->Energy::get_string_value() << " (" << to_search <<")\n";
             return t;
         }
-        else {
-            t = t->move_next();
-        }
-    }
-    return t;// this is NULL
-}
-
-Electric* LL_Electric::search_string(string to_search, Electric* current_point) {
-    Electric* t = head_Electric;
-    for (t = current_point; t; t->move_next()) {
-        if (to_search == (t->get_enterprise())) { return t; }
         else { t = t->move_next(); }
     }
     return t;// this is NULL
 }
+
+/*
+get_volume()
+get_price()
+get_enterprise()
+*/
+
+//This is for search its location of all company's name in node
+//then use in "search_string_type"
+Electric* LL_Electric::search_string(string to_search, Electric* current_point) {
+    Electric* t = head_Electric;
+    for (t = current_point; t; t = t->move_next())
+    {
+        if (to_search == (t->get_enterprise())) { return t; }
+    }
+    return t;// this is NULL
+}
+
+//this use for get all type of company's name to fill up dropdown type
+string LL_Electric::search_string_type(string to_search, Electric* current_point) {
+    // first inpit head
+    Electric* t = search_string(to_search, current_point);// get where enterpise is
+    if (t) {
+        string temp_type;
+        temp_type = t->get_genre();// keep type of that location
+        search_string_type(to_search, t->move_next());// recursive
+        return temp_type; // get type
+    }
+    else { return "There is no type to get anymore\n"; }
+}
+
+
+
 
 void LL_Electric::delete_node(string com_delete, string type_delete) {
     Electric* t = head_Electric;
@@ -124,16 +137,11 @@ deleteNodeCode:
     sum_energy -= t->get_volume();
     sum_company--;
     if (!pret) {
-        //if pret is NULL(found first node)
         head_Electric = t->move_next();
         delete t;
     }
-    else if (!t) {
-        //if t is NULL(not found)
-        sum_company++;
-    }
+    else if (!t) { sum_company++; }
     else {
-        //not last node and last
         next = t->move_next();
         pret->set_next_node(next);
         delete t;
@@ -165,8 +173,6 @@ void LL_Electric::write_csv() {
 }
 
 //oil
-
-#include "LL_base.h"
 class LL_Crude_oil :public LL_Energy {
 private:
     Crude_oil* head_Crude_oil;
@@ -184,7 +190,6 @@ public:
     ~LL_Crude_oil();
 };
 
-/////////////LL_Crude_oil/////////////
 float LL_Crude_oil::buy_fuction(string com_name, string com_type, float volum_buy) {
     float expense;
     expense = this->search_string(com_name, com_type)->user_select_buy(volum_buy);
@@ -222,9 +227,7 @@ LL_Crude_oil::~LL_Crude_oil() {
 }
 
 
-Crude_oil* LL_Crude_oil::get_head() {
-    return head_Crude_oil;
-}
+Crude_oil* LL_Crude_oil::get_head() { return head_Crude_oil; }
 
 void LL_Crude_oil::add_node(Crude_oil*& new_node) {
     Crude_oil* t = head_Crude_oil;
@@ -236,10 +239,7 @@ void LL_Crude_oil::add_node(Crude_oil*& new_node) {
     }
     else
     {
-        while (t->move_next())
-        {
-            t = t->move_next();
-        }
+        while (t->move_next()) { t = t->move_next(); }
         t->insert_last(new_node);
     }
     sum_company++;
@@ -252,11 +252,10 @@ Crude_oil* LL_Crude_oil::search_string(string name_to_show, string type_to_show)
     for (int i = 0; i < sum_company; i++) {
         if (name_to_show == (t->get_enterprise())
             && type_to_show == (t->get_type())) {
+            //cout<<"Found "<< t->Energy::get_string_value() << " (" << to_search <<")\n";
             return t;
         }
-        else {
-            t = t->move_next();
-        }
+        else { t = t->move_next(); }
     }
     return t;// this is NULL
 }
@@ -266,13 +265,9 @@ Crude_oil* LL_Crude_oil::search_string(string name_to_show, string type_to_show)
 //then use in "search_string_type"
 Crude_oil* LL_Crude_oil::search_string(string to_search, Crude_oil* current_point) {
     Crude_oil* t = head_Crude_oil;
-    for (t = current_point; t; t->move_next()) {
-        if (to_search == (t->get_enterprise())) {
-            return t;
-        }
-        else {
-            t = t->move_next();
-        }
+    for (t = current_point; t; t = t->move_next())
+    {
+        if (to_search == (t->get_enterprise())) { return t; }
     }
     return t;// this is NULL
 }
@@ -287,8 +282,11 @@ string LL_Crude_oil::search_string_type(string to_search, Crude_oil* current_poi
         search_string_type(to_search, t->move_next());// recursive
         return temp_type; // get type
     }
-    else { return "There is no type to get anymore\n"; }
+    else { return " "; }
 }
+
+
+
 
 void LL_Crude_oil::delete_node(string com_delete, string type_delete) {
     Crude_oil* t = head_Crude_oil;
@@ -297,6 +295,7 @@ void LL_Crude_oil::delete_node(string com_delete, string type_delete) {
     for (int i = 0; i < sum_company; i++) {
         if ((com_delete == (t->get_enterprise()))
             && (type_delete == (t->get_type()))) {
+            //cout<<"Found "<< t->Energy::get_string_value() << " (" << to_delete <<")\n";
             goto deleteNodeCode;
         }
         else {
@@ -308,13 +307,11 @@ deleteNodeCode:
     sum_energy -= t->get_volume();
     sum_company--;
     if (!pret) {
-        //if pret is NULL(found first node)
         head_Crude_oil = t->move_next();
         delete t;
     }
     else if (!t) { sum_company++; }
     else {
-        //not last node and last
         next = t->move_next();
         pret->set_next_node(next);
         delete t;
@@ -329,6 +326,7 @@ void LL_Crude_oil::write_csv() {
         string typ, ent;
         float gra, sul, vol, pri;
         Crude_oil* t = head_Crude_oil;
+        //cout<<"Check input from class"<<endl;
         for (int i = 0; i < sum_company; i++)
         {
             typ = (t->get_type());
@@ -346,8 +344,6 @@ void LL_Crude_oil::write_csv() {
 }
 
 //gas
-
-#include "LL_base.h"
 class LL_Gas :public LL_Energy {
 private:
     Gas* head_Gas;
@@ -432,9 +428,7 @@ Gas* LL_Gas::search_string(string name_to_show, string type_to_show) {
             && type_to_show == (t->get_type())) {
             return t;
         }
-        else {
-            t = t->move_next();
-        }
+        else { t = t->move_next(); }
     }
     return t;// this is NULL
 }
@@ -443,13 +437,9 @@ Gas* LL_Gas::search_string(string name_to_show, string type_to_show) {
 //then use in "search_string_type"
 Gas* LL_Gas::search_string(string to_search, Gas* current_point) {
     Gas* t = head_Gas;
-    for (t = current_point; t; t->move_next()) {
-        if (to_search == (t->get_enterprise())) {
-            return t;
-        }
-        else {
-            t = t->move_next();
-        }
+    for (t = current_point; t; t = t->move_next())
+    {
+        if (to_search == (t->get_enterprise())) { return t; }
     }
     return t;// this is NULL
 }
@@ -464,10 +454,11 @@ string LL_Gas::search_string_type(string to_search, Gas* current_point) {
         search_string_type(to_search, t->move_next());// recursive
         return temp_type; // get type
     }
-    else {
-        return "There is no type to get anymore\n";
-    }
+    else { return " "; }
 }
+
+
+
 
 void LL_Gas::delete_node(string com_delete, string type_delete) {
     Gas* t = head_Gas;
@@ -487,13 +478,11 @@ deleteNodeCode:
     sum_energy -= t->get_volume();
     sum_company--;
     if (!pret) {
-        //if pret is NULL(found first node)
         head_Gas = t->move_next();
         delete t;
     }
     else if (!t) { sum_company++; }
     else {
-        //not last node and last
         next = t->move_next();
         pret->set_next_node(next);
         delete t;
@@ -508,6 +497,7 @@ void LL_Gas::write_csv() {
         string typ, ent;
         float pre, tem, vol, pri;
         Gas* t = head_Gas;
+        //cout<<"Check input from class"<<endl;
         for (int i = 0; i < sum_company; i++)
         {
             typ = (t->get_type());
