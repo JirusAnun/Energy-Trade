@@ -9,6 +9,7 @@ public:
     float get_price();
     string get_enterprise();
     //method and fuction
+    void adjust_volume(float);
     float user_select_sell(float);
     float user_select_buy(float);
     Energy(string, float, float);
@@ -30,6 +31,10 @@ float Energy::get_volume() { return volume; }
 
 float Energy::get_price() {
     return price;
+}
+
+void Energy::adjust_volume(float x) {
+    volume += x;
 }
 
 
