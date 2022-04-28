@@ -35,29 +35,11 @@ float Energy::get_price() {
 
 float Energy::user_select_sell(float user_input) {
     float expense = roundValue(price * user_input * 0.8);
-    char confirm;
-    cin >> confirm;
-    if (confirm == 'Y') {
-        volume += roundValue(user_input);
-        return expense;
-    }
-    else return '\0';
+    return expense;
 }
 
 
 float Energy::user_select_buy(float user_input) {
-    //add expecting
     float expense = roundValue(price * user_input);
-    char confirm;
-    if (user_input <= volume) {
-        cin >> confirm;
-        if (confirm == 'Y') {
-            volume -= roundValue(user_input);
-            return expense;
-        }
-        else return '\0';
-    }
-    else {
-        return '\0';
-    }
+    return expense;
 }

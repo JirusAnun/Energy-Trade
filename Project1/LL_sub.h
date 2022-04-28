@@ -5,8 +5,8 @@ private:
 public:
     void add_node(Electric*&);
     void delete_node(string, string);
-    float buy_fuction(string, string, float);
-    float sell_fuction(string, string, float);
+    void buy_fuction(string, string, float);
+    void sell_fuction(string, string, float);
     Electric* search_string(string, string);
     Electric* search_string(string, Electric*);
     string search_string_type(string, Electric*);
@@ -16,25 +16,19 @@ public:
     ~LL_Electric();
 };
 
-float LL_Electric::buy_fuction(string com_name, string com_type, float volum_buy) {
+void LL_Electric::buy_fuction(string com_name, string com_type, float volum_buy) {
     float expense;
     expense = this->search_string(com_name, com_type)->user_select_buy(volum_buy);
-    if (expense) {
-        sum_energy -= volum_buy;
-        write_history_csv("buy", glob_user, com_name, volum_buy, expense);
-    }
-    return expense;
+    sum_energy -= volum_buy;
+    write_history_csv("buy", glob_user, com_name, volum_buy, expense);
 }
 
-float LL_Electric::sell_fuction(string com_name, string com_type, float volum_sell) {
+void LL_Electric::sell_fuction(string com_name, string com_type, float volum_sell) {
     float expense;
     expense = this->search_string(com_name, com_type)->user_select_sell(volum_sell);
 
-    if (expense) {
-        sum_energy += volum_sell;
-        write_history_csv("sell", glob_user, Energy_type_current, volum_sell, expense);
-    }
-    return expense;
+    sum_energy += volum_sell;
+    write_history_csv("sell", glob_user, Energy_type_current, volum_sell, expense);
 }
 
 LL_Electric::LL_Electric() { head_Electric = NULL; }
