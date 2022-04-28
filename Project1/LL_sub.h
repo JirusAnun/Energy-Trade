@@ -99,11 +99,10 @@ Electric* LL_Electric::search_string(string name_to_show, string type_to_show) {
 
 Electric* LL_Electric::search_string(string to_search, Electric* current_point) {
     Electric* t = head_Electric;
-    for (t = current_point; t; t->move_next()) {
+    for (t = current_point; t; t = t->move_next()) {
         if (to_search == (t->get_enterprise())) { return t; }
-        else { t = t->move_next(); }
     }
-    return t;// this is NULL
+    return t;
 }
 
 void LL_Electric::delete_node(string com_delete, string type_delete) {
