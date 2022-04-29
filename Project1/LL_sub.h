@@ -19,6 +19,7 @@ public:
 void LL_Electric::buy_fuction(string com_name, string com_type, float volum_buy) {
     float expense;
     expense = this->search_string(com_name, com_type)->user_select_buy(volum_buy);
+    this->search_string(com_name, com_type)->adjust_volume(-volum_buy);
     sum_energy -= volum_buy;
     write_history_csv("buy", glob_user, com_name, volum_buy, expense);
 }
@@ -26,7 +27,7 @@ void LL_Electric::buy_fuction(string com_name, string com_type, float volum_buy)
 void LL_Electric::sell_fuction(string com_name, string com_type, float volum_sell) {
     float expense;
     expense = this->search_string(com_name, com_type)->user_select_sell(volum_sell);
-
+    this->search_string(com_name, com_type)->adjust_volume(volum_sell);
     sum_energy += volum_sell;
     write_history_csv("sell", glob_user, Energy_type_current, volum_sell, expense);
 }
@@ -172,8 +173,8 @@ private:
 public:
     void add_node(Crude_oil*&);
     void delete_node(string, string);
-    float buy_fuction(string, string, float);
-    float sell_fuction(string, string, float);
+    void buy_fuction(string, string, float);
+    void sell_fuction(string, string, float);
     Crude_oil* search_string(string, string);
     Crude_oil* search_string(string, Crude_oil*);
     string search_string_type(string, Crude_oil*);
@@ -183,26 +184,20 @@ public:
     ~LL_Crude_oil();
 };
 
-float LL_Crude_oil::buy_fuction(string com_name, string com_type, float volum_buy) {
+void LL_Crude_oil::buy_fuction(string com_name, string com_type, float volum_buy) {
     float expense;
     expense = this->search_string(com_name, com_type)->user_select_buy(volum_buy);
-
-    if (expense) {
-        sum_energy -= volum_buy;
-        write_history_csv("buy", glob_user, com_name, volum_buy, expense);
-    }
-    return expense;
+    this->search_string(com_name, com_type)->adjust_volume(-volum_buy);
+    sum_energy -= volum_buy;
+    write_history_csv("buy", glob_user, com_name, volum_buy, expense);
 }
 
-float LL_Crude_oil::sell_fuction(string com_name, string com_type, float volum_sell) {
+void LL_Crude_oil::sell_fuction(string com_name, string com_type, float volum_sell) {
     float expense;
     expense = this->search_string(com_name, com_type)->user_select_sell(volum_sell);
-
-    if (expense) {
-        sum_energy += volum_sell;
-        write_history_csv("sell", glob_user, Energy_type_current, volum_sell, expense);
-    }
-    return expense;
+    this->search_string(com_name, com_type)->adjust_volume(volum_sell);
+    sum_energy += volum_sell;
+    write_history_csv("sell", glob_user, Energy_type_current, volum_sell, expense);
 }
 
 
@@ -340,8 +335,8 @@ private:
 public:
     void add_node(Gas*&);
     void delete_node(string, string);
-    float buy_fuction(string, string, float);
-    float sell_fuction(string, string, float);
+    void buy_fuction(string, string, float);
+    void sell_fuction(string, string, float);
     Gas* search_string(string, string);
     Gas* search_string(string, Gas*);
     string search_string_type(string, Gas*);
@@ -364,26 +359,20 @@ LL_Gas::~LL_Gas() {
     sum_company = 0;
 }
 
-float LL_Gas::buy_fuction(string com_name, string com_type, float volum_buy) {
+void LL_Gas::buy_fuction(string com_name, string com_type, float volum_buy) {
     float expense;
     expense = this->search_string(com_name, com_type)->user_select_buy(volum_buy);
-
-    if (expense) {
-        sum_energy -= volum_buy;
-        write_history_csv("buy", glob_user, com_name, volum_buy, expense);
-    }
-    return expense;
+    this->search_string(com_name, com_type)->adjust_volume(-volum_buy);
+    sum_energy -= volum_buy;
+    write_history_csv("buy", glob_user, com_name, volum_buy, expense);
 }
 
-float LL_Gas::sell_fuction(string com_name, string com_type, float volum_sell) {
+void LL_Gas::sell_fuction(string com_name, string com_type, float volum_sell) {
     float expense;
     expense = this->search_string(com_name, com_type)->user_select_sell(volum_sell);
-
-    if (expense) {
-        sum_energy += volum_sell;
-        write_history_csv("sell", glob_user, Energy_type_current, volum_sell, expense);
-    }
-    return expense;
+    this->search_string(com_name, com_type)->adjust_volume(volum_sell);
+    sum_energy += volum_sell;
+    write_history_csv("sell", glob_user, Energy_type_current, volum_sell, expense);
 }
 
 Gas* LL_Gas::get_head() {
