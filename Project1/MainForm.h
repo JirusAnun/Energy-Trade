@@ -3731,7 +3731,7 @@ namespace Project1 {
 			{
 				LL_head.LL_of_electric->sell_fuction(temp_enterpise, temp_type, stof(temp_volume));
 				String^ temp_company_name;
-				for (Crude_oil* t = LL_head.LL_of_oil->get_head(); t; t = t->move_next()) {
+				for (Electric* t = LL_head.LL_of_electric->get_head(); t; t = t->move_next()) {
 					temp_company_name = gcnew String(t->get_enterprise().data());
 
 					if (!comboBox_user_company->Items->Contains(temp_company_name))
