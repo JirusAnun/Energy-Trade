@@ -45,6 +45,12 @@ float Energy::user_select_sell(float user_input) {
 
 
 float Energy::user_select_buy(float user_input) {
-    float expense = roundValue(price * user_input);
-    return expense;
+    if (user_input> volume) { 
+        return '\0';
+    }
+    else {
+       float expense = roundValue(price * user_input);
+       return expense;
+    }
+        
 }
