@@ -32,5 +32,23 @@
     <ClInclude Include="ID_class.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Node_base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Node_sub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LL_base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LL_sub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LL_class.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="round.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
