@@ -1,6 +1,6 @@
-CNG,1,273,Gas corp.,30,10
-CNG,2,153,Gas corp.,30,10
-CNG,3,93,Gas corp.,30,10
-LNG,3,3,Test,50,15
-CNG,5,5,Test,60,55
-LNG,1,1,1,1,1
+LNG,101,-259.6,Chevron.,500,5
+LNG,102,-259.6,China National Petroleum.,500,10
+LNG,103,-259.6,Rosneft Oil Co.,1000,10
+CNG,101,-259.6,China National Petroleum.,5000,0.12
+CNG,105,-259.6,Saudi Arabian Oil Co.,5000,0.21
+CNG,107,-259.6,Chevron.,500,0.35

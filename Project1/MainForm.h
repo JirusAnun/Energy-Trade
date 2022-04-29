@@ -146,42 +146,22 @@ namespace Project1 {
 	private: System::Windows::Forms::Label^ label_admin_energyTrade;
 	private: System::Windows::Forms::Button^ button_admin_add;
 	private: System::Windows::Forms::Panel^ panel_admin_add;
-
-
 	private: System::Windows::Forms::Panel^ Underline_admin_add;
-
 	private: System::Windows::Forms::Label^ label_admin_add_category;
 	private: System::Windows::Forms::Label^ label_admin_add_unitPrice;
-
 	private: System::Windows::Forms::Label^ label_admin_add_volume;
 	private: System::Windows::Forms::Label^ label_admin_add_line2;
-
-
-
 	private: System::Windows::Forms::Label^ label_admin_add_line1;
-
 	private: System::Windows::Forms::Label^ label_admin_add_enterprise;
 	private: System::Windows::Forms::ComboBox^ comboBox_admin_add_catagory;
-
 	private: System::Windows::Forms::Panel^ Underline_admin_add_line2;
-
 	private: System::Windows::Forms::Panel^ Underline_admin_add_line1;
 	private: System::Windows::Forms::TextBox^ textBox_admin_add_unitePrice;
-
-
 	private: System::Windows::Forms::TextBox^ textBox_admin_add_volume;
 	private: System::Windows::Forms::TextBox^ textBox_admin_add_line2;
-
-
 	private: System::Windows::Forms::TextBox^ textBox_admin_add_line1;
-
-
 	private: System::Windows::Forms::TextBox^ textBox_admin_add_enterprise;
-
-
-
 	private: System::Windows::Forms::Panel^ Underline_admin_add_line4;
-
 	private: System::Windows::Forms::Panel^ Underline_admin_add_line3;
 	private: System::Windows::Forms::Panel^ Underline_admin_add_line5;
 	private: System::Windows::Forms::Label^ label_admin_add_unitUnitPrice;
@@ -194,25 +174,17 @@ namespace Project1 {
 	private: System::Windows::Forms::Button^ button_admin_addAll;
 	private: System::Windows::Forms::Panel^ panel_message;
 	private: System::Windows::Forms::Label^ label_noti;
-
 	private: System::Windows::Forms::Label^ label_message;
 	private: System::Windows::Forms::Button^ button_message_close;
-
 	private: System::Windows::Forms::Button^ button_message_ok;
 	private: System::Windows::Forms::Panel^ panel_confirm;
 	private: System::Windows::Forms::Button^ button_confirm_cancel;
-
-
 	private: System::Windows::Forms::Label^ label_confirm_noti;
 	private: System::Windows::Forms::Label^ label_confirm;
 	private: System::Windows::Forms::Button^ button_confirm_close;
-
-
-
 	private: System::Windows::Forms::Button^ button_confirm_ok;
 	private: System::Windows::Forms::Label^ label_aadmim_top1;
 	private: System::Windows::Forms::Panel^ Underline_unite;
-
 	private: System::Windows::Forms::Label^ label_user_total3;
 	private: System::Windows::Forms::Label^ label_user_total2;
 	private: System::Windows::Forms::Label^ label_user_total1;
@@ -234,12 +206,9 @@ namespace Project1 {
 	private: System::Windows::Forms::Label^ label_buySell_noti;
 	private: System::Windows::Forms::Label^ label_buySell;
 	private: System::Windows::Forms::Button^ button_buySell_close;
-
-
 	private: System::ComponentModel::IContainer^ components;
 
 	protected:
-
 	private:
 		/// <summary>
 		/// Required designer variable.
@@ -2332,7 +2301,7 @@ namespace Project1 {
 			// 
 			// label_buySell
 			// 
-			this->label_buySell->Font = (gcnew System::Drawing::Font(L"Agency FB", 13));
+			this->label_buySell->Font = (gcnew System::Drawing::Font(L"Agency FB", 10));
 			this->label_buySell->ForeColor = System::Drawing::SystemColors::ActiveBorder;
 			this->label_buySell->Location = System::Drawing::Point(36, 61);
 			this->label_buySell->Name = L"label_buySell";
@@ -2473,6 +2442,18 @@ namespace Project1 {
 				panel_register->Visible = false;
 				glob_user = username;
 				label_user_name->Text = gcnew String(glob_user.data());
+				status_menu = "Electric energy";
+				comboBox_user_company->Items->Clear();
+
+				String^ temp_company_name;
+				for (Electric* t = LL_head.LL_of_electric->get_head(); t; t = t->move_next()) {
+					temp_company_name = gcnew String(t->get_enterprise().data());
+
+					if (!comboBox_user_company->Items->Contains(temp_company_name))
+					{
+						comboBox_user_company->Items->Add(temp_company_name);
+					}
+				}
 			}
 			else
 			{
@@ -2493,6 +2474,9 @@ namespace Project1 {
 			textBox_register_password->Text = "";
 			textBox_register_conpassword->Text = "";
 		}
+		label_user_total1->Text = gcnew String(to_string(LL_head.LL_of_electric->get_sum_energy()).data());
+		label_user_total2->Text = gcnew String(to_string(LL_head.LL_of_oil->get_sum_energy()).data());
+		label_user_total3->Text = gcnew String(to_string(LL_head.LL_of_gas->get_sum_energy()).data());
 	}
 	private: System::Void panel_login_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 	}
