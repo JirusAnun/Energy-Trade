@@ -3663,7 +3663,6 @@ namespace Project1 {
 			else if (status_menu == "Crude oil")
 			{
 				LL_head.LL_of_oil->buy_fuction(temp_enterpise, temp_type, stof(temp_volume));
-				comboBox_user_company->Items->Clear();
 
 				String^ temp_company_name;
 				for (Crude_oil* t = LL_head.LL_of_oil->get_head(); t; t = t->move_next()) {
@@ -3678,7 +3677,6 @@ namespace Project1 {
 			else if (status_menu == "Natural gas")
 			{
 				LL_head.LL_of_gas->buy_fuction(temp_enterpise, temp_type, stof(temp_volume));
-				comboBox_user_company->Items->Clear();
 
 				String^ temp_company_name;
 				for (Gas* t = LL_head.LL_of_gas->get_head(); t; t = t->move_next()) {
@@ -3745,7 +3743,6 @@ namespace Project1 {
 			else if (status_menu == "Crude oil")
 			{
 				LL_head.LL_of_oil->sell_fuction(temp_enterpise, temp_type, stof(temp_volume));
-				comboBox_user_company->Items->Clear();
 
 				String^ temp_company_name;
 				for (Crude_oil* t = LL_head.LL_of_oil->get_head(); t; t = t->move_next()) {
@@ -3760,7 +3757,6 @@ namespace Project1 {
 			else if (status_menu == "Natural gas")
 			{
 				LL_head.LL_of_gas->sell_fuction(temp_enterpise, temp_type, stof(temp_volume));
-				comboBox_user_company->Items->Clear();
 
 				String^ temp_company_name;
 				for (Gas* t = LL_head.LL_of_gas->get_head(); t; t = t->move_next()) {
@@ -3773,11 +3769,47 @@ namespace Project1 {
 				}
 
 			}
+			comboBox_user_company->SelectedItem = -1;
+			comboBox_user_genre->SelectedItem = -1;
+			if (status_menu == "Electric energy")
+			{
+				msclr::interop::marshal_context context;
+				std::string temp_name = context.marshal_as<std::string>(comboBox_user_company->Text);
+				std::string temp_genre = context.marshal_as<std::string>(comboBox_user_genre->Text);
+
+				label_user_value1->Text = gcnew String(LL_head.LL_of_electric->search_string(temp_name, temp_genre)->get_Substations().data());
+				label_user_value2->Text = gcnew String(LL_head.LL_of_electric->search_string(temp_name, temp_genre)->get_license().data());
+				label_user_valueVolume->Text = gcnew String(to_string(LL_head.LL_of_electric->search_string(temp_name, temp_genre)->get_volume()).data());
+				label_user_valuePrice->Text = gcnew String(to_string(LL_head.LL_of_electric->search_string(temp_name, temp_genre)->get_price()).data());
+			}
+			else if (status_menu == "Crude oil")
+			{
+				msclr::interop::marshal_context context;
+				std::string temp_name = context.marshal_as<std::string>(comboBox_user_company->Text);
+				std::string temp_genre = context.marshal_as<std::string>(comboBox_user_genre->Text);
+
+				label_user_value1->Text = gcnew String(to_string(LL_head.LL_of_oil->search_string(temp_name, temp_genre)->get_api_gravity()).data());
+				label_user_value2->Text = gcnew String(to_string(LL_head.LL_of_oil->search_string(temp_name, temp_genre)->get_Sulfur()).data());
+				label_user_valueVolume->Text = gcnew String(to_string(LL_head.LL_of_oil->search_string(temp_name, temp_genre)->get_volume()).data());
+				label_user_valuePrice->Text = gcnew String(to_string(LL_head.LL_of_oil->search_string(temp_name, temp_genre)->get_price()).data());
+			}
+			else if (status_menu == "Natural gas")
+			{
+				msclr::interop::marshal_context context;
+				std::string temp_name = context.marshal_as<std::string>(comboBox_user_company->Text);
+				std::string temp_genre = context.marshal_as<std::string>(comboBox_user_genre->Text);
+
+				label_user_value1->Text = gcnew String(to_string(LL_head.LL_of_gas->search_string(temp_name, temp_genre)->get_pressure()).data());
+				label_user_value2->Text = gcnew String(to_string(LL_head.LL_of_gas->search_string(temp_name, temp_genre)->get_temperature()).data());
+				label_user_valueVolume->Text = gcnew String(to_string(LL_head.LL_of_gas->search_string(temp_name, temp_genre)->get_volume()).data());
+				label_user_valuePrice->Text = gcnew String(to_string(LL_head.LL_of_gas->search_string(temp_name, temp_genre)->get_price()).data());
+			}
 		}
 		label_user_total1->Text = gcnew String(to_string(LL_head.LL_of_electric->get_sum_energy()).data());
 		label_user_total2->Text = gcnew String(to_string(LL_head.LL_of_oil->get_sum_energy()).data());
 		label_user_total3->Text = gcnew String(to_string(LL_head.LL_of_gas->get_sum_energy()).data());
 		panel_buySell->Visible = false;
+		textBox_user_unit->Text = "";
 	}
 	private: System::Void label_admin_transactions_Click(System::Object^ sender, System::EventArgs^ e) {
 	}

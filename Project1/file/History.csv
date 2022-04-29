@@ -62,3 +62,13 @@ buy,a,Electric_corp.,1,11
 buy,a,Electric_corp.,14,0
 buy,a,Electric_corp.,12,132
 buy,a,Electric_corp.,1,11
+buy,a,Oil Corp.,10,100
+buy,a,add1,3,1368
+buy,a,Oil Corp.,1,10
+sell,a,Oil Corp.,1,8
+buy,a,Electric_corp.,1,11
+buy,a,Oil Corp.,1,10
+sell,a,Oil Corp.,1,8
+sell,a,Electric_corp.,14,123.2
+sell,a,add1,15,5472
+sell,a,add1,12,4377.6
