@@ -20,13 +20,6 @@ Clone the project
 - Add and delete enterprise to buy and sell energy
 - View transactions history
 
-## Screenshots
-
-![App Screenshot](![image](https://user-images.githubusercontent.com/64542489/165884174-e67fde7a-6efa-406b-9bb3-2579bc7842ca.png))
-![App Screenshot](![image]https://user-images.githubusercontent.com/64542489/165884217-a8ec6239-fe3c-4baa-b46b-8af2c7abb4ec.png))
-
-
-
 
 ## Tech Stack
 
