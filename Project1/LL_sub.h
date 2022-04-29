@@ -72,7 +72,6 @@ Electric* LL_Electric::search_string(string name_to_show, string type_to_show) {
     for (int i = 0; i < sum_company; i++) {
         if (name_to_show == (t->get_enterprise())
             && type_to_show == (t->get_genre())) {
-            //cout<<"Found "<< t->Energy::get_string_value() << " (" << to_search <<")\n";
             return t;
         }
         else { t = t->move_next(); }
@@ -246,7 +245,6 @@ Crude_oil* LL_Crude_oil::search_string(string name_to_show, string type_to_show)
     for (int i = 0; i < sum_company; i++) {
         if (name_to_show == (t->get_enterprise())
             && type_to_show == (t->get_type())) {
-            //cout<<"Found "<< t->Energy::get_string_value() << " (" << to_search <<")\n";
             return t;
         }
         else { t = t->move_next(); }
@@ -289,7 +287,6 @@ void LL_Crude_oil::delete_node(string com_delete, string type_delete) {
     for (int i = 0; i < sum_company; i++) {
         if ((com_delete == (t->get_enterprise()))
             && (type_delete == (t->get_type()))) {
-            //cout<<"Found "<< t->Energy::get_string_value() << " (" << to_delete <<")\n";
             goto deleteNodeCode;
         }
         else {
@@ -320,7 +317,6 @@ void LL_Crude_oil::write_csv() {
         string typ, ent;
         float gra, sul, vol, pri;
         Crude_oil* t = head_Crude_oil;
-        //cout<<"Check input from class"<<endl;
         for (int i = 0; i < sum_company; i++)
         {
             typ = (t->get_type());
@@ -491,7 +487,6 @@ void LL_Gas::write_csv() {
         string typ, ent;
         float pre, tem, vol, pri;
         Gas* t = head_Gas;
-        //cout<<"Check input from class"<<endl;
         for (int i = 0; i < sum_company; i++)
         {
             typ = (t->get_type());

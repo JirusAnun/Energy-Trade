@@ -1192,6 +1192,7 @@ namespace Project1 {
 				static_cast<System::Int32>(static_cast<System::Byte>(20)));
 			this->panel_admin->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel_admin.BackgroundImage")));
 			this->panel_admin->Controls->Add(this->panel_admin_add);
+			this->panel_admin->Controls->Add(this->panel_admin_transactions);
 			this->panel_admin->Controls->Add(this->button_admin_transactions);
 			this->panel_admin->Controls->Add(this->label_admin_total3);
 			this->panel_admin->Controls->Add(this->label_admin_total2);
@@ -1225,7 +1226,6 @@ namespace Project1 {
 			this->panel_admin->Controls->Add(this->label_admin_name);
 			this->panel_admin->Controls->Add(this->button_admin_close);
 			this->panel_admin->Controls->Add(this->label_admin_energyTrade);
-			this->panel_admin->Controls->Add(this->panel_admin_transactions);
 			this->panel_admin->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel_admin->Font = (gcnew System::Drawing::Font(L"Agency FB", 14));
 			this->panel_admin->ForeColor = System::Drawing::SystemColors::ActiveBorder;
@@ -1936,7 +1936,7 @@ namespace Project1 {
 			this->label_admin_name->Name = L"label_admin_name";
 			this->label_admin_name->Size = System::Drawing::Size(254, 24);
 			this->label_admin_name->TabIndex = 13;
-			this->label_admin_name->Text = L"Jiruschai";
+			this->label_admin_name->Text = L"Admin";
 			this->label_admin_name->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// button_admin_close
@@ -1980,25 +1980,29 @@ namespace Project1 {
 			// label_admin_transactions
 			// 
 			this->label_admin_transactions->AutoSize = true;
-			this->label_admin_transactions->Font = (gcnew System::Drawing::Font(L"Agency FB", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label_admin_transactions->Location = System::Drawing::Point(60, 30);
+			this->label_admin_transactions->Font = (gcnew System::Drawing::Font(L"Agency FB", 20));
+			this->label_admin_transactions->ForeColor = System::Drawing::SystemColors::ActiveBorder;
+			this->label_admin_transactions->Location = System::Drawing::Point(109, 35);
 			this->label_admin_transactions->Name = L"label_admin_transactions";
-			this->label_admin_transactions->Size = System::Drawing::Size(80, 25);
+			this->label_admin_transactions->Size = System::Drawing::Size(110, 32);
 			this->label_admin_transactions->TabIndex = 0;
 			this->label_admin_transactions->Text = L"Transaction";
+			this->label_admin_transactions->Click += gcnew System::EventHandler(this, &MainForm::label_admin_transactions_Click);
 			// 
 			// textBox_admin_transactions
 			// 
 			this->textBox_admin_transactions->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(32)),
 				static_cast<System::Int32>(static_cast<System::Byte>(32)), static_cast<System::Int32>(static_cast<System::Byte>(32)));
 			this->textBox_admin_transactions->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->textBox_admin_transactions->Location = System::Drawing::Point(63, 70);
+			this->textBox_admin_transactions->Font = (gcnew System::Drawing::Font(L"Agency FB", 14.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->textBox_admin_transactions->ForeColor = System::Drawing::SystemColors::ActiveBorder;
+			this->textBox_admin_transactions->Location = System::Drawing::Point(115, 70);
 			this->textBox_admin_transactions->Multiline = true;
 			this->textBox_admin_transactions->Name = L"textBox_admin_transactions";
 			this->textBox_admin_transactions->ReadOnly = true;
 			this->textBox_admin_transactions->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
-			this->textBox_admin_transactions->Size = System::Drawing::Size(900, 440);
+			this->textBox_admin_transactions->Size = System::Drawing::Size(800, 440);
 			this->textBox_admin_transactions->TabIndex = 1;
 			// 
 			// panel_login
@@ -2356,8 +2360,8 @@ namespace Project1 {
 			this->BackColor = System::Drawing::SystemColors::ActiveBorder;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->ClientSize = System::Drawing::Size(1280, 720);
-			this->Controls->Add(this->panel_user);
 			this->Controls->Add(this->panel_admin);
+			this->Controls->Add(this->panel_user);
 			this->Controls->Add(this->panel_buySell);
 			this->Controls->Add(this->panel_confirm);
 			this->Controls->Add(this->panel_message);
@@ -2481,7 +2485,9 @@ namespace Project1 {
 		}
 		else
 		{
-			MessageBox::Show("Password and confirm password not match.");
+			panel_message->Visible = true;
+			label_message->Text = "Password and confirm password not match.";
+			panel_message->BringToFront();
 			testBox_register_username->Text = "";
 			textBox_register_password->Text = "";
 			textBox_register_conpassword->Text = "";
@@ -2609,6 +2615,18 @@ namespace Project1 {
 		label_user_unitLine2->Text = "";
 		label_user_unitVolume->Text = "unit";
 		label_user_unitPrice->Text = "$";
+
+		comboBox_user_company->Items->Clear();
+
+		String^ temp_company_name;
+		for (Electric* t = LL_head.LL_of_electric->get_head(); t; t = t->move_next()) {
+			temp_company_name = gcnew String(t->get_enterprise().data());
+
+			if (!comboBox_user_company->Items->Contains(temp_company_name))
+			{
+				comboBox_user_company->Items->Add(temp_company_name);
+			}
+		}
 
 		button_user_electric->BackColor = System::Drawing::Color::FromArgb(
 			static_cast<System::Int32>(static_cast<System::Byte>(0)),
@@ -2989,7 +3007,6 @@ namespace Project1 {
 			Electric* temp_pointer = LL_head.LL_of_electric->get_head();
 			while (temp_pointer)
 			{
-				cout << "search name\n";
 				temp_pointer = LL_head.LL_of_electric->search_string(temp_enterpise, temp_pointer);
 				if (temp_pointer)
 				{
@@ -3004,7 +3021,6 @@ namespace Project1 {
 			Crude_oil* temp_pointer = LL_head.LL_of_oil->get_head();
 			while (temp_pointer)
 			{
-				cout << "search name\n";
 				temp_pointer = LL_head.LL_of_oil->search_string(temp_enterpise, temp_pointer);
 				if (temp_pointer)
 				{
@@ -3019,7 +3035,6 @@ namespace Project1 {
 			Gas* temp_pointer = LL_head.LL_of_gas->get_head();
 			while (temp_pointer)
 			{
-				cout << "search name\n";
 				temp_pointer = LL_head.LL_of_gas->search_string(temp_enterpise, temp_pointer);
 				if (temp_pointer)
 				{
@@ -3035,6 +3050,31 @@ namespace Project1 {
 	private: System::Void button_admin_transactions_Click(System::Object^ sender, System::EventArgs^ e) {
 		status_menu = "Transactions";
 		//import text here
+		
+		string x;
+		ifstream read_file;
+		read_file.open("History.csv");
+		if (read_file)//file
+		{
+			string buy_sell, user, energy;
+			string vol, pri;
+			string Line = "";
+
+			while (getline(read_file, Line)) {
+				stringstream read_string(Line);
+				getline(read_string, buy_sell, ',');
+				getline(read_string, user, ',');
+				getline(read_string, energy, ',');
+				getline(read_string, vol, ',');
+				getline(read_string, pri, ',');
+
+				x += buy_sell + "  " + user + "  " + energy + "  " + vol + "  " + pri + "  " + "\r\n";
+				Line = "";
+			}
+		}
+		read_file.close();
+		String^ temp = gcnew String(x.data());
+		textBox_admin_transactions->Text = temp;
 		panel_admin_transactions->Visible = true;
 		panel_admin_transactions->BringToFront();
 		panel_admin_add->Visible = false;
@@ -3181,7 +3221,6 @@ namespace Project1 {
 			{
 				if (comboBox_admin_add_catagory->SelectedItem == "Electric energy")
 				{
-					//To add exception handling
 					Electric* t;
 					msclr::interop::marshal_context context;
 					std::string temp_genre = context.marshal_as<std::string>(comboBox_admin_add_genre->GetItemText(comboBox_admin_add_genre->SelectedItem));
@@ -3196,7 +3235,9 @@ namespace Project1 {
 					t = new Electric(temp_genre, temp_line1, temp_line2, temp_enterprise, tempf_volume, tempf_price);
 					LL_head.LL_of_electric->add_node(t);
 
-					MessageBox::Show("Add");
+					panel_message->Visible = true;
+					label_message->Text = gcnew String(temp_enterprise.data())+"has been added.";
+					panel_message->BringToFront();
 
 					textBox_admin_add_enterprise->Text = "";
 					textBox_admin_add_line1->Text = "";
@@ -3224,7 +3265,9 @@ namespace Project1 {
 					t = new Crude_oil(temp_genre, tempf_line1, tempf_line2, temp_enterprise, tempf_volume, tempf_price);
 					LL_head.LL_of_oil->add_node(t);
 
-					MessageBox::Show("Add");
+					panel_message->Visible = true;
+					label_message->Text = gcnew String(temp_enterprise.data()) + "has been added";
+					panel_message->BringToFront();
 
 					textBox_admin_add_enterprise->Text = "";
 					textBox_admin_add_line1->Text = "";
@@ -3232,12 +3275,14 @@ namespace Project1 {
 					textBox_admin_add_volume->Text = "";
 					textBox_admin_add_unitePrice->Text = "";
 					//=======
-					MessageBox::Show("Did u see the thing that didn't fill??");
+					panel_message->Visible = true;
+					label_message->Text = "Please fill out the information completely.";
+					panel_message->BringToFront();
 					//>>>>>>> Stashed changes
 				}
 				else if (comboBox_admin_add_catagory->SelectedItem == "Natural gas")
 				{
-					//To add exception handling
+
 					Gas* t;
 					msclr::interop::marshal_context context;
 					std::string temp_genre = context.marshal_as<std::string>(comboBox_admin_add_genre->GetItemText(comboBox_admin_add_genre->SelectedItem));
@@ -3254,7 +3299,9 @@ namespace Project1 {
 					t = new Gas(temp_genre, tempf_line1, tempf_line2, temp_enterprise, tempf_volume, tempf_price);
 					LL_head.LL_of_gas->add_node(t);
 
-					MessageBox::Show("Add");
+					panel_message->Visible = true;
+					label_message->Text = gcnew String(temp_enterprise.data()) + "has been added.";
+					panel_message->BringToFront();
 
 					textBox_admin_add_enterprise->Text = "";
 					textBox_admin_add_line1->Text = "";
@@ -3268,12 +3315,16 @@ namespace Project1 {
 			}
 			else
 			{
-				MessageBox::Show("Did u didn't see unfill line??");
+				panel_message->Visible = true;
+				label_message->Text = "Please fill out the information completely.";
+				panel_message->BringToFront();
 			}
 		}
 		catch (...)
 		{
-			MessageBox::Show("Is this call numberic??");
+			panel_message->Visible = true;
+			label_message->Text = "Please fill out only number.";
+			panel_message->BringToFront();
 		}
 	}
 	private: System::Void button_user_buy_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3298,7 +3349,9 @@ namespace Project1 {
 					label_buySell->Text = temp_show;
 				}
 				else {
-					MessageBox::Show("There isn't enough for your request");
+					panel_message->Visible = true;
+					label_message->Text = "The remaining amount is not enough, please choose another choice.";
+					panel_message->BringToFront();
 				}
 		
 			}
@@ -3320,7 +3373,9 @@ namespace Project1 {
 					label_buySell->Text = temp_show;
 				}
 				else {
-					MessageBox::Show("There isn't enough for your request");
+					panel_message->Visible = true;
+					label_message->Text = "The remaining amount is not enough, please choose another choice.";
+					panel_message->BringToFront();
 				}
 			}
 			else if (status_menu == "Natural gas")
@@ -3342,7 +3397,9 @@ namespace Project1 {
 					label_buySell->Text = temp_show;
 				}
 				else {
-					MessageBox::Show("There isn't enough for your request");
+					panel_message->Visible = true;
+					label_message->Text = "The remaining amount is not enough, please choose another choice.";
+					panel_message->BringToFront();
 				}
 				
 			}
@@ -3352,11 +3409,15 @@ namespace Project1 {
 		}
 		catch (int x)
 		{
-			MessageBox::Show("To much");
+			panel_message->Visible = true;
+			label_message->Text = "The input value is too high, please enter a value between 0.1 - 999999.";
+			panel_message->BringToFront();
 		}
 		catch (...)
 		{
-			MessageBox::Show("Bruh");
+			panel_message->Visible = true;
+			label_message->Text = "Please fill out only number.";
+			panel_message->BringToFront();
 		}
 	}
 	private: System::Void button_user_sell_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3403,7 +3464,9 @@ namespace Project1 {
 		}
 		catch (...)
 		{
-			MessageBox::Show("bruh");
+			panel_message->Visible = true;
+			label_message->Text = "Please fill out only number.";
+			panel_message->BringToFront();
 		}
 	}
 	private: System::Void button_admin_delete_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3415,7 +3478,10 @@ namespace Project1 {
 				std::string name_enterprise = context.marshal_as<std::string>(comboBox_admin_enterprise->GetItemText(comboBox_admin_enterprise->SelectedItem));
 				std::string type = context.marshal_as<std::string>(comboBox_admin_genre->GetItemText(comboBox_admin_genre->SelectedItem));
 				LL_head.LL_of_electric->delete_node(name_enterprise, type);
-				MessageBox::Show("deleted");
+				
+				panel_message->Visible = true;
+				label_message->Text = gcnew String(name_enterprise.data())+" has been deleted";
+				panel_message->BringToFront();
 
 				label_admin_valueLine1->Text = "";
 				label_admin_valueLine2->Text = "";
@@ -3440,7 +3506,9 @@ namespace Project1 {
 				std::string name_enterprise = context.marshal_as<std::string>(comboBox_admin_enterprise->GetItemText(comboBox_admin_enterprise->SelectedItem));
 				std::string type = context.marshal_as<std::string>(comboBox_admin_genre->GetItemText(comboBox_admin_genre->SelectedItem));
 				LL_head.LL_of_oil->delete_node(name_enterprise, type);
-				MessageBox::Show("deleted");
+				panel_message->Visible = true;
+				label_message->Text = gcnew String(name_enterprise.data()) + " has been deleted";
+				panel_message->BringToFront();
 
 				label_admin_valueLine1->Text = "";
 				label_admin_valueLine2->Text = "";
@@ -3465,7 +3533,9 @@ namespace Project1 {
 				std::string name_enterprise = context.marshal_as<std::string>(comboBox_admin_enterprise->GetItemText(comboBox_admin_enterprise->SelectedItem));
 				std::string type = context.marshal_as<std::string>(comboBox_admin_genre->GetItemText(comboBox_admin_genre->SelectedItem));
 				LL_head.LL_of_gas->delete_node(name_enterprise, type);
-				MessageBox::Show("deleted");
+				panel_message->Visible = true;
+				label_message->Text = gcnew String(name_enterprise.data()) + " has been deleted";
+				panel_message->BringToFront();
 
 				label_admin_valueLine1->Text = "";
 				label_admin_valueLine2->Text = "";
@@ -3490,7 +3560,9 @@ namespace Project1 {
 		}
 		else //When user not selected combobox
 		{
-			MessageBox::Show("nope");
+			panel_message->Visible = true;
+			label_message->Text = "Please fill out the information completely.";
+			panel_message->BringToFront();
 		}
 	}
 	private: System::Void comboBox_admin_genre_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -3632,5 +3704,7 @@ namespace Project1 {
 		label_user_total3->Text = gcnew String(to_string(LL_head.LL_of_gas->get_sum_energy()).data());
 		panel_buySell->Visible = false;
 	}
-	};
+	private: System::Void label_admin_transactions_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
 }
