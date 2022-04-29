@@ -2475,7 +2475,7 @@ namespace Project1 {
 			}
 			else
 			{
-				label_message->Text = "Register failed.";
+				label_message->Text = "Username has already exists.";
 				panel_message->Visible = true;
 				panel_message->BringToFront();
 				testBox_register_username->Text = "";
@@ -2582,6 +2582,14 @@ namespace Project1 {
 				panel_message->Visible = true;
 				panel_message->BringToFront();
 			}
+			textBox_login_username->Text = "";
+			textBox_login_password->Text = "";
+		}
+		else
+		{
+			panel_message->Visible = true;
+			label_message->Text = "Username or password incorrect.";
+			panel_message->BringToFront();
 			textBox_login_username->Text = "";
 			textBox_login_password->Text = "";
 		}
