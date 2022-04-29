@@ -29,7 +29,7 @@ void LL_Electric::sell_fuction(string com_name, string com_type, float volum_sel
     expense = this->search_string(com_name, com_type)->user_select_sell(volum_sell);
     this->search_string(com_name, com_type)->adjust_volume(volum_sell);
     sum_energy += volum_sell;
-    write_history_csv("sell", glob_user, Energy_type_current, volum_sell, expense);
+    write_history_csv("sell", glob_user, com_name, volum_sell, expense);
 }
 
 LL_Electric::LL_Electric() { head_Electric = NULL; }
@@ -144,7 +144,7 @@ deleteNodeCode:
 
 void LL_Electric::write_csv() {
     fstream file;
-    file.open("Electric.csv", ios::out);
+    file.open("file/Electric.csv", ios::out);
     if (file)
     {
         string gen, sub, lic, ent;
@@ -197,7 +197,7 @@ void LL_Crude_oil::sell_fuction(string com_name, string com_type, float volum_se
     expense = this->search_string(com_name, com_type)->user_select_sell(volum_sell);
     this->search_string(com_name, com_type)->adjust_volume(volum_sell);
     sum_energy += volum_sell;
-    write_history_csv("sell", glob_user, Energy_type_current, volum_sell, expense);
+    write_history_csv("sell", glob_user, com_name, volum_sell, expense);
 }
 
 
@@ -306,7 +306,7 @@ deleteNodeCode:
 
 void LL_Crude_oil::write_csv() {
     fstream file;
-    file.open("Crude_oil.csv", ios::out);
+    file.open("file/Crude_oil.csv", ios::out);
     if (file)
     {
         string typ, ent;
@@ -316,7 +316,7 @@ void LL_Crude_oil::write_csv() {
         {
             typ = (t->get_type());
             gra = (t->get_api_gravity());
-            sul = (t->get_sulfer());
+            sul = (t->get_Sulfur());
 
             ent = (t->get_enterprise());
             vol = (t->get_volume());
@@ -372,7 +372,7 @@ void LL_Gas::sell_fuction(string com_name, string com_type, float volum_sell) {
     expense = this->search_string(com_name, com_type)->user_select_sell(volum_sell);
     this->search_string(com_name, com_type)->adjust_volume(volum_sell);
     sum_energy += volum_sell;
-    write_history_csv("sell", glob_user, Energy_type_current, volum_sell, expense);
+    write_history_csv("sell", glob_user, com_name, volum_sell, expense);
 }
 
 Gas* LL_Gas::get_head() {
@@ -470,7 +470,7 @@ deleteNodeCode:
 
 void LL_Gas::write_csv() {
     fstream file;
-    file.open("Gas.csv", ios::out);
+    file.open("file/Gas.csv", ios::out);
     if (file)
     {
         string typ, ent;

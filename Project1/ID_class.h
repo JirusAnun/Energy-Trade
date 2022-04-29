@@ -26,7 +26,7 @@ public:
 
 void Login_reg::create_LL() {
     ifstream Read_file;
-    Read_file.open("ID.csv");
+    Read_file.open("file/ID.csv");
     if (Read_file) {
         string Line = "";
         string Row_str;
@@ -92,7 +92,7 @@ bool Login_reg::check_reg(string Username, string Password) { // true = ready to
 }
 
 void Login_reg::write_csv() {
-    File.open("ID.csv", ios::out);
+    File.open("file/ID.csv", ios::out);
     if (File) {
         //input from class
         int n = All_User.Get_size(); //getsize from NODE to n

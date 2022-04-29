@@ -25,7 +25,7 @@ LL_class::~LL_class() { }
 void LL_class::read_csv() {
     //turn information in csv into object
     ifstream read_file;
-    read_file.open("Electric.csv");
+    read_file.open("file/Electric.csv");
     if (read_file)//file
     {
         string gen, sub, lic, ent, s_vol, s_pri;
@@ -51,7 +51,7 @@ void LL_class::read_csv() {
     }
     read_file.close();
 
-    read_file.open("Crude_oil.csv");
+    read_file.open("file/Crude_oil.csv");
     if (read_file)//file
     {
         string typ, ent, s_gra, s_sul, s_vol, s_pri;
@@ -79,7 +79,7 @@ void LL_class::read_csv() {
     }
     read_file.close();
 
-    read_file.open("Gas.csv");
+    read_file.open("file/Gas.csv");
     if (read_file)//file
     {
         string typ, s_pre, s_tem, ent, s_vol, s_pri;

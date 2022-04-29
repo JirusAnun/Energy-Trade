@@ -66,7 +66,7 @@ public:
     //get Value
     string get_type();
     float get_api_gravity();
-    float get_sulfer();
+    float get_Sulfur();
     //about Node
     Crude_oil* move_next();
     void set_next_node(Crude_oil*&);
@@ -112,7 +112,7 @@ float Crude_oil::get_api_gravity() {
     return api_gravity;
 }
 
-float Crude_oil::get_sulfer() {
+float Crude_oil::get_Sulfur() {
     return sulfur;
 }
 //gas

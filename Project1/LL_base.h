@@ -28,7 +28,7 @@ void LL_Energy::write_history_csv(string buy_or_sell, string Username, string En
     // keep value that user cliked for string type
     ofstream file;
 
-    file.open("History.csv", ios_base::app); // append instead of overwrite
+    file.open("file/History.csv", ios_base::app); // append instead of overwrite
     if (file)
     {
         file << buy_or_sell << "," << Username << "," <<
