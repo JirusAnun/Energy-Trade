@@ -3236,7 +3236,7 @@ namespace Project1 {
 					LL_head.LL_of_electric->add_node(t);
 
 					panel_message->Visible = true;
-					label_message->Text = gcnew String(temp_enterprise.data())+"has been added.";
+					label_message->Text = gcnew String(temp_enterprise.data())+" has been added.";
 					panel_message->BringToFront();
 
 					textBox_admin_add_enterprise->Text = "";
@@ -3244,6 +3244,11 @@ namespace Project1 {
 					textBox_admin_add_line2->Text = "";
 					textBox_admin_add_volume->Text = "";
 					textBox_admin_add_unitePrice->Text = "";
+					//=======
+					panel_message->Visible = true;
+					label_message->Text = gcnew String(temp_enterprise.data()) + " has been added.";
+					panel_message->BringToFront();
+					//>>>>>>> Stashed changes
 				}
 				else if (comboBox_admin_add_catagory->SelectedItem == "Crude oil")
 				{
@@ -3266,7 +3271,7 @@ namespace Project1 {
 					LL_head.LL_of_oil->add_node(t);
 
 					panel_message->Visible = true;
-					label_message->Text = gcnew String(temp_enterprise.data()) + "has been added";
+					label_message->Text = gcnew String(temp_enterprise.data()) + " has been added";
 					panel_message->BringToFront();
 
 					textBox_admin_add_enterprise->Text = "";
@@ -3276,7 +3281,7 @@ namespace Project1 {
 					textBox_admin_add_unitePrice->Text = "";
 					//=======
 					panel_message->Visible = true;
-					label_message->Text = "Please fill out the information completely.";
+					label_message->Text = gcnew String(temp_enterprise.data())+" has been added.";
 					panel_message->BringToFront();
 					//>>>>>>> Stashed changes
 				}
@@ -3300,7 +3305,7 @@ namespace Project1 {
 					LL_head.LL_of_gas->add_node(t);
 
 					panel_message->Visible = true;
-					label_message->Text = gcnew String(temp_enterprise.data()) + "has been added.";
+					label_message->Text = gcnew String(temp_enterprise.data()) + " has been added.";
 					panel_message->BringToFront();
 
 					textBox_admin_add_enterprise->Text = "";
@@ -3308,6 +3313,11 @@ namespace Project1 {
 					textBox_admin_add_line2->Text = "";
 					textBox_admin_add_volume->Text = "";
 					textBox_admin_add_unitePrice->Text = "";
+					//=======
+					panel_message->Visible = true;
+					label_message->Text = gcnew String(temp_enterprise.data()) + " has been added.";
+					panel_message->BringToFront();
+					//>>>>>>> Stashed changes
 				}
 				label_admin_total1->Text = gcnew String(to_string(LL_head.LL_of_electric->get_sum_energy()).data());
 				label_admin_total2->Text = gcnew String(to_string(LL_head.LL_of_oil->get_sum_energy()).data());
@@ -3337,7 +3347,7 @@ namespace Project1 {
 				float tempf_volume;
 				std::string temp_volume = context.marshal_as<std::string>(textBox_user_unit->Text);
 				tempf_volume = stof(temp_volume);
-				if (tempf_volume >= 1000000) { throw 0; }
+				if (tempf_volume  >= 1000000 || tempf_volume <= 0) { throw 0; }
 				std::string temp_enterpise = context.marshal_as<std::string>(comboBox_user_company->GetItemText(comboBox_user_company->SelectedItem));
 				std::string temp_type = context.marshal_as<std::string>(comboBox_user_genre->GetItemText(comboBox_user_genre->SelectedItem));
 				tempf_price = LL_head.LL_of_electric->search_string(temp_enterpise, temp_type)->user_select_buy(stof(temp_volume));
@@ -3361,7 +3371,7 @@ namespace Project1 {
 				float tempf_volume;
 				std::string temp_volume = context.marshal_as<std::string>(textBox_user_unit->Text);
 				tempf_volume = stof(temp_volume);
-				if (tempf_volume >= 1000000) { throw 0; }
+				if (tempf_volume  >= 1000000 || tempf_volume <= 0) { throw 0; }
 				std::string temp_enterpise = context.marshal_as<std::string>(comboBox_user_company->GetItemText(comboBox_user_company->SelectedItem));
 				std::string temp_type = context.marshal_as<std::string>(comboBox_user_genre->GetItemText(comboBox_user_genre->SelectedItem));
 				tempf_price = LL_head.LL_of_oil->search_string(temp_enterpise, temp_type)->user_select_buy(stof(temp_volume));
@@ -3384,7 +3394,7 @@ namespace Project1 {
 				float tempf_volume;
 				std::string temp_volume = context.marshal_as<std::string>(textBox_user_unit->Text);
 				tempf_volume = stof(temp_volume);
-				if (tempf_volume >= 1000000) { throw 0; }
+				if (tempf_volume  >= 1000000 || tempf_volume <= 0) { throw 0; }
 				std::string temp_enterpise = context.marshal_as<std::string>(comboBox_user_company->GetItemText(comboBox_user_company->SelectedItem));
 				std::string temp_type = context.marshal_as<std::string>(comboBox_user_genre->GetItemText(comboBox_user_genre->SelectedItem));
 				tempf_price = LL_head.LL_of_gas->search_string(temp_enterpise, temp_type)->user_select_buy(stof(temp_volume));
