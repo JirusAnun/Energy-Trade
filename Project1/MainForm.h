@@ -184,11 +184,6 @@ namespace Project1 {
 	private: System::Windows::Forms::ComboBox^ comboBox_admin_enterprise;
 	private: System::Windows::Forms::ComboBox^ comboBox_admin_add_catagory;
 	private: System::Windows::Forms::ComboBox^ comboBox_admin_add_genre;
-
-
-	
-
-
 	
 	private: System::Windows::Forms::Label^ label_buySell_noti;
 	private: System::Windows::Forms::Label^ label_buySell;
@@ -214,7 +209,6 @@ namespace Project1 {
 	private: System::Windows::Forms::Button^ button_buySell_canel;
 	private: System::Windows::Forms::Button^ button_buySell_close;
 
-	
 	private: System::ComponentModel::IContainer^ components;
 
 	protected:
