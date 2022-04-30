@@ -24,11 +24,6 @@ Run Energy trade applicetion.exe
 - Add and delete enterprise to buy and sell energy
 - View transactions history
 
-## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
-
 ## Tech Stack
 
 Windows Forms c++
