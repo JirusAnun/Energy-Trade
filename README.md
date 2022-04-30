@@ -9,10 +9,6 @@ Clone the project
 ```bash
   git clone https://github.com/JirusAnun/Energy-Trade
 ```
-Run Energy trade applicetion.exe
-```
-  \x64\Release\Energy Trade Project.exe
-```
 
 
 
