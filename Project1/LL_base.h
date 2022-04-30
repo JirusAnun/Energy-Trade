@@ -7,8 +7,8 @@ protected:
     float sum_energy;
 public:
     float get_sum_energy();
-    int get_size();
-    void write_history_csv(string, string, string, float, float);
+    int   get_size();
+    void  write_history_csv(string, string, string, float, float);
     LL_Energy();
     ~LL_Energy();
 };

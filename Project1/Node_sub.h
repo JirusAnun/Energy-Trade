@@ -1,5 +1,4 @@
 ﻿#pragma once
-//Electric
 using namespace std;
 
 class Electric : public Energy {
@@ -7,15 +6,13 @@ private:
     string genre, Substations, license;
     Electric* next_Electric;
 public:
-    //get_value_fuction
+    void insert_first(Electric*&);
+    void insert_last(Electric*&);
+    void set_next_node(Electric*&);
     string get_genre();
     string get_Substations();
     string get_license();
-    //about Node
     Electric* move_next();
-    void set_next_node(Electric*&);
-    void insert_first(Electric*&);
-    void insert_last(Electric*&);
     Electric(string, string, string, string, float, float);
     ~Electric();
 };
@@ -54,28 +51,24 @@ void Electric::insert_last(Electric*& new_node) {
     this->next_Electric = new_node;
     new_node->next_Electric = NULL;
 }
-//oil
+
 
 class Crude_oil : public Energy {
 private:
-    string type;  //Extra heavy medium light
-    float api_gravity; //ความหนาแน่นเฉาะ ยิ่งน้อยน้ำมันยิ่งดี
-    float sulfur; //parameter in percentage unit สารปนเปื้อน ปกติอยู่ราวๆ 0.05-10 wt%
+    string type; 
+    float api_gravity; 
+    float sulfur; 
     Crude_oil* next_Crude_oil;
 public:
-    //get Value
-    string get_type();
-    float get_api_gravity();
-    float get_Sulfur();
-    //about Node
-    Crude_oil* move_next();
     void set_next_node(Crude_oil*&);
     void insert_first(Crude_oil*&);
     void insert_last(Crude_oil*&);
+    string get_type();
+    float get_api_gravity();
+    float get_Sulfur();
+    Crude_oil* move_next();
     Crude_oil(string, float, float, string, float, float);
-    //enterp
     ~Crude_oil();
-    //Additional function
 };
 
 Crude_oil::Crude_oil(string typ, float gra, float sul, string Ent, float vol, float pri) :Energy(Ent, vol, pri) {
@@ -115,23 +108,21 @@ float Crude_oil::get_api_gravity() {
 float Crude_oil::get_Sulfur() {
     return sulfur;
 }
-//gas
 
 class Gas : public Energy {
-    string type; //(CNG/LNG)
-    float pressure, temperature; //parameter kPA ปกติ 101.325
+    string type;
+    float pressure, temperature; 
     Gas* next_Gas;
 public:
     Gas* move_next();
     void set_next_node(Gas*&);
     void insert_first(Gas*&);
     void insert_last(Gas*&);
-    Gas(string, float, float, string, float, float);
-    ~Gas();
-    //Get ค่า
     string get_type();
     float get_pressure();
     float get_temperature();
+    Gas(string, float, float, string, float, float);
+    ~Gas();
 };
 
 Gas::Gas(string typ, float pre, float tem, string Ent, float vol, float pri) :Energy(Ent, vol, pri) {

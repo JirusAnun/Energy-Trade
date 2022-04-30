@@ -1,4 +1,4 @@
-﻿//electric
+﻿
 class LL_Electric :public LL_Energy {
 private:
     Electric* head_Electric;
@@ -9,7 +9,7 @@ public:
     void sell_fuction(string, string, float);
     Electric* search_string(string, string);
     Electric* search_string(string, Electric*);
-    string search_string_type(string, Electric*);
+    string    search_string_type(string, Electric*);
     Electric* get_head();
     void write_csv();
     LL_Electric();
@@ -77,14 +77,9 @@ Electric* LL_Electric::search_string(string name_to_show, string type_to_show) {
         }
         else { t = t->move_next(); }
     }
-    return t;// this is NULL
+    return t;
 }
 
-/*
-get_volume()
-get_price()
-get_enterprise()
-*/
 
 //This is for search its location of all company's name in node
 //then use in "search_string_type"
@@ -94,18 +89,17 @@ Electric* LL_Electric::search_string(string to_search, Electric* current_point) 
     {
         if (to_search == (t->get_enterprise())) { return t; }
     }
-    return t;// this is NULL
+    return t;
 }
 
 //this use for get all type of company's name to fill up dropdown type
 string LL_Electric::search_string_type(string to_search, Electric* current_point) {
-    // first inpit head
-    Electric* t = search_string(to_search, current_point);// get where enterpise is
+    Electric* t = search_string(to_search, current_point);
     if (t) {
         string temp_type;
-        temp_type = t->get_genre();// keep type of that location
+        temp_type = t->get_genre();
         search_string_type(to_search, t->move_next());// recursive
-        return temp_type; // get type
+        return temp_type;
     }
     else { return "There is no type to get anymore\n"; }
 }
@@ -166,7 +160,6 @@ void LL_Electric::write_csv() {
     file.close();
 }
 
-//oil
 class LL_Crude_oil :public LL_Energy {
 private:
     Crude_oil* head_Crude_oil;
@@ -244,7 +237,7 @@ Crude_oil* LL_Crude_oil::search_string(string name_to_show, string type_to_show)
         }
         else { t = t->move_next(); }
     }
-    return t;// this is NULL
+    return t;
 }
 
 
@@ -256,18 +249,17 @@ Crude_oil* LL_Crude_oil::search_string(string to_search, Crude_oil* current_poin
     {
         if (to_search == (t->get_enterprise())) { return t; }
     }
-    return t;// this is NULL
+    return t;
 }
 
 //this use for get all type of company's name to fill up dropdown type
 string LL_Crude_oil::search_string_type(string to_search, Crude_oil* current_point) {
-    // first inpit head
-    Crude_oil* t = search_string(to_search, current_point);// get where enterpise is
+    Crude_oil* t = search_string(to_search, current_point);
     if (t) {
         string temp_type;
-        temp_type = t->get_type();// keep type of that location
+        temp_type = t->get_type();
         search_string_type(to_search, t->move_next());// recursive
-        return temp_type; // get type
+        return temp_type; 
     }
     else { return " "; }
 }
@@ -328,7 +320,7 @@ void LL_Crude_oil::write_csv() {
     file.close();
 }
 
-//gas
+
 class LL_Gas :public LL_Energy {
 private:
     Gas* head_Gas;
@@ -409,7 +401,7 @@ Gas* LL_Gas::search_string(string name_to_show, string type_to_show) {
         }
         else { t = t->move_next(); }
     }
-    return t;// this is NULL
+    return t;
 }
 
 //This is for search its location of all company's name in node
@@ -425,13 +417,12 @@ Gas* LL_Gas::search_string(string to_search, Gas* current_point) {
 
 //this use for get all type of company's name to fill up dropdown type
 string LL_Gas::search_string_type(string to_search, Gas* current_point) {
-    // first inpit head
-    Gas* t = search_string(to_search, current_point);// get where enterpise is
+    Gas* t = search_string(to_search, current_point);
     if (t) {
         string temp_type;
-        temp_type = t->get_type();// keep type of that location
+        temp_type = t->get_type();
         search_string_type(to_search, t->move_next());// recursive
-        return temp_type; // get type
+        return temp_type;
     }
     else { return " "; }
 }

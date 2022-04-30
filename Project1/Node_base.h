@@ -4,14 +4,12 @@ protected:
     string Enterprise;
     float volume, price;
 public:
-    //get_value_fuction
+    void  adjust_volume(float);
+    float user_select_sell(float);
+    float user_select_buy(float);
     float get_volume();
     float get_price();
     string get_enterprise();
-    //method and fuction
-    void adjust_volume(float);
-    float user_select_sell(float);
-    float user_select_buy(float);
     Energy(string, float, float);
     ~Energy();
 };

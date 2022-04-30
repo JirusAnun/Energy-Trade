@@ -94,8 +94,7 @@ bool Login_reg::check_reg(string Username, string Password) { // true = ready to
 void Login_reg::write_csv() {
     File.open("file/ID.csv", ios::out);
     if (File) {
-        //input from class
-        int n = All_User.Get_size(); //getsize from NODE to n
+        int n = All_User.Get_size();
         for (int i = 0; i < n; i++) {
             Row = i + 1;
             Username = All_User.Get_id(i);

@@ -8,12 +8,12 @@ class LL {
 public:
     void Add_node(ID*&);
     void Show_all();
-    int Get_size();
-    string Get_id(int);//Same as ID_NODE.h but in LL.h
-    string Get_pass(int);//Same as ID_NODE.h but in LL.h
-    bool Get_permission(int);
-    ~LL();
+    int    Get_size();
+    string Get_id(int);
+    string Get_pass(int);
+    bool   Get_permission(int);
     LL();
+    ~LL();
 };
 
 LL::LL() {
