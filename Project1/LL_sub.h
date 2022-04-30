@@ -1,4 +1,4 @@
-﻿
+﻿#pragma once
 class LL_Electric :public LL_Energy {
 private:
     Electric* head_Electric;

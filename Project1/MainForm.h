@@ -49,7 +49,6 @@ namespace Project1 {
 
 	protected:
 
-	
 	private: System::Windows::Forms::Panel^ panel_login;
 	private: System::Windows::Forms::Panel^ underline_login_password;
 	private: System::Windows::Forms::Panel^ underline_login_username;
@@ -64,7 +63,6 @@ namespace Project1 {
 	private: System::Windows::Forms::Button^ button_login_login;
 	private: System::Windows::Forms::Button^ button_login_close;
 	private: System::Windows::Forms::CheckBox^ checkBox_login_showPassword;
-
 	private: System::Windows::Forms::Panel^ panel_register;
 	private: System::Windows::Forms::Panel^ underline_register_conpassword;
 	private: System::Windows::Forms::Panel^ underline_register_password;
@@ -82,7 +80,6 @@ namespace Project1 {
 	private: System::Windows::Forms::Button^ button_register_signup;
 	private: System::Windows::Forms::Button^ button_register_close;
 	private: System::Windows::Forms::CheckBox^ checkBox_register_showPassword;
-	
 	private: System::Windows::Forms::Panel^ panel_user;
 	private: System::Windows::Forms::Panel^ Underline_user;
 	private: System::Windows::Forms::Panel^ panel_admin;
@@ -99,7 +96,6 @@ namespace Project1 {
 	private: System::Windows::Forms::Panel^ Underline_unite;
 	private: System::Windows::Forms::Panel^ panel_admin_transactions;
 	private: System::Windows::Forms::Panel^ panel_buySell;
-	
 	private: System::Windows::Forms::Label^ label_user_name;
 	private: System::Windows::Forms::Label^ label_user_EnergyTrade;
 	private: System::Windows::Forms::Label^ label_user_enterprise;
@@ -133,7 +129,6 @@ namespace Project1 {
 	private: System::Windows::Forms::Button^ button_user_buy;
 	private: System::Windows::Forms::ComboBox^ comboBox_user_company;
 	private: System::Windows::Forms::ComboBox^ comboBox_user_genre;
-
 	private: System::Windows::Forms::Label^ label_admin_unitUnitPrice;
 	private: System::Windows::Forms::Label^ label_admin_unitVolume;
 	private: System::Windows::Forms::Label^ label_admin_unitline2;
@@ -184,33 +179,25 @@ namespace Project1 {
 	private: System::Windows::Forms::ComboBox^ comboBox_admin_enterprise;
 	private: System::Windows::Forms::ComboBox^ comboBox_admin_add_catagory;
 	private: System::Windows::Forms::ComboBox^ comboBox_admin_add_genre;
-	
 	private: System::Windows::Forms::Label^ label_buySell_noti;
 	private: System::Windows::Forms::Label^ label_buySell;
-
 	private: System::Windows::Forms::Label^ label_aadmim_top3;
 	private: System::Windows::Forms::Label^ label_aadmim_top2;
 	private: System::Windows::Forms::Label^ label_aadmim_top1;
-	
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label_noti;
 	private: System::Windows::Forms::Label^ label_message;
 	private: System::Windows::Forms::Label^ label_confirm_noti;
 	private: System::Windows::Forms::Label^ label_confirm;
-	
 	private: System::Windows::Forms::Button^ button_message_close;
 	private: System::Windows::Forms::Button^ button_message_ok;
-
 	private: System::Windows::Forms::Button^ button_confirm_cancel;
 	private: System::Windows::Forms::Button^ button_confirm_close;
 	private: System::Windows::Forms::Button^ button_confirm_ok;
-
 	private: System::Windows::Forms::Button^ button_buySell_ok;
 	private: System::Windows::Forms::Button^ button_buySell_canel;
 	private: System::Windows::Forms::Button^ button_buySell_close;
-
 	private: System::ComponentModel::IContainer^ components;
-
 	protected:
 	private:
 #pragma region Windows Form Designer generated code
